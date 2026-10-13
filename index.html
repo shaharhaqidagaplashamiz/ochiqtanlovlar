@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="O'zbekistonlik arxitektor va shaharsozlar qatnasha oladigan ochiq tanlov va mukofotlar. Har kuni yangilanadi.">
+<meta property="og:title" content="Arxitektura va shaharsozlik tanlovlari">
+<meta property="og:description" content="Ochiq tanlovlar, muddatlar, badallar va rasmiy saytlar · Shahar haqida gaplashamiz">
+<meta property="og:image" content="kanal.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="kanal.jpg">
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Me'mor Tanlovlar Kuzatuvi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a drawing sheet. Figure-ground city fabric behind the title, scale bar + north arrow as the title block,
+   competitions as a hairline register; each deadline is a dimension line. Contour lines close the sheet. */
+:root{
+  --paper:#f6f6f3; --sheet:#ffffff; --ink:#141514; --ink2:#3d403d; --muted:#7a7e79; --hair:#dcddd8; --fill:#e9eae5;
+  --accent:#2b47b5; --accent-soft:#e6eaf8; --urban:#2e7050;
+  --ok:#2f7a4c; --ok-soft:#e7f2ea; --mid:#9a6a00; --mid-soft:#faf0d6; --crit:#c0352b; --crit-soft:#fbe7e4;
+  --tg:#2481cc; --pink:#f9c9c9; --gold:#c9972e; --gold-ink:#6b4d0e;
+  --sans:"Century Gothic","CenturyGothic","Urbanist","Helvetica Neue",Arial,system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#121413; --sheet:#181b19; --ink:#ebece8; --ink2:#c4c7c1; --muted:#8b908a; --hair:#2b2f2c; --fill:#202421;
+  --accent:#93a8ff; --accent-soft:#1d2440; --urban:#7fcaa2;
+  --ok:#86d3a3; --ok-soft:#142a1d; --mid:#f0c75e; --mid-soft:#2f2710; --crit:#ff8f84; --crit-soft:#36191a;
+  --tg:#5aa9e6; --pink:#4a2d30; --gold:#e2b955; --gold-ink:#3a2a06; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#121413; --sheet:#181b19; --ink:#ebece8; --ink2:#c4c7c1; --muted:#8b908a; --hair:#2b2f2c; --fill:#202421;
+  --accent:#93a8ff; --accent-soft:#1d2440; --urban:#7fcaa2;
+  --ok:#86d3a3; --ok-soft:#142a1d; --mid:#f0c75e; --mid-soft:#2f2710; --crit:#ff8f84; --crit-soft:#36191a;
+  --tg:#5aa9e6; --pink:#4a2d30; --gold:#e2b955; --gold-ink:#3a2a06; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:0 16px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding-block:16px 0;display:flex;flex-direction:column;gap:28px}
+a{color:var(--accent);text-underline-offset:3px}
+button,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sec-h{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--ink);padding-bottom:8px}
+.sec-h h2{font-size:15px;font-weight:700;margin:0;letter-spacing:.01em}
+.sec-h .eyebrow{margin-left:auto}
+
+/* channel strip */
+.chan{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--hair);flex-wrap:wrap}
+.chan img{width:44px;height:44px;border-radius:50%;flex:none;object-fit:cover;background:var(--pink)}
+.chan-t{flex:1 1 220px;min-width:0;display:flex;flex-direction:column}
+.chan-t strong{font-size:15px;font-weight:700}
+.chan-t span{font-size:13px;color:var(--ink2)}
+.tg{display:inline-flex;align-items:center;gap:7px;color:var(--tg);text-decoration:none;font-weight:600;font-size:13.5px;border:1px solid currentColor;padding:6px 14px;border-radius:999px}
+.tg:hover{background:var(--tg);color:#fff}
+.tg svg{width:15px;height:15px;fill:currentColor}
+
+/* title sheet */
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:end;min-height:260px;padding-block:8px 4px}
+.hero-txt{display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
+.hero h1{font-size:clamp(32px,5.2vw,54px);line-height:1.02;font-weight:700;letter-spacing:-.025em;margin:0;text-wrap:balance}
+.hero p{margin:0;color:var(--ink2);max-width:46ch;font-size:15.5px}
+.fabric{position:relative;height:100%;min-height:240px;border:1px solid var(--hair);background:var(--sheet);overflow:hidden}
+.fabric canvas{position:absolute;inset:0;width:100%;height:100%}
+.fabric .prize{position:absolute;left:12px;top:10px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;font-weight:500;color:var(--paper);background:var(--ink);padding:3px 8px}
+.fabric .prize.pop{animation:pop .35s ease-out}
+.fabric .prize.win{background:var(--gold);color:var(--gold-ink)}
+@keyframes pop{0%{transform:translateY(-4px);opacity:.2}100%{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.fabric .prize.pop{animation:none}}
+.fabric .cap{position:absolute;left:10px;bottom:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted);background:var(--sheet);padding:1px 4px}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.fabric{min-height:170px}}
+
+/* title block row */
+.tblock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--hair)}
+.tblock>div{padding:10px 14px 10px 0;display:flex;flex-direction:column;gap:3px;min-width:0}
+.tblock>div+div{padding-left:14px;border-left:1px solid var(--hair)}
+.tblock .v{font-family:var(--mono);font-size:14px}
+.scale{display:flex;align-items:flex-end;gap:0;height:16px;margin-top:2px}
+.scale i{display:block;width:22px;height:6px;border:1px solid var(--ink);border-right:0}
+.scale i:nth-child(odd){background:var(--ink)}
+.scale i:last-child{border-right:1px solid var(--ink)}
+.scale-l{display:flex;justify-content:space-between;width:110px;font-family:var(--mono);font-size:9.5px;color:var(--muted)}
+.lang{display:flex}
+.lang button{border:1px solid var(--ink);background:transparent;padding:1px 10px;cursor:pointer;font-family:var(--mono);font-size:12px}
+.lang button+button{border-left:0}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:640px){.tblock{grid-template-columns:1fr 1fr}.tblock>div:nth-child(3){border-left:0;padding-left:0}.tblock>div:nth-child(n+3){border-top:1px solid var(--hair)}}
+
+/* brief */
+.brief{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.brief>div{min-width:0}
+@media (max-width:760px){.brief{grid-template-columns:minmax(0,1fr)}}
+.brief-text{margin:12px 0 0;white-space:pre-line;color:var(--ink2);max-width:62ch}
+.brief select{border:0;border-bottom:1px solid var(--ink);background:transparent;padding:0 2px;font-family:var(--mono);font-size:12px;margin-left:auto}
+.urgent{display:flex;flex-direction:column;margin-top:4px}
+.urgent a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;color:var(--ink);padding:9px 0;border-bottom:1px solid var(--hair);min-width:0;align-items:baseline}
+.urgent a:hover .un{text-decoration:underline}
+.urgent .un{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;font-weight:500}
+.urgent .tick{font-family:var(--mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{font-size:13px;color:var(--muted);padding-top:10px}
+
+/* register controls */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--hair);overflow-x:auto}
+.tabs button{border:0;background:transparent;padding:10px 18px 10px 0;margin-right:18px;cursor:pointer;display:flex;align-items:baseline;gap:8px;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;color:var(--muted)}
+.tabs .n{font-family:var(--mono);font-size:12px}
+.tabs .l{font-weight:600;font-size:15px}
+.tabs button[aria-pressed="true"]{border-bottom-color:var(--ink);color:var(--ink)}
+.filters{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;padding-top:12px}
+.chipset{display:flex;flex-wrap:wrap;gap:4px}
+.chip{border:1px solid var(--hair);background:transparent;padding:3px 10px;font-size:13px;cursor:pointer;color:var(--ink2)}
+.chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.filters select{border:0;border-bottom:1px solid var(--ink);background:transparent;padding:2px 2px;font-size:13px;margin-left:auto}
+.meta-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding-top:10px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);align-items:center}
+.legend i{display:inline-block;width:18px;height:3px;margin-right:6px;vertical-align:middle}
+.legend .lg{background:var(--ok)} .legend .ly{background:var(--mid)} .legend .lr{background:var(--crit)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+/* register entries */
+.list{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.card{display:grid;grid-template-columns:184px minmax(0,1fr);border-bottom:1px solid var(--hair);min-width:0;scroll-margin-top:16px}
+.dl{padding:18px 16px 18px 12px;display:flex;flex-direction:column;gap:6px;color:var(--muted);border-right:1px solid var(--hair)}
+.dl .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
+.dl .dd{display:flex;align-items:baseline;gap:6px}
+.dl .d{font-size:46px;font-weight:700;line-height:.9;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.dl .u{font-size:13px;font-weight:600}
+.dl .clock{font-family:var(--mono);font-size:21px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.dl .clock small{display:block;font-size:9px;letter-spacing:.16em;margin-top:5px;opacity:.75}
+.dim{position:relative;height:9px;margin-top:4px}
+.dim::before{content:"";position:absolute;left:0;right:0;top:4px;border-top:1px solid currentColor;opacity:.35}
+.dim::after{content:"";position:absolute;left:0;top:0;height:9px;border-left:1px solid currentColor;opacity:.6}
+.dim span{position:absolute;left:0;top:3px;height:3px;background:currentColor}
+.dim span::after{content:"";position:absolute;right:-1px;top:-3px;height:9px;border-right:1px solid currentColor}
+.dl .date{font-family:var(--mono);font-size:11.5px;line-height:1.4;color:var(--ink2)}
+.dl .approx{font-size:11px}
+.dl.g{color:var(--ok)} .dl.y{color:var(--mid)} .dl.r{color:var(--crit)}
+.dl.g .d,.dl.y .d,.dl.r .d{color:currentColor}
+/* red band: soft gradient that deepens a little as --heat goes 0 → 1 over the last 10 days */
+.dl.r{--tone:var(--crit-soft);background:linear-gradient(90deg,transparent,var(--tone))}
+@supports (background:color-mix(in srgb,red 10%,blue)){.dl.r{--tone:color-mix(in srgb,var(--crit) calc(var(--heat,0) * 14%),var(--crit-soft))}}
+.dl.r .clock .hms{animation:blink 1s steps(2,start) infinite}
+@keyframes blink{50%{opacity:.5}}
+@media (prefers-reduced-motion:reduce){.dl.r .clock .hms{animation:none}}
+.body{padding:18px 0 18px 22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.top{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.card h3{font-size:19px;line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.org{color:var(--muted);font-size:13px;margin-top:3px}
+.star{border:0;background:transparent;cursor:pointer;font-size:18px;line-height:1;color:var(--muted);padding:2px}
+.star[aria-pressed="true"]{color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--ink2);align-items:center}
+.tags span{display:inline-flex;align-items:center;gap:5px}
+.tags span::before{content:"";width:5px;height:5px;background:var(--hair);display:inline-block}
+.tags .pop::before,.tags .newt::before{display:none}
+.tags .urb{color:var(--urban);font-weight:600} .tags .urb::before{background:var(--urban)}
+.tags .free{color:var(--accent);font-weight:600} .tags .free::before{background:var(--accent)}
+.tags .ex{font-weight:600} .tags .ex::before{background:var(--ink)}
+.tags .pop{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--ink)}
+.tags .pop .off{color:var(--hair)}
+.tags .pop em{font-style:normal;font-family:var(--sans);letter-spacing:0;color:var(--muted)}
+.tags .newt{background:var(--accent);color:var(--paper);padding:0 6px;font-weight:600;font-size:11.5px}
+.summary{margin:0;max-width:72ch}
+.points{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:2px;color:var(--ink2);max-width:72ch}
+.points li::marker{content:"– ";color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding-top:4px}
+.facts div{min-width:0;display:flex;flex-direction:column;gap:1px}
+.facts span{font-family:var(--mono);font-size:13px;overflow-wrap:anywhere}
+details summary{cursor:pointer;color:var(--ink2);font-size:13px;font-weight:600;list-style:none;display:inline-flex;gap:6px;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+";font-family:var(--mono);width:12px}
+details[open] summary::before{content:"−"}
+.more{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 16px;margin:10px 0 0;font-size:13.5px;border-left:1px solid var(--hair);padding-left:14px}
+.more dt{color:var(--muted);font-size:12px}
+.more dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.actions{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.go{display:inline-flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;border-bottom:1.5px solid var(--ink);padding-bottom:1px}
+.go:hover{color:var(--accent);border-color:var(--accent)}
+.flag{font-size:12.5px;color:var(--mid)}
+@media (max-width:640px){
+ .card{grid-template-columns:1fr}
+ .dl{border-right:0;border-bottom:1px dashed var(--hair);display:grid;grid-template-columns:auto 1fr;grid-template-areas:"lbl lbl" "dd clock" "dim dim" "date date";gap:6px 14px;padding:16px 0 12px}
+ .dl .lbl{grid-area:lbl}.dl .dd{grid-area:dd}.dl .clock{grid-area:clock;text-align:right;font-size:24px}.dl .dim{grid-area:dim}.dl .date{grid-area:date}.dl .approx{grid-column:1/-1}
+ .dl.r{background:linear-gradient(180deg,transparent,var(--tone))}
+ .body{padding:14px 0 18px}
+ .facts{grid-template-columns:1fr 1fr}
+ .more{grid-template-columns:1fr}.more dd{margin-bottom:6px}}
+.empty{border-bottom:1px solid var(--hair);padding:36px 0;color:var(--muted)}
+
+/* closing contours */
+footer{position:relative;margin-top:24px;padding-block:28px 32px;border-top:1px solid var(--ink);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:12.5px;color:var(--muted);overflow:hidden}
+footer svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;pointer-events:none}
+footer svg path{fill:none;stroke:var(--hair);stroke-width:1}
+footer>*{position:relative}
+</style>
+
+<div class="wrap">
+  <aside class="chan" aria-label="Telegram">
+    <img src="kanal.jpg" alt="Shahar haqida gaplashamiz" width="44" height="44">
+    <div class="chan-t">
+      <strong>Shahar haqida gaplashamiz</strong>
+      <span id="chan-sub">Birgalikda, aslida insonlar uchun qulay bo'lgan shahar qanday bo'lishi kerakligi haqida gaplashamiz!</span>
+    </div>
+    <a class="tg" href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 19.8c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.3 1.1 11.8c-1.1-.3-1.1-1.1.2-1.6L20.5 2.8c.9-.3 1.7.2 1.4 1.5z"/></svg><span id="chan-btn">Kanalga qo'shilish</span></a>
+  </aside>
+
+  <header>
+    <div class="hero">
+      <div class="hero-txt">
+        <span class="eyebrow" id="eyebrow">Ochiq tanlovlar reyestri</span>
+        <h1 id="h1">Arxitektura va shaharsozlik tanlovlari</h1>
+        <p id="lead">O'zbekistonlik arxitektor va shaharsozlar qatnasha oladigan ochiq tanlov va mukofotlar. Har kuni 09:00 da yangilanadi.</p>
+      </div>
+      <div class="fabric" aria-hidden="true">
+        <canvas id="fabric"></canvas>
+        <span class="prize" id="prize">1-O'RIN</span>
+        <span class="cap" id="cap">G'OLIB LOYIHA · № 001</span>
+      </div>
+    </div>
+    <div class="tblock">
+      <div><span class="eyebrow" id="lbl-upd">Yangilangan</span><span class="v" id="upd">—</span></div>
+      <div><span class="eyebrow" id="lbl-open">Ochiq tanlovlar</span><span class="v" id="openN">—</span></div>
+      <div><span class="eyebrow" id="lbl-tz">Vaqt</span><span class="v">UTC+5 · Toshkent</span></div>
+      <div><span class="eyebrow" id="lbl-lang">Til</span>
+        <div class="lang" role="group" aria-label="Language"><button id="l-uz" aria-pressed="true">UZ</button><button id="l-en" aria-pressed="false">EN</button></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="brief" aria-labelledby="brief-h">
+    <div>
+      <div class="sec-h"><h2 id="brief-h">Bugungi xabar</h2><select id="brief-day" aria-label="Kun"></select></div>
+      <p class="brief-text" id="brief-text">Xabar yuklanmoqda…</p>
+    </div>
+    <div>
+      <div class="sec-h"><h2 id="lbl-urgent">Muddati 14 kun ichida tugaydi</h2></div>
+      <div class="urgent" id="urgent"></div>
+    </div>
+  </section>
+
+  <section aria-label="Tanlovlar">
+    <nav class="tabs" id="stats" aria-label="Guruhlar"></nav>
+    <div class="filters">
+      <div class="chipset" id="kinds"></div>
+      <div class="chipset" id="subs"></div>
+      <button class="chip" id="onlyStar" aria-pressed="false">★ Saqlanganlar</button>
+      <select id="sort" aria-label="Saralash">
+        <option value="pop">Mashhurlik bo'yicha</option>
+        <option value="deadline">Muddat bo'yicha</option>
+        <option value="added">Yangi qo'shilgan</option>
+        <option value="name">Nomi bo'yicha</option>
+      </select>
+    </div>
+    <div class="meta-row"><div class="legend" id="legend"></div><div class="count" id="count"></div></div>
+  </section>
+
+  <main class="list" id="list">
+    <div class="empty" id="empty">Tanlovlar ro'yxati yuklanmoqda. Bu yerda har bir tanlovning muddati, badali, shartlari va rasmiy sayti chiqadi.</div>
+  </main>
+
+  <footer>
+    <svg viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 96 C140 70 260 112 400 86 S660 60 780 82 S940 100 1000 78"/>
+      <path d="M0 108 C150 86 270 120 410 98 S670 76 790 96 S945 112 1000 92"/>
+      <path d="M0 84 C130 54 250 100 390 72 S650 44 770 66 S935 88 1000 62"/>
+      <path d="M0 72 C120 40 240 88 380 58 S640 28 760 50 S930 76 1000 46"/>
+    </svg>
+    <span id="foot">Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing.</span>
+    <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">Shahar haqida gaplashamiz · t.me/shaharhaqidagaplashamiz</a>
+  </footer>
+</div>
+
+<script>
+(function(){
+const T={
+ uz:{h1:"Arxitektura va shaharsozlik tanlovlari",lead:"O'zbekistonlik arxitektor va shaharsozlar qatnasha oladigan ochiq tanlov va mukofotlar. Har kuni 09:00 da yangilanadi.",eyebrow:"Ochiq tanlovlar reyestri",
+  upd:"Yangilangan",open:"Ochiq tanlovlar",lang:"Til",tz:"Vaqt",brief:"Bugungi xabar",urgent:"Muddati 14 kun ichida tugaydi",
+  all:"Hammasi",urbanism:"Shaharsozlik",free:"Tekin",paid:"Pullik",
+  k_all:"Barcha turlar",real_project:"Real loyiha",ideas:"G'oyalar tanlovi",award:"Mukofot",
+  s_all:"Har qanday loyiha",existing_ok:"Tayyor loyiha topshiriladi",new_design:"Yangi loyiha kerak",both:"Tayyor yoki yangi",
+  star:"★ Saqlanganlar",sortP:"Mashhurlik bo'yicha",pop:["","Kam tanilgan","Kam tanilgan","Taniqli","Juda mashhur","Eng nufuzli"],sortD:"Muddat bo'yicha",sortA:"Yangi qo'shilgan",sortN:"Nomi bo'yicha",
+  nodate:"aniq emas",reg:"Ro'yxatdan o'tish",sub:"Topshirish",fee:"Badal (hozir)",prize:"Mukofot",
+  more:"Batafsil shartlar",team:"Kim qatnashadi",deliv:"Topshiriladigan materiallar",language:"Til",feeAll:"Badal (barcha bosqichlar)",results:"Natijalar",note:"Muddat izohi",ver:"Tekshiruv",
+  site:"Rasmiy sayt",newTag:"Yangi",shown:n=>n+" ta tanlov",
+  noBrief:"Bugungi xabar hali tayyor emas. Har kuni 09:00 da shu yerda paydo bo'ladi.",noUrgent:"Yaqin 14 kunda tugaydigan tanlov yo'q.",
+  empty0:"Tanlovlar ro'yxati hali yo'q. Har kungi tekshiruvdan keyin shu yerda chiqadi.",emptyF:"Tanlangan filtrlar bo'yicha tanlov topilmadi. Filtrlarni o'zgartirib ko'ring.",
+  nodb:"Ma'lumotlarni yuklab bo'lmadi. Sahifani qayta oching.",chanSub:"Birgalikda, aslida insonlar uchun qulay bo'lgan shahar qanday bo'lishi kerakligi haqida gaplashamiz!",chanBtn:"Kanalga qo'shilish",
+  tl_sub:"Topshirishgacha",tl_reg:"Ro'yxatgacha",tash:"Toshkent vaqti",approx:"taxminiy vaqt",ended:"Muddati tugadi",dShort:"kun",hms:"SOAT · DAQ · SON",
+  lgG:"30+ kun",lgY:"10–30 kun",lgR:"10 kundan kam",
+  foot:"Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing."},
+ en:{h1:"Architecture & Urbanism Competitions",lead:"Open competitions and awards that architects and urban planners based in Uzbekistan can enter. Updated daily at 09:00.",eyebrow:"Register of open calls",
+  upd:"Updated",open:"Open competitions",lang:"Language",tz:"Time",brief:"Today's brief",urgent:"Closing within 14 days",
+  all:"All",urbanism:"Urbanism",free:"Free",paid:"Paid",
+  k_all:"All types",real_project:"Real project",ideas:"Ideas competition",award:"Award",
+  s_all:"Any project",existing_ok:"Existing project OK",new_design:"New design required",both:"Existing or new",
+  star:"★ Saved",sortP:"By popularity",pop:["","Lesser known","Lesser known","Well known","Very popular","Most prestigious"],sortD:"By deadline",sortA:"Newly added",sortN:"By name",
+  nodate:"unconfirmed",reg:"Registration",sub:"Submission",fee:"Fee (now)",prize:"Prize",
+  more:"Full conditions",team:"Who can enter",deliv:"Deliverables",language:"Language",feeAll:"Fee (all tiers)",results:"Results",note:"Deadline note",ver:"Verification",
+  site:"Official site",newTag:"New",shown:n=>n+" competitions",
+  noBrief:"Today's brief isn't ready yet. It appears here every day at 09:00.",noUrgent:"Nothing closes in the next 14 days.",
+  empty0:"No competitions yet. They appear here after the daily check.",emptyF:"No competitions match these filters. Try changing them.",
+  nodb:"Couldn't load the data. Reload the page.",chanSub:"Together, let's talk about what a city truly comfortable for people should be like!",chanBtn:"Join the channel",
+  tl_sub:"Until submission",tl_reg:"Until registration",tash:"Tashkent time",approx:"estimated time",ended:"Closed",dShort:"days",hms:"HRS · MIN · SEC",
+  lgG:"30+ days",lgY:"10–30 days",lgR:"under 10 days",
+  foot:"Facts were checked on the official sites. Re-read the official conditions before you submit."}
+};
+const ls={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const st={lang:ls.get("lang","uz"),group:"all",kind:"all",sub:"all",onlyStar:false,sort:"pop",stars:new Set(ls.get("stars",[])),comps:[],digests:[],day:null,dbOk:null};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const iso=s=>{const m=String(s??"").match(/\d{4}-\d{2}-\d{2}/);return m?m[0]:null};
+const L=k=>T[st.lang][k];
+const fmt=i=>{if(!i)return L("nodate");const [y,m,d]=i.split("-");return d+"."+m+"."+y};
+const pad=n=>String(n).padStart(2,"0");
+// Deadlines are stored as exact UTC moments (…_deadline_at); everything is shown in Tashkent time.
+const TZ="Asia/Tashkent";
+const atOf=(c,k)=>{const a=c[k+"_deadline_at"];if(a){const t=Date.parse(a);if(!isNaN(t))return {t,exact:c.deadline_time_exact!==false}}
+  const i=iso(c[k+"_deadline"]);if(!i)return null;return {t:Date.parse(i+"T23:59:00+05:00"),exact:false}};
+const nextDL=c=>{const now=Date.now();const xs=[["reg",atOf(c,"registration")],["sub",atOf(c,"submission")]].filter(x=>x[1]);
+  const up=xs.filter(x=>x[1].t>now).sort((a,b)=>a[1].t-b[1].t||(a[0]==="sub"?-1:1));const pick=up[0]||xs.sort((a,b)=>b[1].t-a[1].t)[0];return pick?{type:pick[0],...pick[1]}:null};
+let tkF=null;try{tkF=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit",hour12:false})}catch(e){}
+const fmtAt=t=>{if(tkF)return tkF.format(new Date(t)).replace(/\//g,".").replace(",","");const d=new Date(t+5*36e5);return pad(d.getUTCDate())+"."+pad(d.getUTCMonth()+1)+"."+d.getUTCFullYear()+" "+pad(d.getUTCHours())+":"+pad(d.getUTCMinutes())};
+const band=ms=>ms<=0?"":ms>=30*864e5?"g":ms>=10*864e5?"y":"r";
+const parts=ms=>{const s=Math.max(0,Math.floor(ms/1000));return {d:Math.floor(s/86400),h:Math.floor(s%86400/3600),m:Math.floor(s%3600/60),s:s%60}};
+const hms=ms=>{const p=parts(ms);return pad(p.h)+":"+pad(p.m)+":"+pad(p.s)};
+const heat=ms=>Math.max(0,Math.min(1,1-ms/(10*864e5))).toFixed(4);
+const dimPct=ms=>Math.max(1.5,Math.min(100,ms/(90*864e5)*100)).toFixed(1);
+const sortKey=c=>{const n=nextDL(c);if(!n)return 9e15;return n.t>Date.now()?n.t:8e15-n.t};
+
+function setStatic(){
+  document.documentElement.lang=st.lang;
+  ["h1","lead","eyebrow"].forEach(k=>$(k).textContent=L(k));
+  $("lbl-upd").textContent=L("upd");$("lbl-open").textContent=L("open");$("lbl-lang").textContent=L("lang");$("lbl-tz").textContent=L("tz");
+  $("chan-sub").textContent=L("chanSub");$("chan-btn").textContent=L("chanBtn");$("brief-h").textContent=L("brief");$("lbl-urgent").textContent=L("urgent");$("onlyStar").textContent=L("star");$("foot").textContent=L("foot");
+  const o=$("sort").options;o[0].text=L("sortP");o[1].text=L("sortD");o[2].text=L("sortA");o[3].text=L("sortN");$("sort").value=st.sort;
+  $("l-uz").setAttribute("aria-pressed",st.lang==="uz");$("l-en").setAttribute("aria-pressed",st.lang==="en");
+}
+function chips(el,key,vals){el.innerHTML=vals.map(v=>`<button class="chip" data-v="${v}" aria-pressed="${st[key]===v}">${esc(L(v==="all"?(key==="kind"?"k_all":"s_all"):v))}</button>`).join("");
+  el.querySelectorAll("button").forEach(b=>b.onclick=()=>{st[key]=b.dataset.v;renderAll()})}
+function renderStats(){
+  const open=st.comps;const c={all:open.length,urbanism:0,free:0,paid:0};
+  open.forEach(x=>{if(x.group==="urbanism")c.urbanism++;else if(x.group==="free")c.free++;else c.paid++});
+  $("stats").innerHTML=["all","urbanism","free","paid"].map(g=>`<button data-g="${g}" aria-pressed="${st.group===g}"><span class="l">${esc(L(g))}</span><span class="n">${pad(c[g])}</span></button>`).join("");
+  $("stats").querySelectorAll("button").forEach(b=>b.onclick=()=>{st.group=b.dataset.g;renderAll()});
+  $("openN").textContent=open.length?String(open.length):"—";
+}
+function latestDigest(){return st.digests.find(d=>d.date===st.day)||st.digests[0]}
+function renderBrief(){
+  const sel=$("brief-day");sel.innerHTML=st.digests.map(d=>`<option value="${esc(d.date)}"${(st.day||st.digests[0]?.date)===d.date?" selected":""}>${esc(fmt(d.date))}</option>`).join("");
+  sel.hidden=!st.digests.length;
+  const d=latestDigest();
+  if(st.dbOk===false){$("brief-text").textContent=L("nodb")}
+  else $("brief-text").textContent=d?(st.lang==="uz"?(d.summary_uz||d.summary_en):(d.summary_en||d.summary_uz))||"":L("noBrief");
+  $("upd").textContent=d?fmt(d.date):"—";
+  const now=Date.now();
+  const urg=st.comps.map(c=>({c,n:nextDL(c)})).filter(x=>x.n&&x.n.t>now&&x.n.t-now<=14*864e5).sort((a,b)=>a.n.t-b.n.t);
+  $("urgent").innerHTML=urg.length?urg.map(({c,n})=>`<a href="#${esc(c.id)}"><span class="un">${esc(c.name)}</span><span class="tick" data-at="${n.t}" style="color:var(--${band(n.t-now)==="r"?"crit":"mid"})"></span></a>`).join(""):`<span class="note">${esc(L("noUrgent"))}</span>`;
+}
+function card(c){
+  const pts=(st.lang==="uz"?c.key_points_uz:c.key_points_en)||[];
+  const summ=st.lang==="uz"?(c.summary_uz||c.summary_en):(c.summary_en||c.summary_uz);
+  const n=nextDL(c),ms=n?n.t-Date.now():0,cls=n?band(ms):"";
+  const atTxt=k=>{const a=atOf(c,k);return a?fmtAt(a.t):(c[k+"_deadline"]&&!iso(c[k+"_deadline"])?c[k+"_deadline"]:"—")};
+  const d=latestDigest();const isNew=d&&Array.isArray(d.new_ids)&&d.new_ids.includes(c.id);
+  const p=c.popularity||2;
+  const flags=(c.flags||[]).filter(Boolean);
+  const row=(k,v)=>v?`<dt>${esc(L(k))}</dt><dd>${esc(v)}</dd>`:"";
+  return `<article class="card" id="${esc(c.id)}">
+   <div class="dl ${cls}"${n?` data-at="${n.t}" data-b="${cls}" style="--heat:${heat(ms)}"`:""}>
+    <span class="lbl">${esc(!n?L("nodate"):ms<=0?L("ended"):L(n.type==="reg"?"tl_reg":"tl_sub"))}</span>
+    <span class="dd"><span class="d">${n?parts(ms).d:"—"}</span><span class="u">${esc(L("dShort"))}</span></span>
+    <span class="clock"><span class="hms">${n?hms(ms):"--:--:--"}</span><small>${esc(L("hms"))}</small></span>
+    ${n&&ms>0?`<span class="dim"><span style="width:${dimPct(ms)}%"></span></span>`:""}
+    <span class="date">${n?esc(fmtAt(n.t)):"—"} · ${esc(L("tash"))}</span>
+    ${n&&!n.exact?`<span class="approx">≈ ${esc(L("approx"))}</span>`:""}
+   </div>
+   <div class="body">
+    <div class="top"><div><h3>${esc(c.name)}</h3><div class="org">${esc(c.organizer)}</div></div>
+     <button class="star" data-id="${esc(c.id)}" aria-pressed="${st.stars.has(c.id)}" aria-label="${esc(L("star"))}">${st.stars.has(c.id)?"★":"☆"}</button></div>
+    <div class="tags"><span class="pop" title="${esc(L("sortP"))}">${"★".repeat(p)}<span class="off">${"★".repeat(5-p)}</span> <em>${esc(L("pop")[p])}</em></span>${isNew?`<span class="newt">${esc(L("newTag"))}</span>`:""}${c.group==="urbanism"?`<span class="urb">${esc(L("urbanism"))}</span>`:""}${c.is_free?`<span class="free">${esc(L("free"))}</span>`:`<span>${esc(L("paid"))}</span>`}<span>${esc(L(c.kind)||c.kind)}</span><span class="ex">${esc(L(c.submission_type)||c.submission_type)}</span></div>
+    ${summ?`<p class="summary">${esc(summ)}</p>`:""}
+    ${pts.length?`<ul class="points">${pts.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
+    <div class="facts">
+     <div><span class="eyebrow">${esc(L("reg"))}</span><span>${esc(atTxt("registration"))}</span></div>
+     <div><span class="eyebrow">${esc(L("sub"))}</span><span>${esc(atTxt("submission"))}</span></div>
+     <div><span class="eyebrow">${esc(L("fee"))}</span><span>${esc(c.fee_current||"—")}</span></div>
+    </div>
+    <details><summary>${esc(L("more"))}</summary><dl class="more">
+     ${row("prize",c.prize_text)}${row("team",c.team)}${row("deliv",c.deliverables)}${row("language",c.language)}${row("feeAll",c.fee_text)}${row("note",c.deadline_note)}${row("results",iso(c.results_date)?fmt(iso(c.results_date)):c.results_date)}${row("ver",[c.verified,c.check_date].filter(Boolean).join(" · "))}
+    </dl></details>
+    <div class="actions"><a class="go" href="${esc(c.official_url)}" target="_blank" rel="noopener">${esc(L("site"))} ↗</a>
+     ${flags.length?`<span class="flag">⚠ ${esc(flags.join(" · "))}</span>`:""}</div>
+   </div></article>`;
+}
+function renderList(){
+  let xs=st.comps.filter(c=>st.group==="all"||c.group===st.group)
+   .filter(c=>st.kind==="all"||c.kind===st.kind)
+   .filter(c=>st.sub==="all"||c.submission_type===st.sub||(c.submission_type==="both"&&st.sub!=="all"))
+   .filter(c=>!st.onlyStar||st.stars.has(c.id));
+  if(st.sort==="pop")xs.sort((a,b)=>(b.popularity||2)-(a.popularity||2)||sortKey(a)-sortKey(b));
+  else if(st.sort==="deadline")xs.sort((a,b)=>sortKey(a)-sortKey(b));
+  else if(st.sort==="added")xs.sort((a,b)=>String(b.added||"").localeCompare(String(a.added||""))||sortKey(a)-sortKey(b));
+  else xs.sort((a,b)=>a.name.localeCompare(b.name));
+  $("count").textContent=L("shown")(xs.length);
+  if(!xs.length){$("list").innerHTML=`<div class="empty">${esc(st.dbOk===false?L("nodb"):st.comps.length?L("emptyF"):L("empty0"))}</div>`;return}
+  $("list").innerHTML=xs.map(card).join("");
+  $("list").querySelectorAll(".star").forEach(b=>b.onclick=()=>{const id=b.dataset.id;st.stars.has(id)?st.stars.delete(id):st.stars.add(id);ls.set("stars",[...st.stars]);renderList()});
+}
+function renderAll(){setStatic();renderStats();chips($("kinds"),"kind",["all","real_project","ideas","award"]);chips($("subs"),"sub",["all","existing_ok","new_design"]);
+  $("onlyStar").setAttribute("aria-pressed",st.onlyStar);
+  $("legend").innerHTML=`<span><i class="lg"></i>${esc(L("lgG"))}</span><span><i class="ly"></i>${esc(L("lgY"))}</span><span><i class="lr"></i>${esc(L("lgR"))}</span>`;
+  renderBrief();renderList();tick()}
+// live countdown: update in place every second; re-render when an entry crosses a colour band or closes
+function tick(){const now=Date.now();let rerender=false;
+  document.querySelectorAll("[data-at]").forEach(el=>{const ms=+el.dataset.at-now;
+    if(el.classList.contains("tick")){const p=parts(ms);el.textContent=(p.d?p.d+" "+L("dShort")+" ":"")+hms(ms);return}
+    if(band(ms)!==(el.dataset.b||""))rerender=true;
+    const d=el.querySelector(".d"),h=el.querySelector(".hms"),bar=el.querySelector(".dim span");
+    if(d)d.textContent=parts(ms).d;if(h)h.textContent=hms(ms);if(bar)bar.style.width=dimPct(ms)+"%";
+    if(el.dataset.b==="r")el.style.setProperty("--heat",heat(ms))});
+  if(rerender){renderBrief();renderList()}}
+setInterval(tick,1000);
+
+/* ---- Story reel: the world as a dot raster, competition sites light up, then every dot gathers into a medal drawn like a rotunda plan ---- */
+const MASK={"COLS":96,"ROWS":42,"LAT0":76,"LAT1":-56,"hex":["000100807fe0000101f80000","800172f83fc000022fffff00","8fff914c3f000fe1ffffffff","4fffffdc38301d9fffffffff","0ffffe1818007bffffffffee","061ffe1e000053fffffffc20","0007ff9f000133fffffff060","0003ffdf80057ffffffffc00","0003fffdc000fffffffffa00","0001fffe0000ff3bfffff800","0001fff80003b61bfffff400","0001fff0000325fbffffc400","0001fff0000261ffffff2c00","00007fe00003e07fffff1000","00003fc00007ffffffff0000","00005c20000fffbbffff0000","00003c00000fffbe3ffe0000","00000c90001fffff1e7c0000","00000700000fffde0c708000","000001c0001ffff808380000","00000040000fffe408384000","0000003f000ffff804204000","0000001fc0077ff800410000","0000001fe0001ff000320000","0000003ff0003fe000169000","0000003ffc001fe000108e00","0000001ffe001fe0000c0600","0000001ffc000fe000000000","0000000ffc001fe000001000","00000007fc001fe800007a00","00000007f8001f880000fe00","00000007f0000f880003ff00","00000007e0000f800003ff80","00000007e0000f000001ff80","00000007c00007000001cf80","000000078000000000000702","0000000f0000000000000001","0000000e0000000000000100","0000000e0000000000000004","0000000c0000000000000000","0000000c0000000000000000","000000040000000000000000"]};
+const PHASE={uz:["Tanlovlar xaritasi","Barcha yo'llar bitta maqsad sari","G'olib medali"],en:["Map of open calls","All roads lead to one goal","The winner's medal"]};
+const PI=Math.PI,LOOP=10000;let reelStart=performance.now(),lastPhase=-1,lastCap="";
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,cl=(v,a,b)=>Math.max(a,Math.min(b,v));
+const REDUCED=(()=>{try{return matchMedia("(prefers-reduced-motion: reduce)").matches}catch(e){return false}})();
+// virtual stage 440×260; map raster spans x 10–430
+const VW=440,VH=260,MX0=10,MX1=430,MY0=26,MY1=MY0+(MX1-MX0)*(MASK.LAT0-MASK.LAT1)/360*1.15;
+const proj=(lat,lon)=>[MX0+(lon+180)/360*(MX1-MX0),MY0+(MASK.LAT0-lat)/(MASK.LAT0-MASK.LAT1)*(MY1-MY0)];
+const MAP=[];MASK.hex.forEach((h,r)=>{for(let i=0;i<h.length;i++){const v=parseInt(h[i],16);for(let b=0;b<4;b++)if(v&(8>>b)){const col=i*4+b;
+  const lon=-180+(col+.5)*360/MASK.COLS,lat=MASK.LAT0-(r+.5)*(MASK.LAT0-MASK.LAT1)/MASK.ROWS;MAP.push(proj(lat,lon))}}});
+// medal targets: concentric rings (a rotunda floor plan) with the numeral "1" left open, plus two dot-hatched ribbons
+const MC=[VW/2,140],MR=68;
+const isOne=(u,v)=>(Math.abs(u-.05)<.13&&v>-.58&&v<.52)||(v>.38&&v<.56&&Math.abs(u-.05)<.32)||(u<.0&&u>-.3&&v<-.2&&v>-.6&&Math.abs((v+.58)+(u+.0)*.95)<.12);
+function medalTargets(n){
+  const disc=[],rib=[];
+  for(let k=1;k<=13;k++){const r=MR*k/13,cnt=Math.max(6,Math.round(2*PI*r/4.9));for(let i=0;i<cnt;i++){const a=i/cnt*PI*2+(k%2)*PI/cnt;const u=Math.cos(a)*r/MR,v=Math.sin(a)*r/MR;disc.push([MC[0]+Math.cos(a)*r,MC[1]+Math.sin(a)*r,k<12&&isOne(u,v)?1:0])}}
+  for(let y=MC[1]-MR-54;y<MC[1]-MR+6;y+=4.6)for(let x=-60;x<=60;x+=4.6){const yy=y-(MC[1]-MR-54),off=yy*.34;
+    if(x>=-46+off&&x<=-14+off)rib.push([MC[0]+x,y]);if(x<=46-off&&x>=14-off)rib.push([MC[0]+x,y])}
+  let all=disc.concat(rib);
+  if(all.length>n){let s=17;const rn=()=>(s=(s*16807)%2147483647)/2147483647;while(all.length>n)all.splice(Math.floor(rn()*all.length),1)}
+  while(all.length<n)all.push(disc[all.length%disc.length]);
+  return all}
+const ang=(p,cx,cy)=>Math.atan2(p[1]-cy,p[0]-cx);
+const mapC=[VW/2,(MY0+MY1)/2];
+const mapOrder=MAP.map((p,i)=>i).sort((a,b)=>ang(MAP[a],...mapC)-ang(MAP[b],...mapC));
+const TGT=medalTargets(MAP.length);const tgtOrder=TGT.map((p,i)=>i).sort((a,b)=>ang(TGT[a],...MC)-ang(TGT[b],...MC));
+const PAIR=new Array(MAP.length);mapOrder.forEach((mi,k)=>PAIR[mi]=TGT[tgtOrder[k]]);
+const DELAY=MAP.map(p=>Math.hypot(p[0]-mapC[0],p[1]-mapC[1])/260);
+const HOME=proj(41.3,69.24);
+const hexRgb=h=>{h=h.replace("#","");if(h.length===3)h=h.split("").map(x=>x+x).join("");const n=parseInt(h,16);return [n>>16&255,n>>8&255,n&255]};
+const mix=(a,b,t)=>`rgb(${a.map((v,i)=>Math.round(v+(b[i]-v)*t)).join(",")})`;
+function story(now){
+  const cv=$("fabric");if(!cv)return;const r=cv.getBoundingClientRect();const dpr=Math.min(window.devicePixelRatio||1,2);
+  const W=Math.max(1,Math.round(r.width)),H=Math.max(1,Math.round(r.height));
+  if(cv.width!==W*dpr||cv.height!==H*dpr){cv.width=W*dpr;cv.height=H*dpr}
+  const c=cv.getContext("2d");c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,W,H);
+  const cs=getComputedStyle(document.documentElement),C=k=>cs.getPropertyValue(k).trim();
+  const ink=C("--ink")||"#141514",muted=C("--muted")||"#7a7e79",hair=C("--hair")||"#ddd",acc=C("--accent")||"#2b47b5",gold=C("--gold")||"#c9972e",goldInk=C("--gold-ink")||"#6b4d0e",sheet=C("--sheet")||"#fff";
+  const cM=hexRgb(muted),cG=hexRgb(gold),cI=hexRgb(goldInk);
+  const k=Math.min(W/VW,H/VH);c.save();c.translate((W-VW*k)/2,(H-VH*k)/2);c.scale(k,k);
+  const T=REDUCED?3500:(now-reelStart)%LOOP;
+  // phase weights: m = morph amount (0 map → 1 medal)
+  let m=0;if(T>3800&&T<5800)m=(T-3800)/2000;else if(T>=5800&&T<8000)m=1;else if(T>=8000&&T<9600)m=1-(T-8000)/1600;
+  const appear=cl(T/800,0,1),forward=T<8000;
+  const comps=(st.comps||[]).filter(x=>Array.isArray(x.geo));
+  const pts=[];const seen=new Set();comps.forEach(x=>{const key=x.geo.join(",");if(seen.has(key))return;seen.add(key);pts.push(proj(x.geo[0],x.geo[1]))});
+  // construction lines of the medal plan
+  if(m>.6){const a=cl((m-.6)/.4,0,1);c.save();c.globalAlpha=a*.9;c.strokeStyle=hair;c.lineWidth=1;
+    c.setLineDash([5,3,1,3]);c.beginPath();c.moveTo(MC[0]-MR-24,MC[1]);c.lineTo(MC[0]+MR+24,MC[1]);c.moveTo(MC[0],MC[1]-MR-60);c.lineTo(MC[0],MC[1]+MR+24);c.stroke();c.setLineDash([]);
+    c.strokeStyle=ink;c.globalAlpha=a*.7;c.beginPath();c.arc(MC[0],MC[1],MR+7,0,PI*2);c.stroke();
+    const rot=(T/1000)*.25;for(let i=0;i<48;i++){const aa=i/48*PI*2+rot,l=i%4===0?7:3.5;c.beginPath();c.moveTo(MC[0]+Math.cos(aa)*(MR+7),MC[1]+Math.sin(aa)*(MR+7));c.lineTo(MC[0]+Math.cos(aa)*(MR+7+l),MC[1]+Math.sin(aa)*(MR+7+l));c.stroke()}
+    c.restore()}
+  // the raster: each dot travels from its map cell to its medal seat
+  const sz=2.6;
+  for(let i=0;i<MAP.length;i++){
+    const p=MAP[i],q=PAIR[i];if(T<800&&p[0]>MX0+(MX1-MX0)*appear)continue;
+    const d=DELAY[i]*.35,e=ease(cl((m-d*(forward?1:0)-(forward?0:(.35-d)))/(1-.35),0,1));
+    const sw=Math.sin(e*PI)*18*(i%2?1:-1);
+    const x=p[0]+(q[0]-p[0])*e+sw*(q[1]-p[1])/300,y=p[1]+(q[1]-p[1])*e;
+    const zz=sz+e*.9;c.fillStyle=mix(cM,cG,e);c.globalAlpha=.55+.45*e;c.fillRect(x-zz/2,y-zz/2,zz,zz)}
+  c.globalAlpha=1;
+  if(m>.75){c.save();c.globalAlpha=cl((m-.75)*4,0,1);c.fillStyle=sheet;c.beginPath();c.arc(MC[0],MC[1],MR*.42,0,PI*2);c.fill();c.strokeStyle=goldInk;c.lineWidth=1.2;c.stroke();
+    c.fillStyle=goldInk;c.font="600 46px DM Mono, monospace";c.textAlign="center";c.textBaseline="middle";c.fillText("1",MC[0]+1,MC[1]+3);c.restore()}
+  // competition sites, the routes from Tashkent, and home
+  const showPts=1-cl(m*2.2,0,1);
+  if(showPts>0){
+    const nShow=Math.min(pts.length,Math.floor(cl((T-800)/2400,0,1)*pts.length+(T>3200?pts.length:0)));
+    c.save();c.globalAlpha=showPts;
+    for(let i=0;i<nShow;i++){const p=pts[i];const age=cl((T-800-i/pts.length*2400)/600,0,1);
+      c.strokeStyle=acc;c.globalAlpha=showPts*.28;c.lineWidth=.8;c.setLineDash([2,3]);c.beginPath();c.moveTo(HOME[0],HOME[1]);
+      const mx=(HOME[0]+p[0])/2,my=Math.min(HOME[1],p[1])-24-Math.abs(HOME[0]-p[0])*.12;c.quadraticCurveTo(mx,my,p[0],p[1]);c.stroke();c.setLineDash([]);
+      c.globalAlpha=showPts;c.fillStyle=acc;c.beginPath();c.arc(p[0],p[1],2.6,0,PI*2);c.fill();
+      if(age<1){c.globalAlpha=showPts*(1-age);c.strokeStyle=acc;c.lineWidth=1.2;c.beginPath();c.arc(p[0],p[1],3+age*10,0,PI*2);c.stroke()}}
+    c.globalAlpha=showPts;c.fillStyle=gold;c.fillRect(HOME[0]-3.5,HOME[1]-3.5,7,7);c.strokeStyle=goldInk;c.lineWidth=1;c.strokeRect(HOME[0]-3.5,HOME[1]-3.5,7,7);
+    c.fillStyle=ink;c.font="500 8.5px DM Mono, monospace";c.textAlign="left";c.textBaseline="middle";c.fillText(st.lang==="uz"?"TOSHKENT":"TASHKENT",HOME[0]+7,HOME[1]+8);
+    c.restore()}
+  // competition sites settle on the medal rim
+  if(m>0&&pts.length){c.save();c.fillStyle=acc;for(let i=0;i<pts.length;i++){const p=pts[i],a=i/pts.length*PI*2-PI/2+(m>=1?(T/1000)*.25:0),q=[MC[0]+Math.cos(a)*(MR+12),MC[1]+Math.sin(a)*(MR+12)];
+    const e=ease(cl(m*1.15-i/pts.length*.15,0,1));c.globalAlpha=cl(m*3,0,1);c.beginPath();c.arc(p[0]+(q[0]-p[0])*e,p[1]+(q[1]-p[1])*e,2.4,0,PI*2);c.fill()}c.restore()}
+  c.restore();
+  const ph=m>=.98?2:(T>3800&&T<9600)?1:0;
+  if(ph!==lastPhase){lastPhase=ph;const pz=$("prize");if(pz){pz.textContent=PHASE[st.lang][ph];pz.classList.toggle("win",ph===2);pz.classList.remove("pop");void pz.offsetWidth;pz.classList.add("pop")}}
+  const cap=(st.comps.length?st.comps.length:"—")+(st.lang==="uz"?" TANLOV · ":" CALLS · ")+(pts.length||"—")+(st.lang==="uz"?" JOY · DUNYO BO'YLAB":" PLACES · WORLDWIDE");
+  if(cap!==lastCap){lastCap=cap;const cp=$("cap");if(cp)cp.textContent=cap}
+}
+function loop(now){story(now);requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+function drawFabric(){lastPhase=-1;lastCap="";story(performance.now())}
+/* ---- end story reel ---- */
+let rz;window.addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawFabric,150)});
+
+$("l-uz").onclick=()=>{st.lang="uz";ls.set("lang","uz");renderAll()};
+$("l-en").onclick=()=>{st.lang="en";ls.set("lang","en");renderAll()};
+$("onlyStar").onclick=()=>{st.onlyStar=!st.onlyStar;renderAll()};
+$("sort").onchange=e=>{st.sort=e.target.value;renderList()};
+$("brief-day").onchange=e=>{st.day=e.target.value;renderBrief();renderList()};
+renderAll();drawFabric();
+(async()=>{
+  try{
+    const r=await fetch("data.json",{cache:"no-store"});if(!r.ok)throw 0;
+    const j=await r.json();
+    st.comps=(j.competitions||[]).filter(c=>c.status!=="closed"&&c.status!=="remove");
+    st.digests=(j.digests||[]).slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,14);
+    st.dbOk=true;
+  }catch(e){st.dbOk=false}
+  renderAll();
+  if(location.hash){const el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView()}
+})();
+})();
+</script>
+
+</body>
+</html>
