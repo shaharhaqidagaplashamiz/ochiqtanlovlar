@@ -457,7 +457,16 @@ const mapOrder=MAP.map((p,i)=>i).sort((a,b)=>ang(MAP[a],...mapC)-ang(MAP[b],...m
 const TGT=medalTargets(MAP.length);const tgtOrder=TGT.map((p,i)=>i).sort((a,b)=>ang(TGT[a],...MC)-ang(TGT[b],...MC));
 const PAIR=new Array(MAP.length);mapOrder.forEach((mi,k)=>PAIR[mi]=TGT[tgtOrder[k]]);
 const DELAY=MAP.map(p=>Math.hypot(p[0]-mapC[0],p[1]-mapC[1])/260);
-const HOME=proj(41.3,69.24);
+const CCS="0000010101010101010101010202020202020202000000000000000000000101010101010101020202020202020202020202020202020202020202020203030303030300000000000000000000000001010101010104050606020202020202020202020202020202020202020202020202020202020202020202020202020303030303030000000000000000000000000000000000000001010107070405050602020202020202020202020202020202020202020202020202020202020202020202020202020303030303030000000000000000000000000000000101040405050606020202020202020202020202020202020202020202020202020202020202020202020202020203030300000000000000000000000000000004050802020202020202020202020202020202020202020202020202020202020202020000000000000000000000000000000000090a050b0c0202020202020202020202020202020202020202020202020202020202020000000000000000000000000000000000000d090e0f0f0g0g0c0c02020202020202020h0h0h0h0h02020202020202020202020i0i02020202000000000000000000000000000000000000000j0j0f0k0k0l0m0m0m0m0m020h0h0h0h0h0h0h0h0h0h0h0n0n0n0n0n0n020n0i0i0i0i020202030303030303030303030300000003000j0j0o0o0p0q0q0r0202020h0h0h0h0h0h0h0h0i0i0n0n0n0n0n0n0n0i0i0i0i0i0203030303030303030303030003030s0s0j0j0o0t0u02020h0v0v0v0h0h0h0i0i0i0i0i0n0n0n0i0i0i0i0i0i020w030303030303030303030303030s0s0o0x0y0y0y0y0y0z1010100v11120i0i0i0i0i0i0i0i0i0i0i0i0i130w030303030303030303030303030s14150y0y0y1617181818181019191a0i0i0i0i0i0i0i0i0i0i0i0i1b0w0w030303030303030303031c1c1414151d1717181818181919191a1e0i0i0i0i0i0i0i0i0i0i0i0w1f1f0303030303031c1c141414141g1g1g1g1h1h1i1j171718181819191a1a1e1e0i0i0i0i0i0i0i0i0i0i1f1f1f03031c1c14141414141g1g1g1g1h1h1j1j1j1818181a1a1e1e1e1k1e1l1e0i0i0i0i0i0i1f1f1f1f1m1n1o141414141g1g1g1g1h1h1j1j1j1j1p1e1e1e1e1e1e1q1r0i0i0i0i0i1f1f1f1s1n1n1n1o1o14141t1t1u1u1g1v1v1v1j1j1j1j1j1w1e1e1e1e1r1r1x1x0i1f1f1f1n1n1o1o1o1t1t1t1u1u1v1v1v1v1j1j1y1w1e1e1r1z1z2021222223231o1o1o1t1t1t1t1u1u1v1v1v1v241y1y1e1z1z252627271o28292a2a2a1u1u1v1v1v2b2b2c1e1r2d1x202e2f2f2g2g2g2h272i2j292a2a2k1u2l2m2m2m2b2b2b0t2n1z202f2f2f2g2g2o2p2q2i2j2a2k2k2l2l2l2m2m2r2b2b2c2s2t2f2f2f2g2u2o2u2u2v2v2w2w2w2x2r2r2c2s2t2t2y2y2f2u2u2u2u2u2u2u2z2z2v2w2w2w2x2r2r2s2s2s2s2s3030302u2u2u2u2u2u2u2u2u2v2w2w2w2w31312r2s2s2s2s32302u2u2u2u2u2u2u2u2u2u2u33332w2w2w3131312s2s2s3230302u342u2u2u2u2u2u2u33332w2w353131303034342u2u2u2u2u2u3333333535353636373034342u2u2u2u2u2u33333335353836363937373737373a343b342u2u2u2u3c3c3c3d383839373737373737373a3e3e3b2u2u2u3c3d3d3f3639373737373737373737373a3e3e3e3e2u3c3f3f3f3g37373737373737373737373e3e3e3e2u2u3f3f3f3h373737373737373737373e3e3e3i3i3f3f3f37373737373737373e3e3e3e3737373j3a3e3e3e3j3a3e3e373a3e3e3j3a3e3a3e3a",UZC=31;
+const CCI=MAP.map((_,i)=>{const s=CCS.substr(i*2,2);return s==="--"?-1:parseInt(s,36)});
+const HOME=(()=>{let x=0,y=0,n=0;MAP.forEach((p,i)=>{if(CCI[i]===UZC){x+=p[0];y+=p[1];n++}});return n?[x/n,y/n]:proj(41.3,69.24)})();
+// countries that host at least one open call: nearest raster dot decides the country
+let HOSTS={key:"",list:[],rank:new Map()};
+function hosts(comps){const key=comps.map(c=>c.id).join("|");if(key===HOSTS.key)return HOSTS;
+  const by=new Map();comps.forEach(c=>{const p=proj(c.geo[0],c.geo[1]);let bi=-1,bd=1e9;for(let i=0;i<MAP.length;i++){const d=(MAP[i][0]-p[0])**2+(MAP[i][1]-p[1])**2;if(d<bd){bd=d;bi=i}}
+    const ci=CCI[bi];if(ci<0||ci===UZC)return;if(!by.has(ci))by.set(ci,{ci,xs:0,ys:0,n:0});const o=by.get(ci);o.xs+=p[0];o.ys+=p[1];o.n++});
+  const list=[...by.values()].map(o=>({ci:o.ci,p:[o.xs/o.n,o.ys/o.n],n:o.n})).sort((a,b)=>a.p[0]-b.p[0]);
+  const rank=new Map();list.forEach((o,k)=>rank.set(o.ci,k));HOSTS={key,list,rank};return HOSTS}
 const hexRgb=h=>{h=h.replace("#","");if(h.length===3)h=h.split("").map(x=>x+x).join("");const n=parseInt(h,16);return [n>>16&255,n>>8&255,n&255]};
 const mix=(a,b,t)=>`rgb(${a.map((v,i)=>Math.round(v+(b[i]-v)*t)).join(",")})`;
 function story(now){
@@ -467,14 +476,15 @@ function story(now){
   const c=cv.getContext("2d");c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,W,H);
   const cs=getComputedStyle(document.documentElement),C=k=>cs.getPropertyValue(k).trim();
   const ink=C("--ink")||"#141514",muted=C("--muted")||"#7a7e79",hair=C("--hair")||"#ddd",acc=C("--accent")||"#2b47b5",gold=C("--gold")||"#c9972e",goldInk=C("--gold-ink")||"#6b4d0e",sheet=C("--sheet")||"#fff";
-  const cM=hexRgb(muted),cG=hexRgb(gold),cI=hexRgb(goldInk);
+  const cM=hexRgb(muted),cG=hexRgb(gold),cI=hexRgb(goldInk),cA=hexRgb(acc);
   const k=Math.min(W/VW,H/VH);c.save();c.translate((W-VW*k)/2,(H-VH*k)/2);c.scale(k,k);
   const T=REDUCED?3500:(now-reelStart)%LOOP;
   // phase weights: m = morph amount (0 map → 1 medal)
   let m=0;if(T>3800&&T<5800)m=(T-3800)/2000;else if(T>=5800&&T<8000)m=1;else if(T>=8000&&T<9600)m=1-(T-8000)/1600;
   const appear=cl(T/800,0,1),forward=T<8000;
   const comps=(st.comps||[]).filter(x=>Array.isArray(x.geo));
-  const pts=[];const seen=new Set();comps.forEach(x=>{const key=x.geo.join(",");if(seen.has(key))return;seen.add(key);pts.push(proj(x.geo[0],x.geo[1]))});
+  const HS=hosts(comps),pts=HS.list.map(o=>o.p),nH=Math.max(1,pts.length);
+  const lit=ci=>{if(ci===UZC)return 1;const k=HS.rank.get(ci);if(k===undefined)return 0;return cl((T-800-k/nH*2400)/400,0,1)};
   // construction lines of the medal plan
   if(m>.6){const a=cl((m-.6)/.4,0,1);c.save();c.globalAlpha=a*.9;c.strokeStyle=hair;c.lineWidth=1;
     c.setLineDash([5,3,1,3]);c.beginPath();c.moveTo(MC[0]-MR-24,MC[1]);c.lineTo(MC[0]+MR+24,MC[1]);c.moveTo(MC[0],MC[1]-MR-60);c.lineTo(MC[0],MC[1]+MR+24);c.stroke();c.setLineDash([]);
@@ -488,22 +498,22 @@ function story(now){
     const d=DELAY[i]*.35,e=ease(cl((m-d*(forward?1:0)-(forward?0:(.35-d)))/(1-.35),0,1));
     const sw=Math.sin(e*PI)*18*(i%2?1:-1);
     const x=p[0]+(q[0]-p[0])*e+sw*(q[1]-p[1])/300,y=p[1]+(q[1]-p[1])*e;
-    const zz=sz+e*.9;c.fillStyle=mix(cM,cG,e);c.globalAlpha=.55+.45*e;c.fillRect(x-zz/2,y-zz/2,zz,zz)}
+    const L1=m>0?0:lit(CCI[i]),base=CCI[i]===UZC?cG:cA,b0=L1>0?base.map((v,j)=>cM[j]+(v-cM[j])*L1):cM;
+    const zz=sz+e*.9+(L1>0?.4*L1:0);c.fillStyle=mix(b0,cG,e);c.globalAlpha=.55+.45*Math.max(e,L1);c.fillRect(x-zz/2,y-zz/2,zz,zz)}
   c.globalAlpha=1;
   if(m>.75){c.save();c.globalAlpha=cl((m-.75)*4,0,1);c.fillStyle=sheet;c.beginPath();c.arc(MC[0],MC[1],MR*.42,0,PI*2);c.fill();c.strokeStyle=goldInk;c.lineWidth=1.2;c.stroke();
     c.fillStyle=goldInk;c.font="600 46px DM Mono, monospace";c.textAlign="center";c.textBaseline="middle";c.fillText("1",MC[0]+1,MC[1]+3);c.restore()}
   // competition sites, the routes from Tashkent, and home
   const showPts=1-cl(m*2.2,0,1);
   if(showPts>0){
-    const nShow=Math.min(pts.length,Math.floor(cl((T-800)/2400,0,1)*pts.length+(T>3200?pts.length:0)));
+    const nShow=Math.min(pts.length,Math.ceil(cl((T-800)/2400,0,1)*pts.length)+(T>3200?pts.length:0));
     c.save();c.globalAlpha=showPts;
     for(let i=0;i<nShow;i++){const p=pts[i];const age=cl((T-800-i/pts.length*2400)/600,0,1);
       c.strokeStyle=acc;c.globalAlpha=showPts*.28;c.lineWidth=.8;c.setLineDash([2,3]);c.beginPath();c.moveTo(HOME[0],HOME[1]);
       const mx=(HOME[0]+p[0])/2,my=Math.min(HOME[1],p[1])-24-Math.abs(HOME[0]-p[0])*.12;c.quadraticCurveTo(mx,my,p[0],p[1]);c.stroke();c.setLineDash([]);
-      c.globalAlpha=showPts;c.fillStyle=acc;c.beginPath();c.arc(p[0],p[1],2.6,0,PI*2);c.fill();
       if(age<1){c.globalAlpha=showPts*(1-age);c.strokeStyle=acc;c.lineWidth=1.2;c.beginPath();c.arc(p[0],p[1],3+age*10,0,PI*2);c.stroke()}}
     c.globalAlpha=showPts;c.fillStyle=gold;c.fillRect(HOME[0]-3.5,HOME[1]-3.5,7,7);c.strokeStyle=goldInk;c.lineWidth=1;c.strokeRect(HOME[0]-3.5,HOME[1]-3.5,7,7);
-    c.fillStyle=ink;c.font="500 8.5px DM Mono, monospace";c.textAlign="left";c.textBaseline="middle";c.fillText(st.lang==="uz"?"TOSHKENT":"TASHKENT",HOME[0]+7,HOME[1]+8);
+    c.font="500 8.5px DM Mono, monospace";c.textAlign="left";c.textBaseline="middle";{const lb=st.lang==="uz"?"O'ZBEKISTON":"UZBEKISTAN",tw=c.measureText(lb).width;c.fillStyle=sheet;c.fillRect(HOME[0]+5,HOME[1]+3,tw+4,12);c.fillStyle=ink;c.fillText(lb,HOME[0]+7,HOME[1]+9)}
     c.restore()}
   // competition sites settle on the medal rim
   if(m>0&&pts.length){c.save();c.fillStyle=acc;for(let i=0;i<pts.length;i++){const p=pts[i],a=i/pts.length*PI*2-PI/2+(m>=1?(T/1000)*.25:0),q=[MC[0]+Math.cos(a)*(MR+12),MC[1]+Math.sin(a)*(MR+12)];
@@ -511,7 +521,7 @@ function story(now){
   c.restore();
   const ph=m>=.98?2:(T>3800&&T<9600)?1:0;
   if(ph!==lastPhase){lastPhase=ph;const pz=$("prize");if(pz){pz.textContent=PHASE[st.lang][ph];pz.classList.toggle("win",ph===2);pz.classList.remove("pop");void pz.offsetWidth;pz.classList.add("pop")}}
-  const cap=(st.comps.length?st.comps.length:"—")+(st.lang==="uz"?" TANLOV · ":" CALLS · ")+(pts.length||"—")+(st.lang==="uz"?" JOY · DUNYO BO'YLAB":" PLACES · WORLDWIDE");
+  const cap=(st.comps.length?st.comps.length:"—")+(st.lang==="uz"?" TANLOV · ":" CALLS · ")+(pts.length||"—")+(st.lang==="uz"?" DAVLAT · DUNYO BO'YLAB":" COUNTRIES · WORLDWIDE");
   if(cap!==lastCap){lastCap=cap;const cp=$("cap");if(cp)cp.textContent=cap}
 }
 function loop(now){story(now);requestAnimationFrame(loop)}
