@@ -512,7 +512,7 @@ function story(now){
       c.strokeStyle=acc;c.globalAlpha=showPts*.28;c.lineWidth=.8;c.setLineDash([2,3]);c.beginPath();c.moveTo(HOME[0],HOME[1]);
       const mx=(HOME[0]+p[0])/2,my=Math.min(HOME[1],p[1])-24-Math.abs(HOME[0]-p[0])*.12;c.quadraticCurveTo(mx,my,p[0],p[1]);c.stroke();c.setLineDash([]);
       if(age<1){c.globalAlpha=showPts*(1-age);c.strokeStyle=acc;c.lineWidth=1.2;c.beginPath();c.arc(p[0],p[1],3+age*10,0,PI*2);c.stroke()}}
-    c.globalAlpha=showPts;c.fillStyle=gold;c.fillRect(HOME[0]-3.5,HOME[1]-3.5,7,7);c.strokeStyle=goldInk;c.lineWidth=1;c.strokeRect(HOME[0]-3.5,HOME[1]-3.5,7,7);
+    c.globalAlpha=showPts;c.fillStyle=gold;c.fillRect(HOME[0]-3.5,HOME[1]-3.5,7,7);c.strokeStyle=goldInk;c.lineWidth=1;c.strokeRect(HOME[0]-3.5,HOME[1]-3.5,7,7);c.font="500 8.5px DM Mono, monospace";c.textAlign="left";c.textBaseline="middle";{const lb=st.lang==="uz"?"ÖZBEKISTON":"UZBEKISTAN",tw=c.measureText(lb).width;c.fillStyle=sheet;c.fillRect(HOME[0]+5,HOME[1]+3,tw+4,12);c.fillStyle=ink;c.fillText(lb,HOME[0]+7,HOME[1]+9)}
     
     c.restore()}
   // competition sites settle on the medal rim
