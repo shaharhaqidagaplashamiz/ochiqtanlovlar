@@ -49,6 +49,10 @@ button,select{font:inherit;color:inherit}
 .sec-h h2{font-size:15px;font-weight:700;margin:0;letter-spacing:.01em}
 .sec-h .eyebrow{margin-left:auto}
 
+/* beta notice */
+.beta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid var(--hair);font-size:12.5px;color:var(--ink2)}
+.beta b{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;font-weight:500;color:var(--paper);background:var(--accent);padding:2px 7px}
+.beta a{color:inherit}
 /* channel strip */
 .chan{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--hair);flex-wrap:wrap}
 .chan img{width:44px;height:44px;border-radius:50%;flex:none;object-fit:cover;background:var(--pink)}
@@ -197,6 +201,7 @@ footer>*{position:relative}
 </style>
 
 <div class="wrap">
+  <div class="beta" role="note"><b>BETA</b><span id="beta-t">Sayt sinov rejimida ishlamoqda. Xato yoki taklif bo'lsa, <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">kanalga</a> yozing.</span></div>
   <aside class="chan" aria-label="Telegram">
     <img src="kanal.jpg" alt="Shahar haqida gaplashamiz" width="44" height="44">
     <div class="chan-t">
@@ -286,7 +291,7 @@ const T={
   site:"Rasmiy sayt",newTag:"Yangi",shown:n=>n+" ta tanlov",
   noBrief:"Bugungi xabar hali tayyor emas. Har kuni 09:00 da shu yerda paydo bo'ladi.",noUrgent:"Yaqin 14 kunda tugaydigan tanlov yo'q.",
   empty0:"Tanlovlar ro'yxati hali yo'q. Har kungi tekshiruvdan keyin shu yerda chiqadi.",emptyF:"Tanlangan filtrlar bo'yicha tanlov topilmadi. Filtrlarni o'zgartirib ko'ring.",
-  nodb:"Ma'lumotlarni yuklab bo'lmadi. Sahifani qayta oching.",chanSub:"Birgalikda, aslida insonlar uchun qulay bo'lgan shahar qanday bo'lishi kerakligi haqida gaplashamiz!",chanBtn:"Kanalga qo'shilish",
+  nodb:"Ma'lumotlarni yuklab bo'lmadi. Sahifani qayta oching.",chanSub:"Birgalikda, aslida insonlar uchun qulay bo'lgan shahar qanday bo'lishi kerakligi haqida gaplashamiz!",chanBtn:"Kanalga qo'shilish",beta:'Sayt sinov rejimida ishlamoqda. Xato yoki taklif bo\'lsa, <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">kanalga</a> yozing.',
   tl_sub:"Topshirishgacha",tl_reg:"Ro'yxatgacha",tash:"Toshkent vaqti",approx:"taxminiy vaqt",ended:"Muddati tugadi",dShort:"kun",hms:"SOAT · DAQ · SON",
   lgG:"30+ kun",lgY:"10–30 kun",lgR:"10 kundan kam",
   foot:"Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing."},
@@ -301,7 +306,7 @@ const T={
   site:"Official site",newTag:"New",shown:n=>n+" competitions",
   noBrief:"Today's brief isn't ready yet. It appears here every day at 09:00.",noUrgent:"Nothing closes in the next 14 days.",
   empty0:"No competitions yet. They appear here after the daily check.",emptyF:"No competitions match these filters. Try changing them.",
-  nodb:"Couldn't load the data. Reload the page.",chanSub:"Together, let's talk about what a city truly comfortable for people should be like!",chanBtn:"Join the channel",
+  nodb:"Couldn't load the data. Reload the page.",chanSub:"Together, let's talk about what a city truly comfortable for people should be like!",chanBtn:"Join the channel",beta:'The site is in beta. Spotted a mistake or have an idea? Write to us on the <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">channel</a>.',
   tl_sub:"Until submission",tl_reg:"Until registration",tash:"Tashkent time",approx:"estimated time",ended:"Closed",dShort:"days",hms:"HRS · MIN · SEC",
   lgG:"30+ days",lgY:"10–30 days",lgR:"under 10 days",
   foot:"Facts were checked on the official sites. Re-read the official conditions before you submit."}
@@ -333,7 +338,7 @@ function setStatic(){
   document.documentElement.lang=st.lang;
   ["h1","lead","eyebrow"].forEach(k=>$(k).textContent=L(k));
   $("lbl-upd").textContent=L("upd");$("lbl-open").textContent=L("open");$("lbl-lang").textContent=L("lang");$("lbl-tz").textContent=L("tz");
-  $("chan-sub").textContent=L("chanSub");$("chan-btn").textContent=L("chanBtn");$("brief-h").textContent=L("brief");$("lbl-urgent").textContent=L("urgent");$("onlyStar").textContent=L("star");$("foot").textContent=L("foot");
+  $("chan-sub").textContent=L("chanSub");$("beta-t").innerHTML=L("beta");$("chan-btn").textContent=L("chanBtn");$("brief-h").textContent=L("brief");$("lbl-urgent").textContent=L("urgent");$("onlyStar").textContent=L("star");$("foot").textContent=L("foot");
   const o=$("sort").options;o[0].text=L("sortP");o[1].text=L("sortD");o[2].text=L("sortA");o[3].text=L("sortN");$("sort").value=st.sort;
   $("l-uz").setAttribute("aria-pressed",st.lang==="uz");$("l-en").setAttribute("aria-pressed",st.lang==="en");
 }
