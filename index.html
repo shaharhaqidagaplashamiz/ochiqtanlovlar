@@ -317,6 +317,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const iso=s=>{const m=String(s??"").match(/\d{4}-\d{2}-\d{2}/);return m?m[0]:null};
 const L=k=>T[st.lang][k];
+const LX=(c,k)=>st.lang==="uz"&&c[k+"_uz"]!=null&&c[k+"_uz"]!==""?c[k+"_uz"]:c[k];
 const fmt=i=>{if(!i)return L("nodate");const [y,m,d]=i.split("-");return d+"."+m+"."+y};
 const pad=n=>String(n).padStart(2,"0");
 // Deadlines are stored as exact UTC moments (…_deadline_at); everything is shown in Tashkent time.
@@ -370,7 +371,7 @@ function card(c){
   const atTxt=k=>{const a=atOf(c,k);return a?fmtAt(a.t):(c[k+"_deadline"]&&!iso(c[k+"_deadline"])?c[k+"_deadline"]:"—")};
   const d=latestDigest();const isNew=d&&Array.isArray(d.new_ids)&&d.new_ids.includes(c.id);
   const p=c.popularity||2;
-  const flags=(c.flags||[]).filter(Boolean);
+  const flags=(LX(c,"flags")||[]).filter(Boolean);
   const row=(k,v)=>v?`<dt>${esc(L(k))}</dt><dd>${esc(v)}</dd>`:"";
   return `<article class="card" id="${esc(c.id)}">
    <div class="dl ${cls}"${n?` data-at="${n.t}" data-b="${cls}" style="--heat:${heat(ms)}"`:""}>
@@ -390,10 +391,10 @@ function card(c){
     <div class="facts">
      <div><span class="eyebrow">${esc(L("reg"))}</span><span>${esc(atTxt("registration"))}</span></div>
      <div><span class="eyebrow">${esc(L("sub"))}</span><span>${esc(atTxt("submission"))}</span></div>
-     <div><span class="eyebrow">${esc(L("fee"))}</span><span>${esc(c.fee_current||"—")}</span></div>
+     <div><span class="eyebrow">${esc(L("fee"))}</span><span>${esc(LX(c,"fee_current")||"—")}</span></div>
     </div>
     <details><summary>${esc(L("more"))}</summary><dl class="more">
-     ${row("prize",c.prize_text)}${row("team",c.team)}${row("deliv",c.deliverables)}${row("language",c.language)}${row("feeAll",c.fee_text)}${row("note",c.deadline_note)}${row("results",iso(c.results_date)?fmt(iso(c.results_date)):c.results_date)}${row("ver",[c.verified,c.check_date].filter(Boolean).join(" · "))}
+     ${row("prize",LX(c,"prize_text"))}${row("team",LX(c,"team"))}${row("deliv",LX(c,"deliverables"))}${row("language",LX(c,"language"))}${row("feeAll",LX(c,"fee_text"))}${row("note",LX(c,"deadline_note"))}${row("results",/^\d{4}-\d{2}-\d{2}$/.test(String(c.results_date||""))?fmt(c.results_date):LX(c,"results_date"))}${row("ver",[LX(c,"verified"),c.check_date].filter(Boolean).join(" · "))}
     </dl></details>
     <div class="actions"><a class="go" href="${esc(c.official_url)}" target="_blank" rel="noopener">${esc(L("site"))} ↗</a>
      ${flags.length?`<span class="flag">⚠ ${esc(flags.join(" · "))}</span>`:""}</div>
