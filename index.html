@@ -541,7 +541,8 @@ renderAll();drawFabric();
   try{
     const r=await fetch("data.json",{cache:"no-store"});if(!r.ok)throw 0;
     const j=await r.json();
-    st.comps=(j.competitions||[]).filter(c=>c.status!=="closed"&&c.status!=="remove");
+    const fin=c=>{const s=atOf(c,"submission")||atOf(c,"registration");return s?s.t:Infinity};
+    st.comps=(j.competitions||[]).filter(c=>c.status!=="closed"&&c.status!=="remove"&&fin(c)>Date.now());
     st.digests=(j.digests||[]).slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,14);
     st.dbOk=true;
   }catch(e){st.dbOk=false}
