@@ -240,12 +240,17 @@ button,select,input{font:inherit;color:inherit}
 
 /* korea — the violet band */
 .kr{--band:var(--violet-2);padding-block:72px 64px;margin-top:72px;scroll-margin-top:60px}
-.kr .eyebrow{color:var(--accent)}
-.kr-h{font-size:clamp(34px,5vw,72px);font-weight:700;letter-spacing:-.045em;line-height:.95;margin:6px 0 18px;text-wrap:balance}
-.kr-src{display:flex;gap:12px;align-items:flex-start;background:var(--raise);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--ink2);margin-bottom:12px}
-.kr-src b.ok{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:#fff;background:var(--ok);padding:2px 8px;border-radius:999px;margin-top:2px}
-.kr-src a{color:var(--accent)}
-.kr-note{color:var(--ink2);max-width:80ch;margin:0 0 20px}
+.kr-h{font-size:clamp(34px,5vw,72px);font-weight:700;letter-spacing:-.045em;line-height:.95;margin:0 0 22px;text-wrap:balance}
+.kr-h em{font-style:normal;color:var(--accent)}
+.kr-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:16px}
+.kf{background:var(--raise);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.kf .eyebrow{color:var(--muted)}
+.kf b{font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+.kf span:last-child{font-size:13px;color:var(--ink2)}
+.kf .kf-ok{color:var(--ok)!important;font-weight:600}
+.kf.warn{background:var(--yellow-2)}
+.kf.good{background:#DDF1E5}
+@media (max-width:760px){.kr-facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px}.kf.warn,.kf.good{grid-column:1/-1;order:-1}.kf{padding:12px 14px}.kf b{font-size:15.5px}}
 .elig{font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
 .elig.no{color:#fff;background:var(--crit)} .elig.joint{color:#5E4200;background:var(--yellow)} .elig.yes{color:#fff;background:var(--ok)} .elig.unk{color:var(--ink2);background:var(--raise2)}
 .kr-ko{font-size:12.5px;color:var(--muted);margin-top:3px}
@@ -341,10 +346,8 @@ footer{--band:var(--ink);color:#fff;padding-block:80px 40px;display:flex;flex-di
   </section>
 
   <section class="kr band" id="korea" aria-labelledby="kr-h">
-    <span class="eyebrow" id="kr-upd"></span>
-    <h2 class="kr-h" id="kr-h">Koreya davlat tanlovlari · Seul</h2>
-    <div class="kr-src" id="kr-src"></div>
-    <p class="kr-note" id="kr-note"></p>
+    <h2 class="kr-h" id="kr-h">Koreya davlat tanlovlari <em>Seul</em></h2>
+    <div class="kr-facts" id="kr-facts"></div>
     <div class="sheetbox"><div class="list" id="kr-list"></div></div>
   </section>
 
@@ -528,10 +531,19 @@ function renderList(){
 }
 function renderKorea(){
   const K=st.korea,sec=$("korea");if(!sec)return;
-  $("kr-h").textContent=L("krTitle");$("kr-note").textContent=L("krNote");
+  const uz=st.lang==="uz";
+  $("kr-h").innerHTML=uz?"Koreya davlat tanlovlari <em>Seul</em>":"Korean government competitions <em>Seoul</em>";
   if(!K){sec.hidden=true;return}sec.hidden=false;
-  const P=K.portal||{};$("kr-upd").textContent=K.updated?L("krUpd")+fmt(K.updated):"";
-  $("kr-src").innerHTML=`<b class="ok">${esc(L("krOk"))}</b><span>${esc(st.lang==="uz"?P.operator_uz:P.operator_en)}<br>${esc(st.lang==="uz"?P.proof_uz:P.proof_en)}</span>`;
+  const openIt=(K.items||[]).filter(x=>x.status!=="closed"),foreign=openIt.filter(x=>x.eligibility==="open_international"||x.eligibility==="joint_with_korean_firm").length;
+  const F=uz?{src:"Manba",srcB:"Seul shahar hokimiyati",srcS:"Rasmiy portal",who:"Kim qatnasha oladi",
+      whoB:foreign?`${foreign} ta tanlovda xorijliklar ham qatnasha oladi`:"Hozircha faqat Koreyadagi byurolar",
+      whoS:"Xorijlik arxitektor koreys byurosi bilan birga qatnashadi",upd:"Yangilangan",updS:"Har kuni tekshiriladi"}
+    :{src:"Source",srcB:"Seoul Metropolitan Government",srcS:"Official portal",who:"Who can enter",
+      whoB:foreign?`${foreign} call(s) open to foreign architects`:"For now, Korean offices only",
+      whoS:"A foreign architect enters jointly with a Korean office",upd:"Updated",updS:"Checked daily"};
+  $("kr-facts").innerHTML=`<div class="kf"><span class="eyebrow">${esc(F.src)}</span><b>${esc(F.srcB)}</b><span class="kf-ok">✓ ${esc(F.srcS)}</span></div>
+   <div class="kf ${foreign?"good":"warn"}"><span class="eyebrow">${esc(F.who)}</span><b>${esc(F.whoB)}</b><span>${esc(F.whoS)}</span></div>
+   <div class="kf"><span class="eyebrow">${esc(F.upd)}</span><b>${esc(K.updated?fmt(K.updated):"—")}</b><span>${esc(F.updS)}</span></div>`;
   const now=Date.now(),at=s=>{const t=Date.parse(s||"");return isNaN(t)?null:t};
   const items=(K.items||[]).map(x=>{const r=at(x.registration_deadline_at),s=at(x.submission_deadline_at);const next=[r,s].filter(t=>t&&t>now).sort((a,b)=>a-b)[0]||null;
     const closed=x.status==="closed"||(!next&&((r&&r<now&&!s)||(s&&s<now)));return {x,next,type:next&&next===r?"reg":"sub",closed}})
