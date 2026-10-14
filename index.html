@@ -50,6 +50,10 @@ button,select,input{font:inherit;color:inherit}
 .loader .nm{font-size:13px;color:var(--ink2);text-align:right;max-width:20ch}
 .loader.done{transform:translateY(-100%)}
 
+/* beta strip — always visible, centred, small */
+.testbar{margin:0 -16px;padding:7px 16px;padding-top:calc(7px + env(safe-area-inset-top,0px));background:var(--ink);color:#F4ECEF;font-size:12.5px;line-height:1.4;text-align:center;display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+.testbar a{color:var(--yellow);text-underline-offset:2px}
+.tb-tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;background:var(--yellow);color:var(--ink);padding:1px 7px;border-radius:999px;flex:none}
 /* top bar — sits on the pink hero, turns paper once scrolled */
 .bar{position:sticky;top:0;z-index:20;background:rgba(255,194,199,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);margin:0 -16px;padding:env(safe-area-inset-top,0px) 16px 0;transition:background .3s,box-shadow .3s}
 .bar.scrolled{background:rgba(251,247,244,.9);box-shadow:0 1px 0 var(--hair)}
@@ -264,6 +268,7 @@ footer{--band:var(--ink);color:#fff;padding-block:80px 40px;display:flex;flex-di
 </head>
 <body>
 
+<div class="testbar" role="note"><span class="tb-tag">BETA</span><span id="tb-t">Sayt sinov rejimida ishlamoqda. Xato yoki noaniqlik ko'rsangiz, <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">Telegram kanalimizga</a> yozing.</span></div>
 <header class="bar" id="bar"><div class="in">
   <a class="mark" href="#top" id="top"><img src="kanal.jpg" alt="" width="28" height="28">Ochiq <span>tanlovlar</span></a>
   <span class="beta" id="beta-t">BETA</span>
@@ -420,6 +425,7 @@ const norm=s=>String(s||"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u0
 function setStatic(){
   document.documentElement.lang=st.lang;
   ["h1","lead","eyebrow"].forEach(k=>$(k).textContent=L(k));
+  $("tb-t").innerHTML=st.lang==="uz"?'Sayt sinov rejimida ishlamoqda. Xato yoki noaniqlik ko\'rsangiz, <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">Telegram kanalimizga</a> yozing.':'This site is in test mode. If you spot a mistake, tell us on <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">our Telegram channel</a>.';
   $("h1").innerHTML=esc(L("h1")).replace(/(shaharsozlik|Urbanism)/,"<em>$1</em>");
   const DK=st.lang==="uz"?["Bosh","Bugun","Tanlovlar","Koreya","Kanal ↗"]:["Top","Today","Calls","Korea","Channel ↗"];
   ["d-top","d-today","d-index","d-korea","d-tg"].forEach((id,i)=>$(id).textContent=DK[i]);
