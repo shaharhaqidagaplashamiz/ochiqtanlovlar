@@ -11,344 +11,391 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="kanal.jpg">
 <style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-</head>
-<body>
 <title>Me'mor Tanlovlar Kuzatuvi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a drawing sheet. Figure-ground city fabric behind the title, scale bar + north arrow as the title block,
-   competitions as a hairline register; each deadline is a dimension line. Contour lines close the sheet. */
+/* Colour system after drasa.uk: a warm paper base with white cards, and whole sections painted in one
+   flat brand colour (hero, channel, Korea), a dark footer, and a floating pill nav.
+   The colours come from the channel logo: blush pink, sunflower, sky blue, violet, tangerine, plum ink. */
 :root{
-  --paper:#f6f6f3; --sheet:#ffffff; --ink:#141514; --ink2:#3d403d; --muted:#7a7e79; --hair:#dcddd8; --fill:#e9eae5;
-  --accent:#2b47b5; --accent-soft:#e6eaf8; --urban:#2e7050;
-  --ok:#2f7a4c; --ok-soft:#e7f2ea; --mid:#9a6a00; --mid-soft:#faf0d6; --crit:#c0352b; --crit-soft:#fbe7e4;
-  --tg:#2481cc; --pink:#f9c9c9; --gold:#c9972e; --gold-ink:#6b4d0e;
+  --pink:#FFC2C7; --pink-2:#FFD9DC; --yellow:#F2D367; --yellow-2:#FBEFC4; --blue:#6CABDE; --blue-2:#DCEBF7;
+  --violet:#A064D9; --violet-2:#EEE2FA; --violet-v:#B07CE3; --pink-v:#FF8C9E; --tang:#EE7047; --tang-2:#FCE0D6;
+  --bg:#FBF7F4; --sheet:#FBF7F4; --raise:#FFFFFF; --raise2:#F4EEEA;
+  --ink:#2B2229; --ink2:#5B5058; --muted:#8B7F88; --hair:#ECE3DE; --line:#DCD1CB;
+  --accent:#7A42B8; --accent-soft:var(--violet-2); --urban:#2D6FA5;
+  --ok:#2E8A57; --mid:#B8800A; --crit:#D93A2B;
+  --ok-soft:#DDF1E5; --mid-soft:#FBEFC4; --crit-soft:#FADAD5;
+  --gold:#F2D367; --gold-ink:#2B2229; --tg:#2F86CB;
   --sans:"Century Gothic","CenturyGothic","Urbanist","Helvetica Neue",Arial,system-ui,sans-serif;
   --mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#121413; --sheet:#181b19; --ink:#ebece8; --ink2:#c4c7c1; --muted:#8b908a; --hair:#2b2f2c; --fill:#202421;
-  --accent:#93a8ff; --accent-soft:#1d2440; --urban:#7fcaa2;
-  --ok:#86d3a3; --ok-soft:#142a1d; --mid:#f0c75e; --mid-soft:#2f2710; --crit:#ff8f84; --crit-soft:#36191a;
-  --tg:#5aa9e6; --pink:#4a2d30; --gold:#e2b955; --gold-ink:#3a2a06; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#121413; --sheet:#181b19; --ink:#ebece8; --ink2:#c4c7c1; --muted:#8b908a; --hair:#2b2f2c; --fill:#202421;
-  --accent:#93a8ff; --accent-soft:#1d2440; --urban:#7fcaa2;
-  --ok:#86d3a3; --ok-soft:#142a1d; --mid:#f0c75e; --mid-soft:#2f2710; --crit:#ff8f84; --crit-soft:#36191a;
-  --tg:#5aa9e6; --pink:#4a2d30; --gold:#e2b955; --gold-ink:#3a2a06; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:0 16px;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1040px;margin:0 auto;padding-block:16px 0;display:flex;flex-direction:column;gap:28px}
-a{color:var(--accent);text-underline-offset:3px}
-button,select{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.sec-h{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--ink);padding-bottom:8px}
-.sec-h h2{font-size:15px;font-weight:700;margin:0;letter-spacing:.01em}
-.sec-h .eyebrow{margin-left:auto}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;margin:0;padding:0 16px calc(84px + env(safe-area-inset-bottom,0px));-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto}
+.mono{font-family:var(--mono)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+/* full-bleed colour band without horizontal overflow */
+.band{background:var(--band);box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax)}
 
-/* beta notice */
-.beta{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;text-align:center;padding:6px 0;border-bottom:1px solid var(--hair);font-size:11px;line-height:1.4;color:var(--muted)}
-.beta b{font-family:var(--mono);font-size:9px;letter-spacing:.14em;font-weight:500;color:var(--paper);background:var(--accent);padding:1px 6px}
-.beta a{color:inherit}
-/* channel strip */
-.chan{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--hair);flex-wrap:wrap}
-.chan img{width:44px;height:44px;border-radius:50%;flex:none;object-fit:cover;background:var(--pink)}
-.chan-t{flex:1 1 220px;min-width:0;display:flex;flex-direction:column}
-.chan-t strong{font-size:15px;font-weight:700}
-.chan-t span{font-size:13px;color:var(--ink2)}
-.tg{display:inline-flex;align-items:center;gap:7px;color:var(--tg);text-decoration:none;font-weight:600;font-size:13.5px;border:1px solid currentColor;padding:6px 14px;border-radius:999px}
-.tg:hover{background:var(--tg);color:#fff}
-.tg svg{width:15px;height:15px;fill:currentColor}
+/* loader */
+.loader{position:fixed;inset:0;z-index:60;background:var(--pink);color:var(--ink);display:flex;align-items:flex-end;justify-content:space-between;padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px));transition:transform .7s cubic-bezier(.7,0,.2,1)}
+.loader .pc{font-family:var(--mono);font-size:clamp(64px,16vw,200px);line-height:.8;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.loader .nm{font-size:13px;color:var(--ink2);text-align:right;max-width:20ch}
+.loader.done{transform:translateY(-100%)}
 
-/* title sheet */
-.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:end;min-height:260px;padding-block:8px 4px}
-.hero-txt{display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
-.hero h1{font-size:clamp(32px,5.2vw,54px);line-height:1.02;font-weight:700;letter-spacing:-.025em;margin:0;text-wrap:balance}
-.hero p{margin:0;color:var(--ink2);max-width:46ch;font-size:15.5px}
-.fabric{position:relative;height:100%;min-height:240px;border:1px solid var(--hair);background:var(--sheet);overflow:hidden}
-.fabric canvas{position:absolute;inset:0;width:100%;height:100%}
-.fabric .prize{position:absolute;left:12px;top:10px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;font-weight:500;color:var(--paper);background:var(--ink);padding:3px 8px}
-.fabric .prize.pop{animation:pop .35s ease-out}
-.fabric .prize.win{background:var(--gold);color:var(--gold-ink)}
-@keyframes pop{0%{transform:translateY(-4px);opacity:.2}100%{transform:none;opacity:1}}
-@media (prefers-reduced-motion:reduce){.fabric .prize.pop{animation:none}}
-.fabric .cap{position:absolute;left:10px;bottom:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted);background:var(--sheet);padding:1px 4px}
-@media (max-width:720px){.hero{grid-template-columns:1fr}.fabric{min-height:170px}}
+/* top bar — sits on the pink hero, turns paper once scrolled */
+.bar{position:sticky;top:0;z-index:20;background:rgba(255,194,199,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);margin:0 -16px;padding:env(safe-area-inset-top,0px) 16px 0;transition:background .3s,box-shadow .3s}
+.bar.scrolled{background:rgba(251,247,244,.9);box-shadow:0 1px 0 var(--hair)}
+.bar .in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:14px;height:56px}
+.mark{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.mark img{width:28px;height:28px;border-radius:50%;object-fit:cover}
+.mark span{color:var(--ink2);font-weight:500}
+.beta{font-family:var(--mono);font-size:10px;letter-spacing:.14em;background:var(--ink);color:var(--pink);padding:2px 8px;border-radius:999px}
+.bar .sp{flex:1}
+.lang{display:flex;background:rgba(255,255,255,.6);border-radius:999px;padding:2px}
+.lang button{border:0;background:transparent;padding:4px 11px;cursor:pointer;font-family:var(--mono);font-size:12px;color:var(--ink2);border-radius:999px}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.tglink{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:13.5px;font-weight:600;color:#fff;background:var(--tg);border-radius:999px;padding:6px 13px}
+.tglink:hover{background:var(--ink)}
+.tglink svg{width:14px;height:14px;fill:currentColor}
+@media (max-width:560px){.tglink b{display:none}.beta{display:none}.mark span{display:none}}
 
-/* title block row */
-.tblock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--hair)}
-.tblock>div{padding:10px 14px 10px 0;display:flex;flex-direction:column;gap:3px;min-width:0}
-.tblock>div+div{padding-left:14px;border-left:1px solid var(--hair)}
-.tblock .v{font-family:var(--mono);font-size:14px}
-.scale{display:flex;align-items:flex-end;gap:0;height:16px;margin-top:2px}
-.scale i{display:block;width:22px;height:6px;border:1px solid var(--ink);border-right:0}
-.scale i:nth-child(odd){background:var(--ink)}
-.scale i:last-child{border-right:1px solid var(--ink)}
-.scale-l{display:flex;justify-content:space-between;width:110px;font-family:var(--mono);font-size:9.5px;color:var(--muted)}
-.lang{display:flex}
-.lang button{border:1px solid var(--ink);background:transparent;padding:1px 10px;cursor:pointer;font-family:var(--mono);font-size:12px}
-.lang button+button{border-left:0}
-.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-@media (max-width:640px){.tblock{grid-template-columns:1fr 1fr}.tblock>div:nth-child(3){border-left:0;padding-left:0}.tblock>div:nth-child(n+3){border-top:1px solid var(--hair)}}
+/* hero — the pink band */
+.hero-band{--band:var(--pink);padding-bottom:8px}
+.hero{padding-block:48px 28px;display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.hero .eyebrow{color:var(--ink2)}
+.hero h1{font-size:clamp(42px,8.4vw,128px);line-height:.92;letter-spacing:-.045em;font-weight:700;margin:0;text-wrap:balance;max-width:14ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:end}
+.lead{font-size:17px;color:var(--ink2);max-width:44ch;margin:0}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kpi{padding:14px 14px 12px;display:flex;flex-direction:column;gap:6px;min-width:0;background:var(--raise);border-radius:14px}
+.kpi:nth-child(2){background:var(--yellow)} .kpi:nth-child(3){background:var(--ink);color:#fff}
+.kpi:nth-child(3) .eyebrow{color:var(--pink)}
+.kpi .eyebrow{color:var(--ink2)}
+.kpi b{font-size:clamp(30px,4vw,48px);font-weight:600;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+@media (max-width:760px){.hero-row{grid-template-columns:minmax(0,1fr)}}
 
-/* brief */
-.brief{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
-.brief>div{min-width:0}
-@media (max-width:760px){.brief{grid-template-columns:minmax(0,1fr)}}
-.brief-text{margin:12px 0 0;white-space:pre-line;color:var(--ink2);max-width:62ch}
-.brief select{border:0;border-bottom:1px solid var(--ink);background:transparent;padding:0 2px;font-family:var(--mono);font-size:12px;margin-left:auto}
-.urgent{display:flex;flex-direction:column;margin-top:4px}
-.urgent a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;color:var(--ink);padding:9px 0;border-bottom:1px solid var(--hair);min-width:0;align-items:baseline}
-.urgent a:hover .un{text-decoration:underline}
-.urgent .un{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;font-weight:500}
-.urgent .tick{font-family:var(--mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.note{font-size:13px;color:var(--muted);padding-top:10px}
+/* reel — map on the pink, medal in sunflower */
+.reel{position:relative;height:clamp(220px,34vw,380px);--hair:#EE9AA4;--muted:#C27380;--accent:#7A42B8;--sheet:var(--pink)}
+.reel canvas{position:absolute;inset:0;width:100%;height:100%}
+.reel .cap{position:absolute;left:0;bottom:10px}
 
-/* register controls */
-.tabs{display:flex;gap:0;border-bottom:1px solid var(--hair);overflow-x:auto}
-.tabs button{border:0;background:transparent;padding:10px 18px 10px 0;margin-right:18px;cursor:pointer;display:flex;align-items:baseline;gap:8px;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;color:var(--muted)}
-.tabs .n{font-family:var(--mono);font-size:12px}
-.tabs .l{font-weight:600;font-size:15px}
-.tabs button[aria-pressed="true"]{border-bottom-color:var(--ink);color:var(--ink)}
-.filters{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;padding-top:12px}
+/* channel — the sky-blue band */
+.chan{--band:var(--blue);display:flex;align-items:center;gap:16px;padding:28px 0;flex-wrap:wrap}
+.chan img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 3px #fff}
+.chan-t{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:2px}
+.chan-t strong{font-size:18px;letter-spacing:-.01em}
+.chan-t span{font-size:14px;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:14px;padding:10px 18px;border-radius:999px;background:var(--ink);color:#fff;border:0;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+.btn svg{width:15px;height:15px;fill:currentColor}
+
+/* section headings: big two-tone like the reference */
+.sh{font-size:clamp(34px,5vw,72px);font-weight:700;letter-spacing:-.045em;line-height:.95;margin:0}
+.sh em{font-style:normal;color:var(--muted)}
+
+/* today — two white cards on paper */
+.today{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;padding-block:56px 40px}
+@media (max-width:820px){.today{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--raise);border-radius:18px;padding:20px 22px}
+.sec-h{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.sec-h h2{font-size:20px;font-weight:700;letter-spacing:-.01em;margin:0}
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--raise2);border-radius:999px;padding:3px 9px;color:var(--ink2)}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--tang)}
+.sec-h select{margin-left:auto;background:var(--raise2);border:0;border-radius:999px;padding:4px 10px;font-family:var(--mono);font-size:12px}
+.brief-text{white-space:pre-line;color:var(--ink2);margin:8px 0 0;max-width:62ch}
+.urgent a{display:grid;grid-template-columns:10px minmax(0,1fr) auto;gap:12px;align-items:center;text-decoration:none;padding:11px 0;border-bottom:1px solid var(--hair)}
+.urgent a:last-child{border-bottom:0}
+.urgent a:hover .un{color:var(--accent)}
+.urgent .dot{width:8px;height:8px;border-radius:50%}
+.urgent .un{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
+.urgent .tick{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{color:var(--muted);font-size:13.5px;padding-top:12px;display:block}
+
+/* finder */
+.finder{position:relative;padding:8px 0 14px;display:flex;flex-direction:column;gap:14px}
+.find-h{display:flex;align-items:flex-end;gap:12px}
+.find-h h2{font-size:clamp(34px,5vw,72px);font-weight:700;letter-spacing:-.045em;line-height:.95;margin:0}
+.find-h .count{margin-left:auto;padding-bottom:6px}
+.search{display:flex;align-items:center;gap:10px;border-radius:999px;padding:0 18px;background:var(--raise);box-shadow:inset 0 0 0 1px var(--hair)}
+.search:focus-within{box-shadow:inset 0 0 0 2px var(--accent)}
+.search svg{width:18px;height:18px;flex:none;stroke:var(--ink2);fill:none;stroke-width:2;stroke-linecap:round}
+.search input{flex:1;min-width:0;border:0;background:transparent;padding:14px 0;font-size:16px;outline:none}
+.search input::placeholder{color:var(--muted)}
+.search .clr{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:18px;padding:4px}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;align-items:center}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{border:0;background:var(--raise);border-radius:999px;padding:8px 15px;cursor:pointer;white-space:nowrap;display:inline-flex;gap:8px;align-items:baseline;font-weight:600;color:var(--ink)}
+.tabs button:hover{background:var(--raise2)}
+.tabs button .n{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-weight:400}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.tabs button[aria-pressed="true"] .n{color:var(--pink)}
+.tabs .kr-jump{white-space:nowrap;color:var(--ink);background:var(--violet-2);text-decoration:none;font-weight:600;font-size:13.5px;padding:8px 14px;border-radius:999px;margin-left:auto}
+.tabs .kr-jump:hover{background:var(--violet);color:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
 .chipset{display:flex;flex-wrap:wrap;gap:4px}
-.chip{border:1px solid var(--hair);background:transparent;padding:3px 10px;font-size:13px;cursor:pointer;color:var(--ink2)}
-.chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
-.filters select{border:0;border-bottom:1px solid var(--ink);background:transparent;padding:2px 2px;font-size:13px;margin-left:auto}
-.meta-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding-top:10px}
-.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);align-items:center}
-.legend i{display:inline-block;width:18px;height:3px;margin-right:6px;vertical-align:middle}
+.chip{border:0;background:transparent;box-shadow:inset 0 0 0 1px var(--line);border-radius:999px;padding:4px 12px;font-size:13px;cursor:pointer;color:var(--ink2)}
+.chip:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+.chip[aria-pressed="true"]{background:var(--violet-2);box-shadow:none;color:var(--accent);font-weight:600}
+.filters select{margin-left:auto;background:var(--raise);border:0;box-shadow:inset 0 0 0 1px var(--hair);border-radius:999px;padding:6px 12px;font-size:13px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
 .legend .lg{background:var(--ok)} .legend .ly{background:var(--mid)} .legend .lr{background:var(--crit)}
-.count{font-family:var(--mono);font-size:12px;color:var(--muted)}
+@media (max-width:640px){.filters select{margin-left:0}}
 
-/* register entries */
-.list{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
-.card{display:grid;grid-template-columns:184px minmax(0,1fr);border-bottom:1px solid var(--hair);min-width:0;scroll-margin-top:16px}
-.dl{padding:18px 16px 18px 12px;display:flex;flex-direction:column;gap:6px;color:var(--muted);border-right:1px solid var(--hair)}
-.dl .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
-.dl .dd{display:flex;align-items:baseline;gap:6px}
-.dl .d{font-size:46px;font-weight:700;line-height:.9;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.dl .u{font-size:13px;font-weight:600}
-.dl .clock{font-family:var(--mono);font-size:21px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
-.dl .clock small{display:block;font-size:9px;letter-spacing:.16em;margin-top:5px;opacity:.75}
-.dim{position:relative;height:9px;margin-top:4px}
-.dim::before{content:"";position:absolute;left:0;right:0;top:4px;border-top:1px solid currentColor;opacity:.35}
-.dim::after{content:"";position:absolute;left:0;top:0;height:9px;border-left:1px solid currentColor;opacity:.6}
-.dim span{position:absolute;left:0;top:3px;height:3px;background:currentColor}
-.dim span::after{content:"";position:absolute;right:-1px;top:-3px;height:9px;border-right:1px solid currentColor}
-.dl .date{font-family:var(--mono);font-size:11.5px;line-height:1.4;color:var(--ink2)}
-.dl .approx{font-size:11px}
-.dl.g{color:var(--ok)} .dl.y{color:var(--mid)} .dl.r{color:var(--crit)}
-.dl.g .d,.dl.y .d,.dl.r .d{color:currentColor}
-/* red band: soft gradient that deepens a little as --heat goes 0 → 1 over the last 10 days */
-.dl.r{--tone:var(--crit-soft);background:linear-gradient(90deg,transparent,var(--tone))}
-@supports (background:color-mix(in srgb,red 10%,blue)){.dl.r{--tone:color-mix(in srgb,var(--crit) calc(var(--heat,0) * 14%),var(--crit-soft))}}
-.dl.r .clock .hms{animation:blink 1s steps(2,start) infinite}
-@keyframes blink{50%{opacity:.5}}
-@media (prefers-reduced-motion:reduce){.dl.r .clock .hms{animation:none}}
-.body{padding:18px 0 18px 22px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.top{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
-.card h3{font-size:19px;line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:0;text-wrap:balance}
-.org{color:var(--muted);font-size:13px;margin-top:3px}
-.star{border:0;background:transparent;cursor:pointer;font-size:18px;line-height:1;color:var(--muted);padding:2px}
-.star[aria-pressed="true"]{color:var(--ink)}
-.tags{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--ink2);align-items:center}
-.tags span{display:inline-flex;align-items:center;gap:5px}
-.tags span::before{content:"";width:5px;height:5px;background:var(--hair);display:inline-block}
-.tags .pop::before,.tags .newt::before{display:none}
-.tags .urb{color:var(--urban);font-weight:600} .tags .urb::before{background:var(--urban)}
-.tags .free{color:var(--accent);font-weight:600} .tags .free::before{background:var(--accent)}
-.tags .ex{font-weight:600} .tags .ex::before{background:var(--ink)}
-.tags .pop{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--ink)}
-.tags .pop .off{color:var(--hair)}
-.tags .pop em{font-style:normal;font-family:var(--sans);letter-spacing:0;color:var(--muted)}
-.tags .newt{background:var(--accent);color:var(--paper);padding:0 6px;font-weight:600;font-size:11.5px}
-.summary{margin:0;max-width:72ch}
-.points{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:2px;color:var(--ink2);max-width:72ch}
-.points li::marker{content:"– ";color:var(--muted)}
-.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding-top:4px}
-.facts div{min-width:0;display:flex;flex-direction:column;gap:1px}
+/* index — white sheet holding the rows */
+.ihead{display:grid;grid-template-columns:44px minmax(0,1fr) 190px 150px 220px 24px;gap:16px;padding:14px 22px 10px;border-bottom:1px solid var(--hair)}
+.sheetbox{background:var(--raise);border-radius:20px;overflow:hidden}
+.list{display:flex;flex-direction:column}
+.row{border-bottom:1px solid var(--hair);scroll-margin-top:80px}
+.row:last-child{border-bottom:0}
+.rh{display:grid;grid-template-columns:44px minmax(0,1fr) 190px 150px 220px 24px;gap:16px;align-items:center;padding:20px 22px;cursor:pointer;width:100%;text-align:left;background:transparent;border:0;transition:background .2s}
+/* each call carries a tone from the logo palette: a soft wash on hover, the full colour once opened */
+.row{--tone:var(--pink);--tone-2:var(--pink-2);transition:background .35s,margin .35s,border-radius .35s}
+.row.t-g{--tone:#8ED3A8;--tone-2:#E2F4E8}
+.row.t-y{--tone:var(--yellow);--tone-2:var(--yellow-2)}
+.row.t-r{--tone:linear-gradient(120deg,#FFB3AA 0%,#FF7A6B 55%,#F2503F 100%);--tone-2:#FCE3DF}
+.rh:hover{background:var(--tone-2)}
+.row.open{background:var(--tone);border-radius:18px;margin:6px;border-bottom:0}
+.row.open + .row{border-top:0}
+.row.open .rh,.row.open .rh:hover{background:transparent}
+.row.open .rh .org,.row.open .rh .no{color:var(--ink);opacity:.72}
+.row.open .rh .fee{color:var(--ink)}
+.row.open .dl{background:#fff}
+
+.row.open .pill{background:rgba(255,255,255,.75)}
+.row.open .rb .summary,.row.open .points{color:var(--ink)}
+.row.open .more dt{color:var(--ink);opacity:.7}.row.open .more dd{color:var(--ink)}
+.row.open .stars{color:var(--ink)}.row.open .flag{color:var(--ink);font-weight:600}.row.open .stars .off{color:rgba(43,34,41,.25)}.row.open .stars em{color:var(--ink);opacity:.7}
+.row.open .btn.ghost,.row.open .star{background:#fff;box-shadow:none}
+.rh .no{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.rh .nm{min-width:0}
+.rh h3{font-size:clamp(18px,1.9vw,24px);font-weight:600;letter-spacing:-.015em;line-height:1.15;margin:0;text-wrap:balance}
+.rh .org{font-size:13px;color:var(--muted);margin-top:4px}
+.rh .tg{display:flex;flex-wrap:wrap;gap:4px}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;padding:2px 9px;border-radius:999px;background:var(--raise2);color:var(--ink2);white-space:nowrap}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--pink-v)}
+.pill.k-award::before{background:var(--violet-v)}.pill.k-real_project::before{background:var(--tang)}
+.pill.urb{background:var(--blue-2);color:#1F5785}.pill.urb::before{background:var(--blue)}
+.pill.free{background:var(--yellow-2);color:#6E5200}.pill.free::before{background:#E0B93A}
+.pill.new{background:var(--tang);color:#fff;font-weight:600}.pill.new::before{background:#fff}
+.rh .fee{font-family:var(--mono);font-size:13px;color:var(--ink2);overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* countdown: a tinted tile — big day count, a solid clock pill, then the exact date */
+.dl{display:flex;flex-direction:column;gap:6px;align-items:flex-start;background:var(--raise2);border-radius:14px;padding:10px 12px 9px;min-width:0}
+.dl .top{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.dl .dot{width:9px;height:9px;border-radius:50%;background:var(--muted);flex:none;align-self:center}
+.dl .d{font-size:34px;font-weight:700;letter-spacing:-.04em;line-height:.95;font-variant-numeric:tabular-nums}
+.dl .u{font-size:12.5px;font-weight:600;color:var(--ink2)}
+.dl .hms{font-family:var(--mono);font-size:15px;font-weight:500;letter-spacing:.04em;color:#fff;background:var(--ink);border-radius:8px;padding:3px 9px;font-variant-numeric:tabular-nums;line-height:1.3}
+.dl .when{font-family:var(--mono);font-size:11px;color:var(--ink2)}
+.dl.g{background:var(--ok-soft)} .dl.g .dot{background:var(--ok)} .dl.g .d{color:var(--ok)}
+.dl.y{background:var(--mid-soft)} .dl.y .dot{background:var(--mid)} .dl.y .d{color:#8F6300}
+.dl.r{background:var(--crit-soft)} .dl.r .dot{background:var(--crit);box-shadow:0 0 0 4px rgba(217,58,43,.18)} .dl.r .d{color:var(--crit)} .dl.r .hms{background:var(--crit)}
+@media (prefers-reduced-motion:no-preference){.dl.r .dot{animation:pulse 1.4s ease-in-out infinite}}
+@keyframes pulse{50%{box-shadow:0 0 0 7px transparent}}
+.arr{width:30px;height:30px;padding:6px;border-radius:50%;background:var(--raise2);stroke:var(--ink);fill:none;stroke-width:1.8;transition:transform .25s,background .2s}
+.rh:hover .arr{background:var(--pink)}
+.row.open .arr{transform:rotate(45deg);background:var(--ink);stroke:#fff}
+.rb{display:none;padding:8px 22px 28px 82px}
+.row.open .rb{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px}
+.rb .summary{margin:0 0 12px;font-size:16px;max-width:62ch}
+.points{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;color:var(--ink2)}
+.stars{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:#D9A800;margin-bottom:12px}
+.stars .off{color:var(--line)} .stars em{font-style:normal;font-family:var(--sans);letter-spacing:0;color:var(--muted);margin-left:6px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:14px}
+.facts div{background:var(--raise);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:3px;min-width:0}
 .facts span{font-family:var(--mono);font-size:13px;overflow-wrap:anywhere}
-details summary{cursor:pointer;color:var(--ink2);font-size:13px;font-weight:600;list-style:none;display:inline-flex;gap:6px;align-items:center}
-details summary::-webkit-details-marker{display:none}
-details summary::before{content:"+";font-family:var(--mono);width:12px}
-details[open] summary::before{content:"−"}
-.more{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 16px;margin:10px 0 0;font-size:13.5px;border-left:1px solid var(--hair);padding-left:14px}
+.more{display:grid;grid-template-columns:130px minmax(0,1fr);gap:8px 14px;margin:0;font-size:13.5px}
 .more dt{color:var(--muted);font-size:12px}
-.more dd{margin:0;min-width:0;overflow-wrap:anywhere}
-.actions{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
-.go{display:inline-flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;border-bottom:1.5px solid var(--ink);padding-bottom:1px}
-.go:hover{color:var(--accent);border-color:var(--accent)}
-.flag{font-size:12.5px;color:var(--mid)}
-@media (max-width:640px){
- .card{grid-template-columns:1fr}
- .dl{border-right:0;border-bottom:1px dashed var(--hair);display:grid;grid-template-columns:auto 1fr;grid-template-areas:"lbl lbl" "dd clock" "dim dim" "date date";gap:6px 14px;padding:16px 0 12px}
- .dl .lbl{grid-area:lbl}.dl .dd{grid-area:dd}.dl .clock{grid-area:clock;text-align:right;font-size:24px}.dl .dim{grid-area:dim}.dl .date{grid-area:date}.dl .approx{grid-column:1/-1}
- .dl.r{background:linear-gradient(180deg,transparent,var(--tone))}
- .body{padding:14px 0 18px}
- .facts{grid-template-columns:1fr 1fr}
- .more{grid-template-columns:1fr}.more dd{margin-bottom:6px}}
-.empty{border-bottom:1px solid var(--hair);padding:36px 0;color:var(--muted)}
+.more dd{margin:0;min-width:0;overflow-wrap:anywhere;color:var(--ink2)}
+.acts{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
+.star{border:0;background:var(--raise);border-radius:999px;padding:10px 16px;cursor:pointer;font-size:13.5px;font-weight:600}
+.star[aria-pressed="true"]{background:var(--yellow)}
+.flag{font-size:12.5px;color:#9A5A00;margin-top:10px}
+.empty{padding:48px 22px;color:var(--muted);font-size:16px}
+@media (max-width:980px){
+  .ihead{display:none}
+  .rh{grid-template-columns:32px minmax(0,1fr) 30px;grid-template-areas:"no nm ar" ". tg tg" ". fee dl";row-gap:10px;padding:18px 16px}
+  .rh .no{grid-area:no}.rh .nm{grid-area:nm}.rh .tg{grid-area:tg}.rh .fee{grid-area:fee;align-self:center}.rh .dl{grid-area:dl;justify-self:end;text-align:right}.rh .dl .top{justify-content:flex-end}.rh .arr{grid-area:ar}
+  .row:not(.open) .rh:not(:hover):has(.dl.r){background:linear-gradient(180deg,transparent 45%,var(--crit-soft))}
+  .row.open{margin:4px}
+  .rb{padding:4px 16px 24px}.row.open .rb{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){.rh{grid-template-areas:"no nm ar" ". tg tg" ". dl dl" ". fee fee"}.rh .dl{justify-self:stretch;text-align:left;flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 10px}.rh .dl .when{flex-basis:100%}.rh .dl .top{justify-content:flex-start}.rh .fee{font-size:12px;color:var(--muted)}
+  .facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.more{grid-template-columns:minmax(0,1fr)}.more dd{margin-bottom:6px}.sheetbox{border-radius:16px;margin-inline:-6px}}
 
-/* korea section */
-.kr{display:flex;flex-direction:column;gap:14px;scroll-margin-top:16px}
-.kr-src{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--hair);background:var(--sheet);padding:12px 14px;font-size:13.5px;color:var(--ink2)}
-.kr-src b.ok{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--paper);background:var(--urban);padding:2px 7px;margin-top:2px}
-.kr-src a{white-space:nowrap}
-.kr-note{font-size:13.5px;color:var(--ink2);margin:0;max-width:75ch}
-.kr-list{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
-.kr-item{display:grid;grid-template-columns:184px minmax(0,1fr);border-bottom:1px solid var(--hair);scroll-margin-top:16px}
-.kr-item.closed{opacity:.6}
-.kr-dl{padding:16px 16px 16px 12px;border-right:1px solid var(--hair);display:flex;flex-direction:column;gap:6px;color:var(--muted)}
-.kr-dl .tick{font-family:var(--mono);font-size:18px;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
-.kr-dl .date{font-family:var(--mono);font-size:11.5px;color:var(--ink2)}
-.kr-body{padding:16px 0 16px 22px;display:flex;flex-direction:column;gap:9px;min-width:0}
-.kr-body h3{font-size:18px;line-height:1.25;font-weight:700;margin:0;text-wrap:balance}
-.kr-ko{font-size:12.5px;color:var(--muted);margin-top:2px}
-.elig{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:2px 8px;border:1px solid currentColor}
-.elig.no{color:var(--crit)} .elig.joint{color:var(--mid)} .elig.yes{color:var(--ok)} .elig.unk{color:var(--muted)}
-.kr-links{display:flex;flex-wrap:wrap;gap:8px 18px}
-.kr-link{font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink)}
-.kr-jump{margin-left:auto;font-size:13px;font-weight:600;white-space:nowrap;align-self:center;color:var(--accent);text-decoration:none;padding:10px 0}
-@media (max-width:640px){.kr-item{grid-template-columns:1fr}.kr-dl{border-right:0;border-bottom:1px dashed var(--hair);padding:12px 0}.kr-body{padding:12px 0 16px}.kr-src{flex-direction:column}}
-/* closing contours */
-footer{position:relative;margin-top:24px;padding-block:28px 32px;border-top:1px solid var(--ink);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:12.5px;color:var(--muted);overflow:hidden}
-footer svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;pointer-events:none}
-footer svg path{fill:none;stroke:var(--hair);stroke-width:1}
-footer>*{position:relative}
+/* korea — the violet band */
+.kr{--band:var(--violet-2);padding-block:72px 64px;margin-top:72px;scroll-margin-top:60px}
+.kr .eyebrow{color:var(--accent)}
+.kr-h{font-size:clamp(34px,5vw,72px);font-weight:700;letter-spacing:-.045em;line-height:.95;margin:6px 0 18px;text-wrap:balance}
+.kr-src{display:flex;gap:12px;align-items:flex-start;background:var(--raise);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--ink2);margin-bottom:12px}
+.kr-src b.ok{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:#fff;background:var(--ok);padding:2px 8px;border-radius:999px;margin-top:2px}
+.kr-src a{color:var(--accent)}
+.kr-note{color:var(--ink2);max-width:80ch;margin:0 0 20px}
+.elig{font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.elig.no{color:#fff;background:var(--crit)} .elig.joint{color:#5E4200;background:var(--yellow)} .elig.yes{color:#fff;background:var(--ok)} .elig.unk{color:var(--ink2);background:var(--raise2)}
+.kr-ko{font-size:12.5px;color:var(--muted);margin-top:3px}
+.row.closed{opacity:.55}
+
+/* footer — plum ink band */
+footer{--band:var(--ink);color:#fff;padding-block:80px 40px;display:flex;flex-direction:column;gap:24px}
+.big{font-size:clamp(40px,9vw,140px);font-weight:700;letter-spacing:-.05em;line-height:.9;text-decoration:none;color:var(--pink)}
+.big:hover{color:var(--yellow)}
+.fnote{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:#BFB3BC;font-size:13px}
+
+/* floating pill nav */
+.dock{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:30;display:flex;gap:2px;background:#fff;border-radius:999px;padding:4px;box-shadow:0 6px 24px rgba(43,34,41,.16),0 0 0 1px var(--hair);max-width:calc(100vw - 24px)}
+.dock a{text-decoration:none;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;white-space:nowrap;color:var(--ink)}
+.dock a:hover{background:var(--raise2)}
+.dock a.on{background:var(--ink);color:#fff}
+@media (max-width:420px){.dock a{padding:8px 10px;font-size:12.5px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
+</head>
+<body>
+
+<header class="bar" id="bar"><div class="in">
+  <a class="mark" href="#top" id="top"><img src="kanal.jpg" alt="" width="28" height="28">Ochiq <span>tanlovlar</span></a>
+  <span class="beta" id="beta-t">BETA</span>
+  <span class="sp"></span>
+  <div class="lang" role="group" aria-label="Language"><button id="l-uz" aria-pressed="true">UZ</button><button id="l-en" aria-pressed="false">EN</button></div>
+  <a class="tglink" href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 19.8c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.3 1.1 11.8c-1.1-.3-1.1-1.1.2-1.6L20.5 2.8c.9-.3 1.7.2 1.4 1.5z"/></svg><b>Telegram</b></a>
+</div></header>
 
 <div class="wrap">
-  <div class="beta" role="note"><b>BETA</b><span id="beta-t">Sayt sinov rejimida ishlamoqda. Xato yoki taklif bo'lsa, <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">kanalga</a> yozing.</span></div>
-  <aside class="chan" aria-label="Telegram">
-    <img src="kanal.jpg" alt="Shahar haqida gaplashamiz" width="44" height="44">
-    <div class="chan-t">
-      <strong>Shahar haqida gaplashamiz</strong>
-      <span id="chan-sub">Birgalikda, aslida insonlar uchun qulay bo'lgan shahar qanday bo'lishi kerakligi haqida gaplashamiz!</span>
+ <div class="band hero-band">
+  <section class="hero">
+    <span class="eyebrow" id="eyebrow">Ochiq tanlovlar reyestri</span>
+    <h1 id="h1">Arxitektura va shaharsozlik tanlovlari</h1>
+    <div class="hero-row">
+      <p class="lead" id="lead">O'zbekistonlik arxitektor va shaharsozlar qatnasha oladigan ochiq tanlov va mukofotlar. Har kuni 09:00 da yangilanadi.</p>
+      <div class="kpis">
+        <div class="kpi"><b id="openN">—</b><span class="eyebrow" id="lbl-open">Ochiq tanlovlar</span></div>
+        <div class="kpi"><b id="ctryN">—</b><span class="eyebrow" id="lbl-ctry">Davlat</span></div>
+        <div class="kpi"><b id="soonN">—</b><span class="eyebrow" id="lbl-soon">14 kunda tugaydi</span></div>
+      </div>
     </div>
-    <a class="tg" href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 19.8c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.3 1.1 11.8c-1.1-.3-1.1-1.1.2-1.6L20.5 2.8c.9-.3 1.7.2 1.4 1.5z"/></svg><span id="chan-btn">Kanalga qo'shilish</span></a>
+  </section>
+
+  <div class="reel" aria-hidden="true">
+    <canvas id="fabric"></canvas>
+    <span class="prize" id="prize" hidden></span>
+    <span class="cap eyebrow" id="cap" hidden></span>
+  </div>
+ </div>
+
+  <aside class="chan band" aria-label="Telegram">
+    <img src="kanal.jpg" alt="Shahar haqida gaplashamiz" width="46" height="46">
+    <div class="chan-t"><strong>Shahar haqida gaplashamiz</strong><span id="chan-sub">Birgalikda, aslida insonlar uchun qulay bo'lgan shahar qanday bo'lishi kerakligi haqida gaplashamiz!</span></div>
+    <a class="btn" href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 19.8c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.3 1.1 11.8c-1.1-.3-1.1-1.1.2-1.6L20.5 2.8c.9-.3 1.7.2 1.4 1.5z"/></svg><span id="chan-btn">Kanalga qo'shilish</span></a>
   </aside>
 
-  <header>
-    <div class="hero">
-      <div class="hero-txt">
-        <span class="eyebrow" id="eyebrow">Ochiq tanlovlar reyestri</span>
-        <h1 id="h1">Arxitektura va shaharsozlik tanlovlari</h1>
-        <p id="lead">O'zbekistonlik arxitektor va shaharsozlar qatnasha oladigan ochiq tanlov va mukofotlar. Har kuni 09:00 da yangilanadi.</p>
-      </div>
-      <div class="fabric" aria-hidden="true">
-        <canvas id="fabric"></canvas>
-        <span class="prize" id="prize" hidden>1-O'RIN</span>
-        <span class="cap" id="cap" hidden>G'OLIB LOYIHA · № 001</span>
-      </div>
-    </div>
-    <div class="tblock">
-      <div><span class="eyebrow" id="lbl-upd">Yangilangan</span><span class="v" id="upd">—</span></div>
-      <div><span class="eyebrow" id="lbl-open">Ochiq tanlovlar</span><span class="v" id="openN">—</span></div>
-      <div><span class="eyebrow" id="lbl-tz">Vaqt</span><span class="v">UTC+5 · Toshkent</span></div>
-      <div><span class="eyebrow" id="lbl-lang">Til</span>
-        <div class="lang" role="group" aria-label="Language"><button id="l-uz" aria-pressed="true">UZ</button><button id="l-en" aria-pressed="false">EN</button></div>
-      </div>
-    </div>
-  </header>
-
-  <section class="brief" aria-labelledby="brief-h">
-    <div>
+  <section class="today" id="today">
+    <div class="card">
       <div class="sec-h"><h2 id="brief-h">Bugungi xabar</h2><select id="brief-day" aria-label="Kun"></select></div>
       <p class="brief-text" id="brief-text">Xabar yuklanmoqda…</p>
     </div>
-    <div>
+    <div class="card">
       <div class="sec-h"><h2 id="lbl-urgent">Muddati 14 kun ichida tugaydi</h2></div>
       <div class="urgent" id="urgent"></div>
     </div>
   </section>
 
-  <section aria-label="Tanlovlar">
-    <nav class="tabs" id="stats" aria-label="Guruhlar"></nav>
-    <div class="filters">
-      <div class="chipset" id="kinds"></div>
-      <div class="chipset" id="subs"></div>
-      <button class="chip" id="onlyStar" aria-pressed="false">★ Saqlanganlar</button>
-      <select id="sort" aria-label="Saralash">
-        <option value="pop">Mashhurlik bo'yicha</option>
-        <option value="deadline">Muddat bo'yicha</option>
-        <option value="added">Yangi qo'shilgan</option>
-        <option value="name">Nomi bo'yicha</option>
-      </select>
+  <section id="index" aria-label="Tanlovlar">
+    <div class="finder">
+      <div class="find-h"><h2 id="find-h">Barcha tanlovlar</h2><span class="count eyebrow" id="count"></span></div>
+      <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off" placeholder="Qidirish: tanlov nomi, tashkilotchi yoki shahar"><button class="clr" id="q-clr" type="button" aria-label="Tozalash" hidden>×</button></label>
+      <nav class="tabs" id="stats" aria-label="Guruhlar"></nav>
+      <div class="filters">
+        <div class="chipset" id="kinds"></div>
+        <div class="chipset" id="subs"></div>
+        <button class="chip" id="onlyStar" aria-pressed="false">★ Saqlanganlar</button>
+        <select id="sort" aria-label="Saralash">
+          <option value="pop">Mashhurlik bo'yicha</option>
+          <option value="deadline">Muddat bo'yicha</option>
+          <option value="added">Yangi qo'shilgan</option>
+          <option value="name">Nomi bo'yicha</option>
+        </select>
+      </div>
+      <div class="legend" id="legend"></div>
     </div>
-    <div class="meta-row"><div class="legend" id="legend"></div><div class="count" id="count"></div></div>
+    <div class="sheetbox">
+    <div class="ihead eyebrow" id="ihead"><span>№</span><span id="ih-n">Tanlov</span><span id="ih-t">Turi</span><span id="ih-f">Badal</span><span id="ih-d">Muddatgacha</span><span></span></div>
+    <div class="list" id="list"><div class="empty">Tanlovlar yuklanmoqda…</div></div>
+    </div>
   </section>
 
-  <main class="list" id="list">
-    <div class="empty" id="empty">Tanlovlar ro'yxati yuklanmoqda. Bu yerda har bir tanlovning muddati, badali, shartlari va rasmiy sayti chiqadi.</div>
-  </main>
-
-  <section class="kr" id="korea" aria-labelledby="kr-h">
-    <div class="sec-h"><h2 id="kr-h">Koreya davlat tanlovlari · Seul</h2><span class="eyebrow" id="kr-upd"></span></div>
+  <section class="kr band" id="korea" aria-labelledby="kr-h">
+    <span class="eyebrow" id="kr-upd"></span>
+    <h2 class="kr-h" id="kr-h">Koreya davlat tanlovlari · Seul</h2>
     <div class="kr-src" id="kr-src"></div>
     <p class="kr-note" id="kr-note"></p>
-    <div class="kr-list" id="kr-list"></div>
+    <div class="sheetbox"><div class="list" id="kr-list"></div></div>
   </section>
 
-  <footer>
-    <svg viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0 96 C140 70 260 112 400 86 S660 60 780 82 S940 100 1000 78"/>
-      <path d="M0 108 C150 86 270 120 410 98 S670 76 790 96 S945 112 1000 92"/>
-      <path d="M0 84 C130 54 250 100 390 72 S650 44 770 66 S935 88 1000 62"/>
-      <path d="M0 72 C120 40 240 88 380 58 S640 28 760 50 S930 76 1000 46"/>
-    </svg>
-    <span id="foot">Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing.</span>
-    <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">Shahar haqida gaplashamiz · t.me/shaharhaqidagaplashamiz</a>
+  <footer class="band">
+    <a class="big" href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">Shahar haqida gaplashamiz ↗</a>
+    <div class="fnote"><span id="foot">Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing.</span><span id="upd-f"></span></div>
   </footer>
 </div>
-
+<nav class="dock" id="dock" aria-label="Bo'limlar">
+  <a href="#top" id="d-top">Bosh</a><a href="#today" id="d-today">Bugun</a><a href="#index" id="d-index">Tanlovlar</a><a href="#korea" id="d-korea">Koreya</a><a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener" id="d-tg">Kanal ↗</a>
+</nav>
 <script>
 (function(){
 const T={
  uz:{h1:"Arxitektura va shaharsozlik tanlovlari",lead:"O'zbekistonlik arxitektor va shaharsozlar qatnasha oladigan ochiq tanlov va mukofotlar. Har kuni 09:00 da yangilanadi.",eyebrow:"Ochiq tanlovlar reyestri",
-  upd:"Yangilangan",open:"Ochiq tanlovlar",lang:"Til",tz:"Vaqt",brief:"Bugungi xabar",urgent:"Muddati 14 kun ichida tugaydi",
+  open:"Ochiq tanlovlar",ctry:"Davlat",soon:"14 kunda tugaydi",brief:"Bugungi xabar",urgent:"Muddati 14 kun ichida tugaydi",
+  findH:"Barcha tanlovlar",qPh:"Qidirish: tanlov nomi, tashkilotchi yoki shahar",clr:"Tozalash",ihN:"Tanlov",ihT:"Turi",ihF:"Badal (hozir)",ihD:"Muddatgacha",
   all:"Hammasi",urbanism:"Shaharsozlik",free:"Tekin",paid:"Pullik",
   k_all:"Barcha turlar",real_project:"Real loyiha",ideas:"G'oyalar tanlovi",award:"Mukofot",
   s_all:"Har qanday loyiha",existing_ok:"Tayyor loyiha topshiriladi",new_design:"Yangi loyiha kerak",both:"Tayyor yoki yangi",
-  star:"★ Saqlanganlar",sortP:"Mashhurlik bo'yicha",pop:["","Kam tanilgan","Kam tanilgan","Taniqli","Juda mashhur","Eng nufuzli"],sortD:"Muddat bo'yicha",sortA:"Yangi qo'shilgan",sortN:"Nomi bo'yicha",
+  star:"★ Saqlanganlar",save:"☆ Saqlash",saved:"★ Saqlangan",sortP:"Mashhurlik bo'yicha",pop:["","Kam tanilgan","Kam tanilgan","Taniqli","Juda mashhur","Eng nufuzli"],sortD:"Muddat bo'yicha",sortA:"Yangi qo'shilgan",sortN:"Nomi bo'yicha",
   nodate:"aniq emas",reg:"Ro'yxatdan o'tish",sub:"Topshirish",fee:"Badal (hozir)",prize:"Mukofot",
-  more:"Batafsil shartlar",team:"Kim qatnashadi",deliv:"Topshiriladigan materiallar",language:"Til",feeAll:"Badal (barcha bosqichlar)",results:"Natijalar",note:"Muddat izohi",ver:"Tekshiruv",
-  site:"Rasmiy sayt",newTag:"Yangi",shown:n=>n+" ta tanlov",
+  team:"Kim qatnashadi",deliv:"Materiallar",language:"Til",feeAll:"Badal (bosqichlar)",results:"Natijalar",note:"Muddat izohi",ver:"Tekshiruv",
+  site:"Rasmiy sayt ↗",newTag:"Yangi",shown:n=>n+" ta tanlov",
   noBrief:"Bugungi xabar hali tayyor emas. Har kuni 09:00 da shu yerda paydo bo'ladi.",noUrgent:"Yaqin 14 kunda tugaydigan tanlov yo'q.",
-  empty0:"Tanlovlar ro'yxati hali yo'q. Har kungi tekshiruvdan keyin shu yerda chiqadi.",emptyF:"Tanlangan filtrlar bo'yicha tanlov topilmadi. Filtrlarni o'zgartirib ko'ring.",
-  nodb:"Ma'lumotlarni yuklab bo'lmadi. Sahifani qayta oching.",chanSub:"Birgalikda, aslida insonlar uchun qulay bo'lgan shahar qanday bo'lishi kerakligi haqida gaplashamiz!",chanBtn:"Kanalga qo'shilish",beta:'Sayt sinov rejimida ishlamoqda. Xato yoki taklif bo\'lsa, <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">kanalga</a> yozing.',
-  krTitle:"Koreya davlat tanlovlari · Seul",krOk:"RASMIY MANBA",krNote:"Bu bo'limda Seul shahar hokimiyatining rasmiy loyiha tanlovlari portalidagi tanlovlar tahlil qilinadi. Muhim: hozirgi tanlovlarning barchasi ichki tanlov, ularda faqat Koreyada ro'yxatdan o'tgan arxitektura byurolari qatnasha oladi. Koreya qonuniga ko'ra xorijiy arxitektor faqat koreys byurosi bilan birgalikda ishlay oladi. Xalqaro tanlov e'lon qilinsa, shu yerda alohida belgilanadi.",
-  krOpen:"Ro'yxatdan o'tishgacha",krSubm:"Topshirishgacha",krUnknown:"Muddat hali aniqlanmagan — portalda ko'ring",krClosed:"Yopilgan (namuna uchun)",
-  krReg:"Ro'yxatdan o'tish",krSub:"Topshirish",krRes:"Natijalar",krFee:"Loyihalash haqi",krLang:"Til",krElig:"Kim qatnasha oladi",krVer:"Tekshiruv",krPortal:"Seul portalida ochish",krNotice:"Rasmiy e'lon",krOrg:"Buyurtmachi",
-  elig_korean_only:"Faqat Koreya byurolari",elig_joint_with_korean_firm:"Koreya byurosi bilan birga",elig_open_international:"Xalqaro, hamma uchun ochiq",elig_unknown:"Qatnashish shartlari noma'lum",krJump:"Koreya · Seul tanlovlari ↓",krUpd:"Yangilangan: ",krEmpty:"Hozircha ochiq tanlov yo'q.",
-  tl_sub:"Topshirishgacha",tl_reg:"Ro'yxatgacha",tash:"Toshkent vaqti",approx:"taxminiy vaqt",ended:"Muddati tugadi",dShort:"kun",hms:"SOAT · DAQ · SON",
-  lgG:"30+ kun",lgY:"10–30 kun",lgR:"10 kundan kam",
-  foot:"Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing."},
+  empty0:"Tanlovlar ro'yxati hali yo'q.",emptyF:"Bu qidiruv yoki filtrlar bo'yicha tanlov topilmadi. Qidiruvni tozalab yoki filtrlarni o'zgartirib ko'ring.",
+  nodb:"Ma'lumotlarni yuklab bo'lmadi. Sahifani qayta oching.",chanSub:"Birgalikda, aslida insonlar uchun qulay bo'lgan shahar qanday bo'lishi kerakligi haqida gaplashamiz!",chanBtn:"Kanalga qo'shilish",
+  krTitle:"Koreya davlat tanlovlari · Seul",krOk:"RASMIY MANBA",krNote:"Seul shahar hokimiyatining rasmiy loyiha tanlovlari portalidagi tanlovlar. Muhim: hozirgi tanlovlarning barchasi ichki tanlov, ularda faqat Koreyada ro'yxatdan o'tgan arxitektura byurolari qatnasha oladi. Koreya qonuniga ko'ra xorijiy arxitektor faqat koreys byurosi bilan birgalikda ishlay oladi. Xalqaro tanlov e'lon qilinsa, shu yerda alohida belgilanadi.",
+  krUnknown:"Muddat aniqlanmagan",krClosed:"Yopilgan",krReg:"Ro'yxatdan o'tish",krSub:"Topshirish",krRes:"Natijalar",krFee:"Loyihalash haqi",krLang:"Til",krElig:"Kim qatnasha oladi",krVer:"Tekshiruv",krPortal:"Seul portalida ochish ↗",krNotice:"Rasmiy e'lon ↗",
+  elig_korean_only:"Faqat Koreya byurolari",elig_joint_with_korean_firm:"Koreya byurosi bilan birga",elig_open_international:"Xalqaro, hamma uchun ochiq",elig_unknown:"Shartlar noma'lum",krJump:"Koreya · Seul",krUpd:"Yangilangan: ",krEmpty:"Hozircha ochiq tanlov yo'q.",intl:"Xalqaro",
+  tl_sub:"topshirishgacha",tl_reg:"ro'yxatgacha",tash:"Toshkent",approx:"taxminiy",ended:"tugadi",dShort:"kun",
+  lgG:"30+ kun",lgY:"10–30 kun",lgR:"10 kundan kam",upd:"Yangilangan: ",
+  foot:"Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing.",ldr:"Arxitektura va shaharsozlik tanlovlari"},
  en:{h1:"Architecture & Urbanism Competitions",lead:"Open competitions and awards that architects and urban planners based in Uzbekistan can enter. Updated daily at 09:00.",eyebrow:"Register of open calls",
-  upd:"Updated",open:"Open competitions",lang:"Language",tz:"Time",brief:"Today's brief",urgent:"Closing within 14 days",
+  open:"Open calls",ctry:"Countries",soon:"Close within 14 days",brief:"Today's brief",urgent:"Closing within 14 days",
+  findH:"All competitions",qPh:"Search: competition, organizer or city",clr:"Clear",ihN:"Competition",ihT:"Type",ihF:"Fee (now)",ihD:"Time left",
   all:"All",urbanism:"Urbanism",free:"Free",paid:"Paid",
   k_all:"All types",real_project:"Real project",ideas:"Ideas competition",award:"Award",
   s_all:"Any project",existing_ok:"Existing project OK",new_design:"New design required",both:"Existing or new",
-  star:"★ Saved",sortP:"By popularity",pop:["","Lesser known","Lesser known","Well known","Very popular","Most prestigious"],sortD:"By deadline",sortA:"Newly added",sortN:"By name",
+  star:"★ Saved",save:"☆ Save",saved:"★ Saved",sortP:"By popularity",pop:["","Lesser known","Lesser known","Well known","Very popular","Most prestigious"],sortD:"By deadline",sortA:"Newly added",sortN:"By name",
   nodate:"unconfirmed",reg:"Registration",sub:"Submission",fee:"Fee (now)",prize:"Prize",
-  more:"Full conditions",team:"Who can enter",deliv:"Deliverables",language:"Language",feeAll:"Fee (all tiers)",results:"Results",note:"Deadline note",ver:"Verification",
-  site:"Official site",newTag:"New",shown:n=>n+" competitions",
+  team:"Who can enter",deliv:"Deliverables",language:"Language",feeAll:"Fee (tiers)",results:"Results",note:"Deadline note",ver:"Verification",
+  site:"Official site ↗",newTag:"New",shown:n=>n+" competitions",
   noBrief:"Today's brief isn't ready yet. It appears here every day at 09:00.",noUrgent:"Nothing closes in the next 14 days.",
-  empty0:"No competitions yet. They appear here after the daily check.",emptyF:"No competitions match these filters. Try changing them.",
-  nodb:"Couldn't load the data. Reload the page.",chanSub:"Together, let's talk about what a city truly comfortable for people should be like!",chanBtn:"Join the channel",beta:'The site is in beta. Spotted a mistake or have an idea? Write to us on the <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">channel</a>.',
-  krTitle:"Korean government competitions · Seoul",krOk:"OFFICIAL SOURCE",krNote:"This section analyses competitions on the Seoul Metropolitan Government's official design-competition portal. Important: all current calls are domestic, open only to architecture offices registered in Korea. Under Korean law a foreign architect can practise only jointly with a Korean office. International calls will be marked here when announced.",
-  krOpen:"Until registration",krSubm:"Until submission",krUnknown:"Deadline not confirmed yet — check the portal",krClosed:"Closed (for reference)",
-  krReg:"Registration",krSub:"Submission",krRes:"Results",krFee:"Design fee",krLang:"Language",krElig:"Who can enter",krVer:"Verification",krPortal:"Open on Seoul portal",krNotice:"Official notice",krOrg:"Client",
-  elig_korean_only:"Korean offices only",elig_joint_with_korean_firm:"Jointly with a Korean office",elig_open_international:"International, open to all",elig_unknown:"Eligibility unknown",krJump:"Korea · Seoul calls ↓",krUpd:"Updated: ",krEmpty:"No open calls right now.",
-  tl_sub:"Until submission",tl_reg:"Until registration",tash:"Tashkent time",approx:"estimated time",ended:"Closed",dShort:"days",hms:"HRS · MIN · SEC",
-  lgG:"30+ days",lgY:"10–30 days",lgR:"under 10 days",
-  foot:"Facts were checked on the official sites. Re-read the official conditions before you submit."}
+  empty0:"No competitions yet.",emptyF:"Nothing matches this search or these filters. Clear the search or change the filters.",
+  nodb:"Couldn't load the data. Reload the page.",chanSub:"Together, let's talk about what a city truly comfortable for people should be like!",chanBtn:"Join the channel",
+  krTitle:"Korean government competitions · Seoul",krOk:"OFFICIAL SOURCE",krNote:"Calls from the Seoul Metropolitan Government's official design-competition portal. Important: all current calls are domestic, open only to architecture offices registered in Korea. Under Korean law a foreign architect can practise only jointly with a Korean office. International calls will be marked here when announced.",
+  krUnknown:"Deadline not confirmed",krClosed:"Closed",krReg:"Registration",krSub:"Submission",krRes:"Results",krFee:"Design fee",krLang:"Language",krElig:"Who can enter",krVer:"Verification",krPortal:"Open on Seoul portal ↗",krNotice:"Official notice ↗",
+  elig_korean_only:"Korean offices only",elig_joint_with_korean_firm:"With a Korean office",elig_open_international:"International, open to all",elig_unknown:"Eligibility unknown",krJump:"Korea · Seoul",krUpd:"Updated: ",krEmpty:"No open calls right now.",intl:"International",
+  tl_sub:"to submission",tl_reg:"to registration",tash:"Tashkent",approx:"estimated",ended:"closed",dShort:"days",
+  lgG:"30+ days",lgY:"10–30 days",lgR:"under 10 days",upd:"Updated: ",
+  foot:"Facts were checked on the official sites. Re-read the official conditions before you submit.",ldr:"Architecture & urbanism competitions"}
 };
 const ls={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-const st={lang:ls.get("lang","uz"),group:"all",kind:"all",sub:"all",onlyStar:false,sort:"pop",stars:new Set(ls.get("stars",[])),comps:[],digests:[],korea:null,day:null,dbOk:null};
+const st={lang:ls.get("lang","uz"),group:"all",kind:"all",sub:"all",onlyStar:false,sort:"pop",q:"",open:new Set(),stars:new Set(ls.get("stars",[])),comps:[],digests:[],korea:null,day:null,dbOk:null};
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const iso=s=>{const m=String(s??"").match(/\d{4}-\d{2}-\d{2}/);return m?m[0]:null};
@@ -356,7 +403,6 @@ const L=k=>T[st.lang][k];
 const LX=(c,k)=>st.lang==="uz"&&c[k+"_uz"]!=null&&c[k+"_uz"]!==""?c[k+"_uz"]:c[k];
 const fmt=i=>{if(!i)return L("nodate");const [y,m,d]=i.split("-");return d+"."+m+"."+y};
 const pad=n=>String(n).padStart(2,"0");
-// Deadlines are stored as exact UTC moments (…_deadline_at); everything is shown in Tashkent time.
 const TZ="Asia/Tashkent";
 const atOf=(c,k)=>{const a=c[k+"_deadline_at"];if(a){const t=Date.parse(a);if(!isNaN(t))return {t,exact:c.deadline_time_exact!==false}}
   const i=iso(c[k+"_deadline"]);if(!i)return null;return {t:Date.parse(i+"T23:59:00+05:00"),exact:false}};
@@ -367,15 +413,21 @@ const fmtAt=t=>{if(tkF)return tkF.format(new Date(t)).replace(/\//g,".").replace
 const band=ms=>ms<=0?"":ms>=30*864e5?"g":ms>=10*864e5?"y":"r";
 const parts=ms=>{const s=Math.max(0,Math.floor(ms/1000));return {d:Math.floor(s/86400),h:Math.floor(s%86400/3600),m:Math.floor(s%3600/60),s:s%60}};
 const hms=ms=>{const p=parts(ms);return pad(p.h)+":"+pad(p.m)+":"+pad(p.s)};
-const heat=ms=>Math.max(0,Math.min(1,1-ms/(10*864e5))).toFixed(4);
-const dimPct=ms=>Math.max(1.5,Math.min(100,ms/(90*864e5)*100)).toFixed(1);
 const sortKey=c=>{const n=nextDL(c);if(!n)return 9e15;return n.t>Date.now()?n.t:8e15-n.t};
+const ARR='<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>';
+const norm=s=>String(s||"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[ʻʼ‘’`']/g,"'");
 
 function setStatic(){
   document.documentElement.lang=st.lang;
   ["h1","lead","eyebrow"].forEach(k=>$(k).textContent=L(k));
-  $("lbl-upd").textContent=L("upd");$("lbl-open").textContent=L("open");$("lbl-lang").textContent=L("lang");$("lbl-tz").textContent=L("tz");
-  $("chan-sub").textContent=L("chanSub");$("beta-t").innerHTML=L("beta");$("chan-btn").textContent=L("chanBtn");$("brief-h").textContent=L("brief");$("lbl-urgent").textContent=L("urgent");$("onlyStar").textContent=L("star");$("foot").textContent=L("foot");
+  $("h1").innerHTML=esc(L("h1")).replace(/(shaharsozlik|Urbanism)/,"<em>$1</em>");
+  const DK=st.lang==="uz"?["Bosh","Bugun","Tanlovlar","Koreya","Kanal ↗"]:["Top","Today","Calls","Korea","Channel ↗"];
+  ["d-top","d-today","d-index","d-korea","d-tg"].forEach((id,i)=>$(id).textContent=DK[i]);
+  $("lbl-open").textContent=L("open");$("lbl-ctry").textContent=L("ctry");$("lbl-soon").textContent=L("soon");
+  $("chan-sub").textContent=L("chanSub");$("chan-btn").textContent=L("chanBtn");$("brief-h").textContent=L("brief");$("lbl-urgent").textContent=L("urgent");
+  $("find-h").textContent=L("findH");$("q").placeholder=L("qPh");$("q-clr").setAttribute("aria-label",L("clr"));
+  $("ih-n").textContent=L("ihN");$("ih-t").textContent=L("ihT");$("ih-f").textContent=L("ihF");$("ih-d").textContent=L("ihD");
+  $("onlyStar").textContent=L("star");$("foot").textContent=L("foot");
   const o=$("sort").options;o[0].text=L("sortP");o[1].text=L("sortD");o[2].text=L("sortA");o[3].text=L("sortN");$("sort").value=st.sort;
   $("l-uz").setAttribute("aria-pressed",st.lang==="uz");$("l-en").setAttribute("aria-pressed",st.lang==="en");
 }
@@ -384,72 +436,90 @@ function chips(el,key,vals){el.innerHTML=vals.map(v=>`<button class="chip" data-
 function renderStats(){
   const open=st.comps;const c={all:open.length,urbanism:0,free:0,paid:0};
   open.forEach(x=>{if(x.group==="urbanism")c.urbanism++;else if(x.group==="free")c.free++;else c.paid++});
-  $("stats").innerHTML=["all","urbanism","free","paid"].map(g=>`<button data-g="${g}" aria-pressed="${st.group===g}"><span class="l">${esc(L(g))}</span><span class="n">${pad(c[g])}</span></button>`).join("");
+  $("stats").innerHTML=["all","urbanism","free","paid"].map(g=>`<button data-g="${g}" aria-pressed="${st.group===g}">${esc(L(g))}<span class="n">${c[g]}</span></button>`).join("")
+    +(st.korea?`<a class="kr-jump" href="#korea">${esc(L("krJump"))} (${(st.korea.items||[]).filter(x=>x.status!=="closed").length}) ↓</a>`:"");
   $("stats").querySelectorAll("button").forEach(b=>b.onclick=()=>{st.group=b.dataset.g;renderAll()});
-  if(st.korea){const n=(st.korea.items||[]).filter(x=>x.status!=="closed").length;$("stats").insertAdjacentHTML("beforeend",`<a class="kr-jump" href="#korea">${esc(L("krJump").replace(" ↓",""))} (${n}) ↓</a>`)}
+  const now=Date.now();
   $("openN").textContent=open.length?String(open.length):"—";
+  $("soonN").textContent=open.length?String(open.filter(x=>{const n=nextDL(x);return n&&n.t>now&&n.t-now<=14*864e5}).length):"—";
+  try{const g=open.filter(x=>Array.isArray(x.geo));$("ctryN").textContent=g.length?String(hosts(g).list.length):"—"}catch(e){}
 }
 function latestDigest(){return st.digests.find(d=>d.date===st.day)||st.digests[0]}
 function renderBrief(){
   const sel=$("brief-day");sel.innerHTML=st.digests.map(d=>`<option value="${esc(d.date)}"${(st.day||st.digests[0]?.date)===d.date?" selected":""}>${esc(fmt(d.date))}</option>`).join("");
   sel.hidden=!st.digests.length;
   const d=latestDigest();
-  if(st.dbOk===false){$("brief-text").textContent=L("nodb")}
-  else $("brief-text").textContent=d?(st.lang==="uz"?(d.summary_uz||d.summary_en):(d.summary_en||d.summary_uz))||"":L("noBrief");
-  $("upd").textContent=d?fmt(d.date):"—";
+  $("brief-text").textContent=st.dbOk===false?L("nodb"):d?(st.lang==="uz"?(d.summary_uz||d.summary_en):(d.summary_en||d.summary_uz))||"":L("noBrief");
+  $("upd-f").textContent=d?L("upd")+fmt(d.date):"";
   const now=Date.now();
   const urg=st.comps.map(c=>({c,n:nextDL(c)})).filter(x=>x.n&&x.n.t>now&&x.n.t-now<=14*864e5).sort((a,b)=>a.n.t-b.n.t);
-  $("urgent").innerHTML=urg.length?urg.map(({c,n})=>`<a href="#${esc(c.id)}"><span class="un">${esc(c.name)}</span><span class="tick" data-at="${n.t}" style="color:var(--${band(n.t-now)==="r"?"crit":"mid"})"></span></a>`).join(""):`<span class="note">${esc(L("noUrgent"))}</span>`;
+  $("urgent").innerHTML=urg.length?urg.map(({c,n})=>{const col=band(n.t-now)==="r"?"crit":"mid";return `<a href="#${esc(c.id)}" data-open="${esc(c.id)}"><span class="dot" style="background:var(--${col})"></span><span class="un">${esc(c.name)}</span><span class="tick" data-at="${n.t}" style="color:var(--${col})"></span></a>`}).join(""):`<span class="note">${esc(L("noUrgent"))}</span>`;
+  $("urgent").querySelectorAll("[data-open]").forEach(a=>a.onclick=()=>{st.open.add(a.dataset.open);renderList()});
 }
-function card(c){
+function dlCell(n,ms,cls){
+  if(!n)return `<div class="dl"><span class="when">${esc(L("nodate"))}</span></div>`;
+  return `<div class="dl ${cls}" data-at="${n.t}" data-b="${cls}">
+   <span class="top"><span class="dot"></span><span class="d">${parts(ms).d}</span><span class="u">${esc(L("dShort"))} · ${esc(L(n.type==="reg"?"tl_reg":"tl_sub"))}</span></span>
+   <span class="hms">${hms(ms)}</span>
+   <span class="when">${esc(fmtAt(n.t))} ${esc(L("tash"))}${n.exact?"":" · ≈"+esc(L("approx"))}</span></div>`}
+function row(c,i){
   const pts=(st.lang==="uz"?c.key_points_uz:c.key_points_en)||[];
   const summ=st.lang==="uz"?(c.summary_uz||c.summary_en):(c.summary_en||c.summary_uz);
   const n=nextDL(c),ms=n?n.t-Date.now():0,cls=n?band(ms):"";
   const atTxt=k=>{const a=atOf(c,k);return a?fmtAt(a.t):(c[k+"_deadline"]&&!iso(c[k+"_deadline"])?c[k+"_deadline"]:"—")};
   const d=latestDigest();const isNew=d&&Array.isArray(d.new_ids)&&d.new_ids.includes(c.id);
-  const p=c.popularity||2;
+  const p=c.popularity||2,open=st.open.has(c.id),saved=st.stars.has(c.id);
   const flags=(LX(c,"flags")||[]).filter(Boolean);
-  const row=(k,v)=>v?`<dt>${esc(L(k))}</dt><dd>${esc(v)}</dd>`:"";
-  return `<article class="card" id="${esc(c.id)}">
-   <div class="dl ${cls}"${n?` data-at="${n.t}" data-b="${cls}" style="--heat:${heat(ms)}"`:""}>
-    <span class="lbl">${esc(!n?L("nodate"):ms<=0?L("ended"):L(n.type==="reg"?"tl_reg":"tl_sub"))}</span>
-    <span class="dd"><span class="d">${n?parts(ms).d:"—"}</span><span class="u">${esc(L("dShort"))}</span></span>
-    <span class="clock"><span class="hms">${n?hms(ms):"--:--:--"}</span><small>${esc(L("hms"))}</small></span>
-    ${n&&ms>0?`<span class="dim"><span style="width:${dimPct(ms)}%"></span></span>`:""}
-    <span class="date">${n?esc(fmtAt(n.t)):"—"} · ${esc(L("tash"))}</span>
-    ${n&&!n.exact?`<span class="approx">≈ ${esc(L("approx"))}</span>`:""}
-   </div>
-   <div class="body">
-    <div class="top"><div><h3>${esc(c.name)}</h3><div class="org">${esc(c.organizer)}</div></div>
-     <button class="star" data-id="${esc(c.id)}" aria-pressed="${st.stars.has(c.id)}" aria-label="${esc(L("star"))}">${st.stars.has(c.id)?"★":"☆"}</button></div>
-    <div class="tags"><span class="pop" title="${esc(L("sortP"))}">${"★".repeat(p)}<span class="off">${"★".repeat(5-p)}</span> <em>${esc(L("pop")[p])}</em></span>${isNew?`<span class="newt">${esc(L("newTag"))}</span>`:""}${c.group==="urbanism"?`<span class="urb">${esc(L("urbanism"))}</span>`:""}${c.is_free?`<span class="free">${esc(L("free"))}</span>`:`<span>${esc(L("paid"))}</span>`}<span>${esc(L(c.kind)||c.kind)}</span><span class="ex">${esc(L(c.submission_type)||c.submission_type)}</span></div>
-    ${summ?`<p class="summary">${esc(summ)}</p>`:""}
-    ${pts.length?`<ul class="points">${pts.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
-    <div class="facts">
-     <div><span class="eyebrow">${esc(L("reg"))}</span><span>${esc(atTxt("registration"))}</span></div>
-     <div><span class="eyebrow">${esc(L("sub"))}</span><span>${esc(atTxt("submission"))}</span></div>
-     <div><span class="eyebrow">${esc(L("fee"))}</span><span>${esc(LX(c,"fee_current")||"—")}</span></div>
+  const dd=(k,v)=>v?`<dt>${esc(L(k))}</dt><dd>${esc(v)}</dd>`:"";
+  const tone="t-"+(cls||"n");
+  return `<article class="row ${tone}${open?" open":""}" id="${esc(c.id)}">
+   <button class="rh" type="button" aria-expanded="${open}" data-id="${esc(c.id)}">
+    <span class="no">${pad(i+1)}</span>
+    <span class="nm"><h3>${esc(c.name)}</h3><div class="org">${esc(c.organizer)}</div></span>
+    <span class="tg">${isNew?`<span class="pill new">${esc(L("newTag"))}</span>`:""}${c.group==="urbanism"?`<span class="pill urb">${esc(L("urbanism"))}</span>`:""}${c.is_free?`<span class="pill free">${esc(L("free"))}</span>`:""}<span class="pill k-${esc(c.kind)}">${esc(L(c.kind)||c.kind)}</span></span>
+    <span class="fee" title="${esc(LX(c,"fee_current")||"")}">${esc(LX(c,"fee_current")||"—")}</span>
+    ${dlCell(n,ms,cls)}
+    ${ARR}
+   </button>
+   <div class="rb">
+    <div>
+     <div class="stars">${"★".repeat(p)}<span class="off">${"★".repeat(5-p)}</span><em>${esc(L("pop")[p])} · ${esc(L(c.submission_type)||"")}</em></div>
+     ${summ?`<p class="summary">${esc(summ)}</p>`:""}
+     ${pts.length?`<ul class="points">${pts.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
+     ${flags.length?`<div class="flag">⚠ ${esc(flags.join(" · "))}</div>`:""}
+     <div class="acts"><a class="btn" href="${esc(c.official_url)}" target="_blank" rel="noopener">${esc(L("site"))}</a><button class="star" type="button" data-star="${esc(c.id)}" aria-pressed="${saved}">${esc(saved?L("saved"):L("save"))}</button></div>
     </div>
-    <details><summary>${esc(L("more"))}</summary><dl class="more">
-     ${row("prize",LX(c,"prize_text"))}${row("team",LX(c,"team"))}${row("deliv",LX(c,"deliverables"))}${row("language",LX(c,"language"))}${row("feeAll",LX(c,"fee_text"))}${row("note",LX(c,"deadline_note"))}${row("results",/^\d{4}-\d{2}-\d{2}$/.test(String(c.results_date||""))?fmt(c.results_date):LX(c,"results_date"))}${row("ver",[LX(c,"verified"),c.check_date].filter(Boolean).join(" · "))}
-    </dl></details>
-    <div class="actions"><a class="go" href="${esc(c.official_url)}" target="_blank" rel="noopener">${esc(L("site"))} ↗</a>
-     ${flags.length?`<span class="flag">⚠ ${esc(flags.join(" · "))}</span>`:""}</div>
+    <div>
+     <div class="facts">
+      <div><span class="eyebrow">${esc(L("reg"))}</span><span>${esc(atTxt("registration"))}</span></div>
+      <div><span class="eyebrow">${esc(L("sub"))}</span><span>${esc(atTxt("submission"))}</span></div>
+      <div><span class="eyebrow">${esc(L("fee"))}</span><span>${esc(LX(c,"fee_current")||"—")}</span></div>
+     </div>
+     <dl class="more">${dd("prize",LX(c,"prize_text"))}${dd("team",LX(c,"team"))}${dd("deliv",LX(c,"deliverables"))}${dd("language",LX(c,"language"))}${dd("feeAll",LX(c,"fee_text"))}${dd("note",LX(c,"deadline_note"))}${dd("results",/^\d{4}-\d{2}-\d{2}$/.test(String(c.results_date||""))?fmt(c.results_date):LX(c,"results_date"))}${dd("ver",[LX(c,"verified"),c.check_date].filter(Boolean).join(" · "))}</dl>
+    </div>
    </div></article>`;
 }
+function wire(root){
+  root.querySelectorAll(".rh").forEach(b=>b.onclick=()=>{const id=b.dataset.id,el=b.parentElement;st.open.has(id)?st.open.delete(id):st.open.add(id);
+    const o=st.open.has(id);el.classList.toggle("open",o);b.setAttribute("aria-expanded",o)});
+  root.querySelectorAll("[data-star]").forEach(b=>b.onclick=()=>{const id=b.dataset.star;st.stars.has(id)?st.stars.delete(id):st.stars.add(id);ls.set("stars",[...st.stars]);
+    const s=st.stars.has(id);b.setAttribute("aria-pressed",s);b.textContent=s?L("saved"):L("save");if(st.onlyStar)renderList()});
+}
 function renderList(){
+  const q=norm(st.q).trim();
   let xs=st.comps.filter(c=>st.group==="all"||c.group===st.group)
    .filter(c=>st.kind==="all"||c.kind===st.kind)
    .filter(c=>st.sub==="all"||c.submission_type===st.sub||(c.submission_type==="both"&&st.sub!=="all"))
-   .filter(c=>!st.onlyStar||st.stars.has(c.id));
+   .filter(c=>!st.onlyStar||st.stars.has(c.id))
+   .filter(c=>!q||q.split(/\s+/).every(w=>norm([c.name,c.organizer,c.summary_en,c.summary_uz,c.language,c.team].join(" ")).includes(w)));
   if(st.sort==="pop")xs.sort((a,b)=>(b.popularity||2)-(a.popularity||2)||sortKey(a)-sortKey(b));
   else if(st.sort==="deadline")xs.sort((a,b)=>sortKey(a)-sortKey(b));
   else if(st.sort==="added")xs.sort((a,b)=>String(b.added||"").localeCompare(String(a.added||""))||sortKey(a)-sortKey(b));
   else xs.sort((a,b)=>a.name.localeCompare(b.name));
   $("count").textContent=L("shown")(xs.length);
+  $("ihead").hidden=!xs.length;
   if(!xs.length){$("list").innerHTML=`<div class="empty">${esc(st.dbOk===false?L("nodb"):st.comps.length?L("emptyF"):L("empty0"))}</div>`;return}
-  $("list").innerHTML=xs.map(card).join("");
-  $("list").querySelectorAll(".star").forEach(b=>b.onclick=()=>{const id=b.dataset.id;st.stars.has(id)?st.stars.delete(id):st.stars.add(id);ls.set("stars",[...st.stars]);renderList()});
+  $("list").innerHTML=xs.map(row).join("");wire($("list"));
 }
 function renderKorea(){
   const K=st.korea,sec=$("korea");if(!sec)return;
@@ -461,43 +531,45 @@ function renderKorea(){
   const items=(K.items||[]).map(x=>{const r=at(x.registration_deadline_at),s=at(x.submission_deadline_at);const next=[r,s].filter(t=>t&&t>now).sort((a,b)=>a-b)[0]||null;
     const closed=x.status==="closed"||(!next&&((r&&r<now&&!s)||(s&&s<now)));return {x,next,type:next&&next===r?"reg":"sub",closed}})
     .sort((a,b)=>(a.closed-b.closed)||((a.next||9e15)-(b.next||9e15)));
-  const t=k=>L(k),LZ=(x,k)=>st.lang==="uz"?(x[k+"_uz"]??x[k+"_en"]):(x[k+"_en"]??x[k+"_uz"]);
-  const elig=e=>{const m={korean_only:"no",joint_with_korean_firm:"joint",open_international:"yes"};return `<span class="elig ${m[e]||"unk"}">${esc(t("elig_"+(m[e]?e:"unknown")))}</span>`};
-  const row=(k,v)=>v?`<dt>${esc(t(k))}</dt><dd>${esc(v)}</dd>`:"";
-  $("kr-list").innerHTML=items.length?items.map(({x,next,type,closed})=>{const pts=LZ(x,"key_points")||[];
-    return `<article class="kr-item${closed?" closed":""}" id="${esc(x.id)}">
-     <div class="kr-dl"><span class="eyebrow">${esc(closed?t("krClosed"):next?t(type==="reg"?"krOpen":"krSubm"):"")}</span>
-      ${next&&!closed?`<span class="tick" data-at="${next}"></span><span class="date">${esc(fmtAt(next))} · ${esc(L("tash"))}</span>${x.deadline_time_exact===false?`<span class="approx">≈ ${esc(L("approx"))}</span>`:""}`:closed?"":`<span class="date">${esc(t("krUnknown"))}</span>`}
-     </div>
-     <div class="kr-body">
-      <div><h3>${esc(st.lang==="uz"?x.title_uz:x.title_en)}</h3><div class="kr-ko">${esc(x.title_ko||"")}</div></div>
-      <div class="tags">${elig(x.eligibility)}<span>${esc(LZ(x,"organizer")||"")}</span>${x.international?`<span class="free">${st.lang==="uz"?"Xalqaro":"International"}</span>`:""}</div>
+  const LZ=(x,k)=>st.lang==="uz"?(x[k+"_uz"]??x[k+"_en"]):(x[k+"_en"]??x[k+"_uz"]);
+  const elig=e=>{const m={korean_only:"no",joint_with_korean_firm:"joint",open_international:"yes"};return `<span class="elig ${m[e]||"unk"}">${esc(L("elig_"+(m[e]?e:"unknown")))}</span>`};
+  const dd=(k,v)=>v?`<dt>${esc(L(k))}</dt><dd>${esc(v)}</dd>`:"";
+  $("kr-list").innerHTML=items.length?items.map(({x,next,type,closed},i)=>{const pts=LZ(x,"key_points")||[],open=st.open.has(x.id);
+    const ms=next?next-now:0,cls=next?band(ms):"";
+    const dl=closed?`<div class="dl"><span class="when">${esc(L("krClosed"))}</span></div>`:next?dlCell({t:next,type,exact:x.deadline_time_exact!==false},ms,cls):`<div class="dl"><span class="when">${esc(L("krUnknown"))}</span></div>`;
+    return `<article class="row t-${closed?"n":(cls||"n")}${closed?" closed":""}${open?" open":""}" id="${esc(x.id)}">
+     <button class="rh" type="button" aria-expanded="${open}" data-id="${esc(x.id)}">
+      <span class="no">${pad(i+1)}</span>
+      <span class="nm"><h3>${esc(st.lang==="uz"?x.title_uz:x.title_en)}</h3><div class="kr-ko">${esc(x.title_ko||"")}</div></span>
+      <span class="tg">${elig(x.eligibility)}${x.international?`<span class="pill free">${esc(L("intl"))}</span>`:""}</span>
+      <span class="fee">${esc((LZ(x,"organizer")||"").replace(/\s*\(.*\)\s*$/,""))}</span>
+      ${dl}${ARR}
+     </button>
+     <div class="rb"><div>
       ${LZ(x,"summary")?`<p class="summary">${esc(LZ(x,"summary"))}</p>`:""}
       ${pts.length?`<ul class="points">${pts.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>`:""}
+      <div class="acts"><a class="btn" href="${esc(x.portal_url)}" target="_blank" rel="noopener">${esc(L("krPortal"))}</a>${x.notice_url?`<a class="btn ghost" href="${esc(x.notice_url)}" target="_blank" rel="noopener">${esc(L("krNotice"))}</a>`:""}</div>
+     </div><div>
       <div class="facts">
-       <div><span class="eyebrow">${esc(t("krReg"))}</span><span>${esc(x.registration_deadline_at?fmtAt(at(x.registration_deadline_at)):x.registration_deadline?fmt(x.registration_deadline):"—")}</span></div>
-       <div><span class="eyebrow">${esc(t("krSub"))}</span><span>${esc(x.submission_deadline_at?fmtAt(at(x.submission_deadline_at)):x.submission_deadline?fmt(x.submission_deadline):"—")}</span></div>
-       <div><span class="eyebrow">${esc(t("krRes"))}</span><span>${esc(x.results_date?fmt(x.results_date):"—")}</span></div>
+       <div><span class="eyebrow">${esc(L("krReg"))}</span><span>${esc(x.registration_deadline_at?fmtAt(at(x.registration_deadline_at)):x.registration_deadline?fmt(x.registration_deadline):"—")}</span></div>
+       <div><span class="eyebrow">${esc(L("krSub"))}</span><span>${esc(x.submission_deadline_at?fmtAt(at(x.submission_deadline_at)):x.submission_deadline?fmt(x.submission_deadline):"—")}</span></div>
+       <div><span class="eyebrow">${esc(L("krRes"))}</span><span>${esc(x.results_date?fmt(x.results_date):"—")}</span></div>
       </div>
-      <details><summary>${esc(L("more"))}</summary><dl class="more">${row("krElig",LZ(x,"eligibility"))}${row("krFee",LZ(x,"fee"))}${row("krLang",LZ(x,"language"))}${row("krVer",st.lang==="uz"?x.verified_uz:x.verified)}</dl></details>
-      <div class="kr-links"><a class="go" href="${esc(x.portal_url)}" target="_blank" rel="noopener">${esc(t("krPortal"))} ↗</a>${x.notice_url?`<a class="kr-link" href="${esc(x.notice_url)}" target="_blank" rel="noopener">${esc(t("krNotice"))} ↗</a>`:""}</div>
-     </div></article>`}).join(""):`<div class="empty">${esc(t("krEmpty"))}</div>`;
+      <dl class="more">${dd("krElig",LZ(x,"eligibility"))}${dd("krFee",LZ(x,"fee"))}${dd("krLang",LZ(x,"language"))}${dd("krVer",st.lang==="uz"?x.verified_uz:x.verified)}</dl>
+     </div></div></article>`}).join(""):`<div class="empty">${esc(L("krEmpty"))}</div>`;
+  wire($("kr-list"));
 }
 function renderAll(){setStatic();renderStats();chips($("kinds"),"kind",["all","real_project","ideas","award"]);chips($("subs"),"sub",["all","existing_ok","new_design"]);
   $("onlyStar").setAttribute("aria-pressed",st.onlyStar);
   $("legend").innerHTML=`<span><i class="lg"></i>${esc(L("lgG"))}</span><span><i class="ly"></i>${esc(L("lgY"))}</span><span><i class="lr"></i>${esc(L("lgR"))}</span>`;
   renderBrief();renderList();renderKorea();tick()}
-// live countdown: update in place every second; re-render when an entry crosses a colour band or closes
 function tick(){const now=Date.now();let rerender=false;
   document.querySelectorAll("[data-at]").forEach(el=>{const ms=+el.dataset.at-now;
     if(el.classList.contains("tick")){const p=parts(ms);el.textContent=(p.d?p.d+" "+L("dShort")+" ":"")+hms(ms);return}
     if(band(ms)!==(el.dataset.b||""))rerender=true;
-    const d=el.querySelector(".d"),h=el.querySelector(".hms"),bar=el.querySelector(".dim span");
-    if(d)d.textContent=parts(ms).d;if(h)h.textContent=hms(ms);if(bar)bar.style.width=dimPct(ms)+"%";
-    if(el.dataset.b==="r")el.style.setProperty("--heat",heat(ms))});
-  if(rerender){renderBrief();renderList()}}
+    const d=el.querySelector(".d"),h=el.querySelector(".hms");if(d)d.textContent=parts(ms).d;if(h)h.textContent=hms(ms)});
+  if(rerender){renderBrief();renderList();renderKorea()}}
 setInterval(tick,1000);
-
 /* ---- Story reel: the world as a dot raster, competition sites light up, then every dot gathers into a medal drawn like a rotunda plan ---- */
 const MASK={"COLS":96,"ROWS":42,"LAT0":76,"LAT1":-56,"hex":["000100807fe0000101f80000","800172f83fc000022fffff00","8fff914c3f000fe1ffffffff","4fffffdc38301d9fffffffff","0ffffe1818007bffffffffee","061ffe1e000053fffffffc20","0007ff9f000133fffffff060","0003ffdf80057ffffffffc00","0003fffdc000fffffffffa00","0001fffe0000ff3bfffff800","0001fff80003b61bfffff400","0001fff0000325fbffffc400","0001fff0000261ffffff2c00","00007fe00003e07fffff1000","00003fc00007ffffffff0000","00005c20000fffbbffff0000","00003c00000fffbe3ffe0000","00000c90001fffff1e7c0000","00000700000fffde0c708000","000001c0001ffff808380000","00000040000fffe408384000","0000003f000ffff804204000","0000001fc0077ff800410000","0000001fe0001ff000320000","0000003ff0003fe000169000","0000003ffc001fe000108e00","0000001ffe001fe0000c0600","0000001ffc000fe000000000","0000000ffc001fe000001000","00000007fc001fe800007a00","00000007f8001f880000fe00","00000007f0000f880003ff00","00000007e0000f800003ff80","00000007e0000f000001ff80","00000007c00007000001cf80","000000078000000000000702","0000000f0000000000000001","0000000e0000000000000100","0000000e0000000000000004","0000000c0000000000000000","0000000c0000000000000000","000000040000000000000000"]};
 const PHASE={uz:["Tanlovlar xaritasi","Barcha yo'llar bitta maqsad sari","G'olib medali"],en:["Map of open calls","All roads lead to one goal","The winner's medal"]};
@@ -544,7 +616,7 @@ function story(now){
   const W=Math.max(1,Math.round(r.width)),H=Math.max(1,Math.round(r.height));
   if(cv.width!==W*dpr||cv.height!==H*dpr){cv.width=W*dpr;cv.height=H*dpr}
   const c=cv.getContext("2d");c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,W,H);
-  const cs=getComputedStyle(document.documentElement),C=k=>cs.getPropertyValue(k).trim();
+  const cs=getComputedStyle(document.querySelector(".reel")||document.documentElement),C=k=>cs.getPropertyValue(k).trim();
   const ink=C("--ink")||"#141514",muted=C("--muted")||"#7a7e79",hair=C("--hair")||"#ddd",acc=C("--accent")||"#2b47b5",gold=C("--gold")||"#c9972e",goldInk=C("--gold-ink")||"#6b4d0e",sheet=C("--sheet")||"#fff";
   const cM=hexRgb(muted),cG=hexRgb(gold),cI=hexRgb(goldInk),cA=hexRgb(acc);
   const k=Math.min(W/VW,H/VH);c.save();c.translate((W-VW*k)/2,(H-VH*k)/2);c.scale(k,k);
@@ -599,12 +671,29 @@ requestAnimationFrame(loop);
 function drawFabric(){lastPhase=-1;lastCap="";story(performance.now())}
 /* ---- end story reel ---- */
 let rz;window.addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawFabric,150)});
-
 $("l-uz").onclick=()=>{st.lang="uz";ls.set("lang","uz");renderAll()};
 $("l-en").onclick=()=>{st.lang="en";ls.set("lang","en");renderAll()};
 $("onlyStar").onclick=()=>{st.onlyStar=!st.onlyStar;renderAll()};
 $("sort").onchange=e=>{st.sort=e.target.value;renderList()};
 $("brief-day").onchange=e=>{st.day=e.target.value;renderBrief();renderList()};
+$("q").addEventListener("input",e=>{st.q=e.target.value;$("q-clr").hidden=!st.q;renderList()});
+$("q-clr").onclick=()=>{$("q").value="";st.q="";$("q-clr").hidden=true;renderList();$("q").focus()};
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+let ldr=null,ldrT=null,pc=0,loaded=false;
+if(!reduce){
+  ldr=document.createElement("div");ldr.className="loader";ldr.setAttribute("aria-hidden","true");
+  ldr.innerHTML=`<span class="pc">0</span><span class="nm">${esc(L("ldr"))}</span>`;
+  document.body.appendChild(ldr);
+  const pcEl=ldr.querySelector(".pc");
+  ldrT=setInterval(()=>{pc=Math.min(loaded?100:92,pc+(loaded?9:Math.max(1,(92-pc)/9)));pcEl.textContent=Math.round(pc);
+    if(pc>=100){clearInterval(ldrT);setTimeout(()=>{ldr.classList.add("done");setTimeout(()=>ldr.remove(),800)},150)}},30);
+  setTimeout(()=>{loaded=true},4000);
+}
+const bar=$("bar");const onSc=()=>bar.classList.toggle("scrolled",scrollY>innerHeight*.6);addEventListener("scroll",onSc,{passive:true});onSc();
+$("d-top").onclick=e=>{e.preventDefault();scrollTo({top:0,behavior:reduce?"auto":"smooth"})};
+if("IntersectionObserver" in window){const map={today:"d-today",index:"d-index",korea:"d-korea"};
+  const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){document.querySelectorAll(".dock a").forEach(a=>a.classList.remove("on"));$(map[en.target.id]).classList.add("on")}})},{rootMargin:"-45% 0px -50% 0px"});
+  Object.keys(map).forEach(id=>{const el=$(id);if(el)io.observe(el)})}
 renderAll();drawFabric();
 (async()=>{
   try{
@@ -616,11 +705,13 @@ renderAll();drawFabric();
     st.digests=(j.digests||[]).slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,14);
     st.dbOk=true;
   }catch(e){st.dbOk=false}
-  renderAll();
-  if(location.hash){const el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView()}
+  loaded=true;
+  const hid=location.hash?decodeURIComponent(location.hash.slice(1)):"";
+  if(hid&&st.comps.some(c=>c.id===hid))st.open.add(hid);
+  renderAll();drawFabric();
+  if(hid){const el=document.getElementById(hid);if(el)setTimeout(()=>el.scrollIntoView(),900)}
 })();
 })();
 </script>
-
 </body>
 </html>
