@@ -59,7 +59,7 @@ button,select,input{font:inherit;color:inherit}
 .bar.scrolled{background:rgba(251,247,244,.9);box-shadow:0 1px 0 var(--hair)}
 .bar .in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:14px;height:56px}
 .mark{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
-.mark img{width:28px;height:28px;border-radius:50%;object-fit:cover}
+.mark img{width:32px;height:32px;border-radius:50%;object-fit:cover}
 .mark span{color:var(--ink2);font-weight:500}
 .beta{font-family:var(--mono);font-size:10px;letter-spacing:.14em;background:var(--ink);color:var(--pink);padding:2px 8px;border-radius:999px}
 .bar .sp{flex:1}
@@ -270,8 +270,7 @@ footer{--band:var(--ink);color:#fff;padding-block:80px 40px;display:flex;flex-di
 
 <div class="testbar" role="note"><span class="tb-tag">BETA</span><span id="tb-t">Sayt sinov rejimida ishlamoqda. Xato yoki noaniqlik ko'rsangiz, <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">Telegram kanalimizga</a> yozing.</span></div>
 <header class="bar" id="bar"><div class="in">
-  <a class="mark" href="#top" id="top"><img src="kanal.jpg" alt="" width="28" height="28">Ochiq <span>tanlovlar</span></a>
-  <span class="beta" id="beta-t">BETA</span>
+  <a class="mark" href="#top" id="top" aria-label="Ochiq tanlovlar"><img src="kanal.jpg" alt="" width="32" height="32"></a>
   <span class="sp"></span>
   <div class="lang" role="group" aria-label="Language"><button id="l-uz" aria-pressed="true">UZ</button><button id="l-en" aria-pressed="false">EN</button></div>
   <a class="tglink" href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 19.8c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.3 1.1 11.8c-1.1-.3-1.1-1.1.2-1.6L20.5 2.8c.9-.3 1.7.2 1.4 1.5z"/></svg><b>Telegram</b></a>
