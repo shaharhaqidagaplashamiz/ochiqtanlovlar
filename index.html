@@ -193,6 +193,16 @@ details[open] summary::before{content:"−"}
  .more{grid-template-columns:1fr}.more dd{margin-bottom:6px}}
 .empty{border-bottom:1px solid var(--hair);padding:36px 0;color:var(--muted)}
 
+/* brief download */
+.brief-btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:13.5px;padding:7px 14px}
+.brief-btn:hover{background:var(--accent)}
+.brief-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.brief-btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:5.5px 12.5px}
+.brief-btn.alt:hover{border-color:var(--accent);color:var(--accent);background:transparent}
+.brief-none{font-size:12.5px;color:var(--muted)}
+.brief-meta{font-size:12px;color:var(--muted)}
+.docs{display:flex;flex-direction:column;gap:3px}
+.docs a{font-size:13px}
 /* korea section */
 .kr{display:flex;flex-direction:column;gap:14px;scroll-margin-top:16px}
 .kr-src{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--hair);background:var(--sheet);padding:12px 14px;font-size:13.5px;color:var(--ink2)}
@@ -324,6 +334,7 @@ const T={
   krOpen:"Ro'yxatdan o'tishgacha",krSubm:"Topshirishgacha",krUnknown:"Muddat hali aniqlanmagan — portalda ko'ring",krClosed:"Yopilgan (namuna uchun)",
   krReg:"Ro'yxatdan o'tish",krSub:"Topshirish",krRes:"Natijalar",krFee:"Loyihalash haqi",krLang:"Til",krElig:"Kim qatnasha oladi",krVer:"Tekshiruv",krPortal:"Seul portalida ochish",krNotice:"Rasmiy e'lon",krOrg:"Buyurtmachi",
   elig_korean_only:"Faqat Koreya byurolari",elig_joint_with_korean_firm:"Koreya byurosi bilan birga",elig_open_international:"Xalqaro, hamma uchun ochiq",elig_unknown:"Qatnashish shartlari noma'lum",krJump:"Koreya · Seul tanlovlari ↓",krUpd:"Yangilangan: ",krEmpty:"Hozircha ochiq tanlov yo'q.",
+  bPdf:"Brief (PDF) yuklab olish",bPage:"Brief va shartlar",bReg:"Brief (ro'yxatdan o'tgach)",bNone:"Brief hali e'lon qilinmagan",bNoteReg:"Brief ro'yxatdan o'tgan yoki email qoldirgan ishtirokchilarga beriladi",bNotePage:"Shartlar rasmiy sahifada; to'liq PDF bo'lsa, o'sha yerdan yuklanadi",bCovers:"Brief mazmuni",bDocs:"Qo'shimcha hujjatlar",bLang:"Brief tili",
   tl_sub:"Topshirishgacha",tl_reg:"Ro'yxatgacha",tash:"Toshkent vaqti",approx:"taxminiy vaqt",ended:"Muddati tugadi",dShort:"kun",hms:"SOAT · DAQ · SON",
   lgG:"30+ kun",lgY:"10–30 kun",lgR:"10 kundan kam",
   foot:"Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing."},
@@ -343,6 +354,7 @@ const T={
   krOpen:"Until registration",krSubm:"Until submission",krUnknown:"Deadline not confirmed yet — check the portal",krClosed:"Closed (for reference)",
   krReg:"Registration",krSub:"Submission",krRes:"Results",krFee:"Design fee",krLang:"Language",krElig:"Who can enter",krVer:"Verification",krPortal:"Open on Seoul portal",krNotice:"Official notice",krOrg:"Client",
   elig_korean_only:"Korean offices only",elig_joint_with_korean_firm:"Jointly with a Korean office",elig_open_international:"International, open to all",elig_unknown:"Eligibility unknown",krJump:"Korea · Seoul calls ↓",krUpd:"Updated: ",krEmpty:"No open calls right now.",
+  bPdf:"Download brief (PDF)",bPage:"Brief & rules",bReg:"Brief (after registration)",bNone:"Brief not published yet",bNoteReg:"The brief is sent to registered entrants or after leaving an email",bNotePage:"Rules are on the official page; download the full PDF there if offered",bCovers:"What the brief covers",bDocs:"Extra documents",bLang:"Brief language",
   tl_sub:"Until submission",tl_reg:"Until registration",tash:"Tashkent time",approx:"estimated time",ended:"Closed",dShort:"days",hms:"HRS · MIN · SEC",
   lgG:"30+ days",lgY:"10–30 days",lgR:"under 10 days",
   foot:"Facts were checked on the official sites. Re-read the official conditions before you submit."}
@@ -353,6 +365,16 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const iso=s=>{const m=String(s??"").match(/\d{4}-\d{2}-\d{2}/);return m?m[0]:null};
 const L=k=>T[st.lang][k];
+const DLI='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
+const briefBtn=c=>{const a=c.brief_access,u=c.brief_url;if(!u||a==="none_found")return `<span class="brief-none">${esc(L("bNone"))}</span>`;
+  const lab=a==="direct_pdf"?L("bPdf"):a==="after_registration"?L("bReg"):L("bPage");
+  const note=a==="after_registration"?L("bNoteReg"):a==="page"?L("bNotePage"):"";
+  return `<a class="brief-btn${a==="direct_pdf"?"":" alt"}" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(note)}">${DLI}${esc(lab)}${c.brief_lang?` · ${esc(c.brief_lang)}`:""}</a>`};
+const briefRows=c=>{const cov=st.lang==="uz"?(c.brief_covers_uz||c.brief_covers_en):(c.brief_covers_en||c.brief_covers_uz);
+  const docs=(c.extra_docs||[]).filter(d=>d&&d.url);let s="";
+  if(cov)s+=`<dt>${esc(L("bCovers"))}</dt><dd>${esc(cov)}${c.brief_access==="after_registration"?` <span class="brief-meta">(${esc(L("bNoteReg"))})</span>`:""}</dd>`;
+  if(docs.length)s+=`<dt>${esc(L("bDocs"))}</dt><dd class="docs">${docs.map(d=>`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc((st.lang==="uz"?d.label_uz:d.label_en)||d.label_en||d.url)} ↗</a>`).join("")}</dd>`;
+  return s};
 const LX=(c,k)=>st.lang==="uz"&&c[k+"_uz"]!=null&&c[k+"_uz"]!==""?c[k+"_uz"]:c[k];
 const fmt=i=>{if(!i)return L("nodate");const [y,m,d]=i.split("-");return d+"."+m+"."+y};
 const pad=n=>String(n).padStart(2,"0");
@@ -431,9 +453,9 @@ function card(c){
      <div><span class="eyebrow">${esc(L("fee"))}</span><span>${esc(LX(c,"fee_current")||"—")}</span></div>
     </div>
     <details><summary>${esc(L("more"))}</summary><dl class="more">
-     ${row("prize",LX(c,"prize_text"))}${row("team",LX(c,"team"))}${row("deliv",LX(c,"deliverables"))}${row("language",LX(c,"language"))}${row("feeAll",LX(c,"fee_text"))}${row("note",LX(c,"deadline_note"))}${row("results",/^\d{4}-\d{2}-\d{2}$/.test(String(c.results_date||""))?fmt(c.results_date):LX(c,"results_date"))}${row("ver",[LX(c,"verified"),c.check_date].filter(Boolean).join(" · "))}
+     ${row("prize",LX(c,"prize_text"))}${row("team",LX(c,"team"))}${row("deliv",LX(c,"deliverables"))}${row("language",LX(c,"language"))}${row("feeAll",LX(c,"fee_text"))}${row("note",LX(c,"deadline_note"))}${row("results",/^\d{4}-\d{2}-\d{2}$/.test(String(c.results_date||""))?fmt(c.results_date):LX(c,"results_date"))}${briefRows(c)}${row("ver",[LX(c,"verified"),c.check_date].filter(Boolean).join(" · "))}
     </dl></details>
-    <div class="actions"><a class="go" href="${esc(c.official_url)}" target="_blank" rel="noopener">${esc(L("site"))} ↗</a>
+    <div class="actions">${briefBtn(c)}<a class="go" href="${esc(c.official_url)}" target="_blank" rel="noopener">${esc(L("site"))} ↗</a>
      ${flags.length?`<span class="flag">⚠ ${esc(flags.join(" · "))}</span>`:""}</div>
    </div></article>`;
 }
@@ -479,8 +501,8 @@ function renderKorea(){
        <div><span class="eyebrow">${esc(t("krSub"))}</span><span>${esc(x.submission_deadline_at?fmtAt(at(x.submission_deadline_at)):x.submission_deadline?fmt(x.submission_deadline):"—")}</span></div>
        <div><span class="eyebrow">${esc(t("krRes"))}</span><span>${esc(x.results_date?fmt(x.results_date):"—")}</span></div>
       </div>
-      <details><summary>${esc(L("more"))}</summary><dl class="more">${row("krElig",LZ(x,"eligibility"))}${row("krFee",LZ(x,"fee"))}${row("krLang",LZ(x,"language"))}${row("krVer",st.lang==="uz"?x.verified_uz:x.verified)}</dl></details>
-      <div class="kr-links"><a class="go" href="${esc(x.portal_url)}" target="_blank" rel="noopener">${esc(t("krPortal"))} ↗</a>${x.notice_url?`<a class="kr-link" href="${esc(x.notice_url)}" target="_blank" rel="noopener">${esc(t("krNotice"))} ↗</a>`:""}</div>
+      <details><summary>${esc(L("more"))}</summary><dl class="more">${row("krElig",LZ(x,"eligibility"))}${row("krFee",LZ(x,"fee"))}${row("krLang",LZ(x,"language"))}${briefRows(x)}${row("krVer",st.lang==="uz"?x.verified_uz:x.verified)}</dl></details>
+      <div class="kr-links">${briefBtn(x)}<a class="go" href="${esc(x.portal_url)}" target="_blank" rel="noopener">${esc(t("krPortal"))} ↗</a>${x.notice_url?`<a class="kr-link" href="${esc(x.notice_url)}" target="_blank" rel="noopener">${esc(t("krNotice"))} ↗</a>`:""}</div>
      </div></article>`}).join(""):`<div class="empty">${esc(t("krEmpty"))}</div>`;
 }
 function renderAll(){setStatic();renderStats();chips($("kinds"),"kind",["all","real_project","ideas","award"]);chips($("subs"),"sub",["all","existing_ok","new_design"]);
