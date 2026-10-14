@@ -193,13 +193,24 @@ details[open] summary::before{content:"−"}
  .more{grid-template-columns:1fr}.more dd{margin-bottom:6px}}
 .empty{border-bottom:1px solid var(--hair);padding:36px 0;color:var(--muted)}
 
-/* brief download */
-.brief-btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:13.5px;padding:7px 14px}
-.brief-btn:hover{background:var(--accent)}
-.brief-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.brief-btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:5.5px 12.5px}
-.brief-btn.alt:hover{border-color:var(--accent);color:var(--accent);background:transparent}
-.brief-none{font-size:12.5px;color:var(--muted)}
+/* brief download: four clearly different kinds */
+.brief-btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:13.5px;padding:6px 13px 6px 9px;border:1.5px solid currentColor;line-height:1.2}
+.brief-btn svg{width:20px;height:20px;flex:none}
+.brief-btn small{font-family:var(--mono);font-size:10.5px;font-weight:500;opacity:.8}
+.brief-btn.pdf{background:var(--crit);border-color:var(--crit);color:var(--paper)}
+.brief-btn.pdf:hover{filter:brightness(1.1)}
+.brief-btn svg .pt{fill:var(--crit)}
+.blegend svg .pt{fill:var(--paper)}
+.brief-btn.page{color:var(--accent);background:var(--accent-soft)}
+.brief-btn.page:hover{background:var(--accent);color:var(--paper)}
+.brief-btn.reg{color:var(--mid);background:var(--mid-soft)}
+.brief-btn.reg:hover{background:var(--mid);color:var(--paper)}
+.brief-none{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted);border:1.5px dashed var(--hair);padding:5px 11px 5px 8px}
+.brief-none svg{width:18px;height:18px}
+.blegend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted);align-items:center}
+.blegend span{display:inline-flex;align-items:center;gap:5px}
+.blegend svg{width:16px;height:16px}
+.blegend .pdf{color:var(--crit)} .blegend .page{color:var(--accent)} .blegend .reg{color:var(--mid)}
 .brief-meta{font-size:12px;color:var(--muted)}
 .docs{display:flex;flex-direction:column;gap:3px}
 .docs a{font-size:13px}
@@ -334,7 +345,7 @@ const T={
   krOpen:"Ro'yxatdan o'tishgacha",krSubm:"Topshirishgacha",krUnknown:"Muddat hali aniqlanmagan — portalda ko'ring",krClosed:"Yopilgan (namuna uchun)",
   krReg:"Ro'yxatdan o'tish",krSub:"Topshirish",krRes:"Natijalar",krFee:"Loyihalash haqi",krLang:"Til",krElig:"Kim qatnasha oladi",krVer:"Tekshiruv",krPortal:"Seul portalida ochish",krNotice:"Rasmiy e'lon",krOrg:"Buyurtmachi",
   elig_korean_only:"Faqat Koreya byurolari",elig_joint_with_korean_firm:"Koreya byurosi bilan birga",elig_open_international:"Xalqaro, hamma uchun ochiq",elig_unknown:"Qatnashish shartlari noma'lum",krJump:"Koreya · Seul tanlovlari ↓",krUpd:"Yangilangan: ",krEmpty:"Hozircha ochiq tanlov yo'q.",
-  bPdf:"Brief (PDF) yuklab olish",bPage:"Brief va shartlar",bReg:"Brief (ro'yxatdan o'tgach)",bNone:"Brief hali e'lon qilinmagan",bNoteReg:"Brief ro'yxatdan o'tgan yoki email qoldirgan ishtirokchilarga beriladi",bNotePage:"Shartlar rasmiy sahifada; to'liq PDF bo'lsa, o'sha yerdan yuklanadi",bCovers:"Brief mazmuni",bDocs:"Qo'shimcha hujjatlar",bLang:"Brief tili",
+  bPdf:"Brief PDF yuklab olish ↓",bPage:"Shartlar sahifasi ↗",bReg:"Brief: ro'yxatdan keyin",bNone:"Brief hali e'lon qilinmagan",bNoteReg:"Brief ro'yxatdan o'tgan yoki email qoldirgan ishtirokchilarga beriladi",bNotePage:"Shartlar rasmiy sahifada; to'liq PDF bo'lsa, o'sha yerdan yuklanadi",bCovers:"Brief mazmuni",bDocs:"Qo'shimcha hujjatlar",bLang:"Brief tili",lgPdf:"PDF to'g'ridan-to'g'ri",lgPage:"Shartlar sahifada",lgReg:"Ro'yxatdan keyin",
   tl_sub:"Topshirishgacha",tl_reg:"Ro'yxatgacha",tash:"Toshkent vaqti",approx:"taxminiy vaqt",ended:"Muddati tugadi",dShort:"kun",hms:"SOAT · DAQ · SON",
   lgG:"30+ kun",lgY:"10–30 kun",lgR:"10 kundan kam",
   foot:"Ma'lumotlar rasmiy saytlardan tekshirilgan. Topshirishdan oldin rasmiy sahifadagi shartlarni yana bir bor ko'rib chiqing."},
@@ -354,7 +365,7 @@ const T={
   krOpen:"Until registration",krSubm:"Until submission",krUnknown:"Deadline not confirmed yet — check the portal",krClosed:"Closed (for reference)",
   krReg:"Registration",krSub:"Submission",krRes:"Results",krFee:"Design fee",krLang:"Language",krElig:"Who can enter",krVer:"Verification",krPortal:"Open on Seoul portal",krNotice:"Official notice",krOrg:"Client",
   elig_korean_only:"Korean offices only",elig_joint_with_korean_firm:"Jointly with a Korean office",elig_open_international:"International, open to all",elig_unknown:"Eligibility unknown",krJump:"Korea · Seoul calls ↓",krUpd:"Updated: ",krEmpty:"No open calls right now.",
-  bPdf:"Download brief (PDF)",bPage:"Brief & rules",bReg:"Brief (after registration)",bNone:"Brief not published yet",bNoteReg:"The brief is sent to registered entrants or after leaving an email",bNotePage:"Rules are on the official page; download the full PDF there if offered",bCovers:"What the brief covers",bDocs:"Extra documents",bLang:"Brief language",
+  bPdf:"Download brief PDF ↓",bPage:"Rules page ↗",bReg:"Brief: after registration",bNone:"Brief not published yet",bNoteReg:"The brief is sent to registered entrants or after leaving an email",bNotePage:"Rules are on the official page; download the full PDF there if offered",bCovers:"What the brief covers",bDocs:"Extra documents",bLang:"Brief language",lgPdf:"Direct PDF",lgPage:"Rules on a page",lgReg:"After registration",
   tl_sub:"Until submission",tl_reg:"Until registration",tash:"Tashkent time",approx:"estimated time",ended:"Closed",dShort:"days",hms:"HRS · MIN · SEC",
   lgG:"30+ days",lgY:"10–30 days",lgR:"under 10 days",
   foot:"Facts were checked on the official sites. Re-read the official conditions before you submit."}
@@ -365,11 +376,16 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const iso=s=>{const m=String(s??"").match(/\d{4}-\d{2}-\d{2}/);return m?m[0]:null};
 const L=k=>T[st.lang][k];
-const DLI='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
-const briefBtn=c=>{const a=c.brief_access,u=c.brief_url;if(!u||a==="none_found")return `<span class="brief-none">${esc(L("bNone"))}</span>`;
-  const lab=a==="direct_pdf"?L("bPdf"):a==="after_registration"?L("bReg"):L("bPage");
-  const note=a==="after_registration"?L("bNoteReg"):a==="page"?L("bNotePage"):"";
-  return `<a class="brief-btn${a==="direct_pdf"?"":" alt"}" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(note)}">${DLI}${esc(lab)}${c.brief_lang?` · ${esc(c.brief_lang)}`:""}</a>`};
+const IC={
+ pdf:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2.5h8l4.5 4.5v14.5H7z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M15 2.5V7h4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><rect x="2" y="11" width="14" height="7.5" rx="1.2" fill="currentColor"/><text class="pt" x="9" y="16.9" text-anchor="middle" font-size="5.8" font-weight="700" font-family="Arial,sans-serif">PDF</text></svg>',
+ page:'<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h10l4 4v14H5z"/><path d="M8 10h8M8 13.5h8M8 17h5"/><path d="M15 3v4h4"/></svg>',
+ reg:'<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><circle cx="12" cy="16" r="1.3" fill="currentColor"/></svg>',
+ none:'<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>'};
+const briefBtn=c=>{const a=c.brief_access,u=c.brief_url;if(!u||a==="none_found")return `<span class="brief-none">${IC.none}${esc(L("bNone"))}</span>`;
+  const k=a==="direct_pdf"?"pdf":a==="after_registration"?"reg":"page";
+  const lab=k==="pdf"?L("bPdf"):k==="reg"?L("bReg"):L("bPage");
+  const note=k==="reg"?L("bNoteReg"):k==="page"?L("bNotePage"):"";
+  return `<a class="brief-btn ${k}" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(note)}">${IC[k]}<span>${esc(lab)}${c.brief_lang?` <small>${esc(c.brief_lang)}</small>`:""}</span></a>`};
 const briefRows=c=>{const cov=st.lang==="uz"?(c.brief_covers_uz||c.brief_covers_en):(c.brief_covers_en||c.brief_covers_uz);
   const docs=(c.extra_docs||[]).filter(d=>d&&d.url);let s="";
   if(cov)s+=`<dt>${esc(L("bCovers"))}</dt><dd>${esc(cov)}${c.brief_access==="after_registration"?` <span class="brief-meta">(${esc(L("bNoteReg"))})</span>`:""}</dd>`;
@@ -507,7 +523,7 @@ function renderKorea(){
 }
 function renderAll(){setStatic();renderStats();chips($("kinds"),"kind",["all","real_project","ideas","award"]);chips($("subs"),"sub",["all","existing_ok","new_design"]);
   $("onlyStar").setAttribute("aria-pressed",st.onlyStar);
-  $("legend").innerHTML=`<span><i class="lg"></i>${esc(L("lgG"))}</span><span><i class="ly"></i>${esc(L("lgY"))}</span><span><i class="lr"></i>${esc(L("lgR"))}</span>`;
+  $("legend").innerHTML=`<span><i class="lg"></i>${esc(L("lgG"))}</span><span><i class="ly"></i>${esc(L("lgY"))}</span><span><i class="lr"></i>${esc(L("lgR"))}</span><span class="blegend"><span class="pdf">${IC.pdf}${esc(L("lgPdf"))}</span><span class="page">${IC.page}${esc(L("lgPage"))}</span><span class="reg">${IC.reg}${esc(L("lgReg"))}</span></span>`;
   renderBrief();renderList();renderKorea();tick()}
 // live countdown: update in place every second; re-render when an entry crosses a colour band or closes
 function tick(){const now=Date.now();let rerender=false;
