@@ -531,7 +531,7 @@ function renderKorea(){
   $("kr-h").textContent=L("krTitle");$("kr-note").textContent=L("krNote");
   if(!K){sec.hidden=true;return}sec.hidden=false;
   const P=K.portal||{};$("kr-upd").textContent=K.updated?L("krUpd")+fmt(K.updated):"";
-  $("kr-src").innerHTML=`<b class="ok">${esc(L("krOk"))}</b><span>${esc(st.lang==="uz"?P.operator_uz:P.operator_en)} — <a href="${esc(P.url)}" target="_blank" rel="noopener">project.seoul.go.kr ↗</a><br>${esc(st.lang==="uz"?P.proof_uz:P.proof_en)}</span>`;
+  $("kr-src").innerHTML=`<b class="ok">${esc(L("krOk"))}</b><span>${esc(st.lang==="uz"?P.operator_uz:P.operator_en)}<br>${esc(st.lang==="uz"?P.proof_uz:P.proof_en)}</span>`;
   const now=Date.now(),at=s=>{const t=Date.parse(s||"");return isNaN(t)?null:t};
   const items=(K.items||[]).map(x=>{const r=at(x.registration_deadline_at),s=at(x.submission_deadline_at);const next=[r,s].filter(t=>t&&t>now).sort((a,b)=>a-b)[0]||null;
     const closed=x.status==="closed"||(!next&&((r&&r<now&&!s)||(s&&s<now)));return {x,next,type:next&&next===r?"reg":"sub",closed}})
