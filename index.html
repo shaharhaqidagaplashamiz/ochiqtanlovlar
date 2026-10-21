@@ -1311,10 +1311,11 @@ function closeLB(){const el=$("wlb");if(!el)return;el.hidden=true;document.docum
 function stepLB(d){if(!WLB)return;const np=WLB.PG(WLB.items[lbI]);if(np<2)return;lbP=((lbP-1+d+np)%np)+1;fillLB()}
 /* ---- end winners ---- */
 
-/* ---- Home intro (first visit only, ~1.8 s): the page is drawn in pencil lines, then colour pours in and it becomes
+/* ---- Home intro (every page load / refresh that opens on the home view, ~1.8 s; not when navigating back to home inside the site): the page is drawn in pencil lines, then colour pours in and it becomes
         the normal design. Any tap, key, wheel or scroll finishes it at once. ---- */
 (()=>{const home=$("v-home");if(!home)return;
- if(matchMedia("(prefers-reduced-motion: reduce)").matches||ls.get("introSeen",false))return;
+ const h0=decodeURIComponent(location.hash.slice(1));
+ if(matchMedia("(prefers-reduced-motion: reduce)").matches||!(!h0||h0==="bosh"||h0==="top"))return;
  const SVG="http://www.w3.org/2000/svg",q=s=>home.querySelector(s),tiles=[...home.querySelectorAll(".tile")];
  /* pencil outline of each tile + construction ticks overshooting the corners */
  const frame=t=>{const a=t.querySelector(".tile-art");if(!a)return;let s=t.querySelector(".pframe");
@@ -1338,13 +1339,11 @@ function stepLB(d){if(!WLB)return;const np=WLB.PG(WLB.items[lbI]);if(np<2)return
   if(k==="icon"){const pic=q(sel+" .pic"),p=pic&&pic.querySelector("path");sv(p,"--pd",t);sv(p,"--pl",d);sv(p,"--fd",END+.3);sv(pic,"--cd",END+.15)}}
  sv(q(".t-comp .tile-art"),"--wd",END);sv(q(".t-win .tile-art"),"--wd",END+.08);
  let done=false;
- const finish=()=>{if(done)return;done=true;home.classList.remove("intro","go");ls.set("introSeen",true);
+ const finish=()=>{if(done)return;done=true;home.classList.remove("intro","go");
   ["pointerdown","keydown","wheel","touchstart","scroll"].forEach(e=>removeEventListener(e,finish,true))};
- const start=()=>{home.classList.add("go");ls.set("introSeen",true);
+ const start=()=>{home.classList.add("go");
   ["pointerdown","keydown","wheel","touchstart","scroll"].forEach(e=>addEventListener(e,finish,{capture:true,passive:true}))};
- /* plays the first time the home view is actually on screen */
- if(home.hidden){const mo=new MutationObserver(()=>{if(!home.hidden){mo.disconnect();requestAnimationFrame(start)}});mo.observe(home,{attributes:true,attributeFilter:["hidden"]})}
- else requestAnimationFrame(start);
+ requestAnimationFrame(start);
  const wt=q(".t-win .tile-art");if(wt)wt.addEventListener("animationend",e=>{if(e.animationName==="pwash")setTimeout(finish,150)});
  if("ResizeObserver" in window){const ro=new ResizeObserver(()=>{if(home.classList.contains("intro"))tiles.forEach(frame)});tiles.forEach(t=>ro.observe(t.querySelector(".tile-art")))}
 })();
