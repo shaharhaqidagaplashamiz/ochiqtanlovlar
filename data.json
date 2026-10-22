@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21",
+ "updated": "2026-10-22",
  "competitions": [
   {
    "id": "klodnica-boulevards-gliwice",
@@ -42,7 +42,7 @@
    "summary_en": "Free single-stage urban and landscape concept competition for the Kłodnica river corridor in Gliwice, Poland, run in Polish with physical delivery.",
    "summary_uz": "Polşaning Glivitse şahridagi Klodnitsa daryosi yölagi uçun bepul, bir bosqiçli şaharsozlik va landşaft konsepsiyasi tanlovi; polyak tilida ötkaziladi, işlar jismonan topşiriladi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -108,7 +108,7 @@
    "summary_en": "Urban planning ideas contest for the new sustainable 'Puerta de Madrid' district in Leganés, run as a Spanish procurement procedure with paper submission.",
    "summary_uz": "Leganes şahridagi yangi barqaror 'Puerta de Madrid' mavzesi uçun şaharsozlik ğoyalari tanlovi; Ispaniya davlat xaridi tartibida, qoğoz şaklida topşiriladi.",
    "verified": "partially verified (deadline and submission method verified on portal; eligibility, language and deliverables are in PCAP/PPTP PDFs not readable)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -200,8 +200,8 @@
     "qisman tekşirilgan"
    ],
    "verified_uz": "qisman tekşirilgan (rasmiy sayt minabmemorial.ir oçilmadi; sanalar Archinect/Bustler va competitions.archi dan, mukofot taqsimoti architime.ru dan)",
-   "remove_reason": "Technical problem: official site minabmemorial.ir unreachable (DNS/robots-blocked)",
-   "remove_reason_uz": "Texnik muammo: rasmiy sayt minabmemorial.ir oçilmaydi (DNS/robots bloklangan)"
+   "remove_reason": "Official site minabmemorial.ir still unreachable (robots-blocked/connection refused); no alternative official page found",
+   "remove_reason_uz": "Rasmiy sayt minabmemorial.ir hali ham oçilmaydi; boşqa rasmiy sahifa topilmadi"
   },
   {
    "id": "buildner-vancouver-tall-challenge",
@@ -238,7 +238,7 @@
    "summary_en": "Buildner ideas competition for tall-building proposals in downtown Vancouver with a CAD 15,000 prize fund.",
    "summary_uz": "Vankuver markazida baland binolar uçun Buildner ğoyalar tanlovi; mukofot fondi 15 000 CAD.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -296,7 +296,7 @@
    "summary_en": "Buildner/AIA Rochester ideas competition for a riverfront market and public space at the future High Falls State Park.",
    "summary_uz": "Kelajakdagi High Falls ştat boğida daryo böyi bozori va jamoat makoni uçun Buildner/AIA Rochester ğoyalar tanlovi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -342,13 +342,13 @@
    "deliverables": "2 horizontal A1 panels + brief project text",
    "language": "English (brief also in IT/ES/FR; submission language not explicitly stated)",
    "key_points_en": [
-    "Only late fee €129 remains; deadline 30 Oct 2026, 15:00 CET - 9 days left.",
+    "Only late fee €129 remains; deadline 30 Oct 2026, 15:00 CET - 8 days left.",
     "Two A1 horizontal panels plus a short text.",
     "Open worldwide, unlimited team size.",
     "Ideas competition; results 30 Nov 2026."
    ],
    "key_points_uz": [
-    "Faqat keçki tölov 129 € qoldi; muddat 2026-yil 30-oktabr, 15:00 CET - 9 kun qoldi.",
+    "Faqat keçki tölov 129 € qoldi; muddat 2026-yil 30-oktabr, 15:00 CET - 8 kun qoldi.",
     "Ikki gorizontal A1 planşet va qisqa matn.",
     "Butun dunyo uçun oçiq, jamoa soni çeklanmagan.",
     "Ğoyalar tanlovi; natijalar 2026-yil 30-noyabrda."
@@ -356,10 +356,10 @@
    "summary_en": "Terraviva ideas competition for temporary, low-cost tactical-urbanism interventions in neglected urban spaces.",
    "summary_uz": "E'tibordan çetda qolgan şahar makonlari uçun vaqtinçalik, arzon taktik urbanizm yeçimlari böyiça Terraviva ğoyalar tanlovi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
-   "updated": "2026-10-21",
+   "updated": "2026-10-22",
    "registration_deadline_at": "2026-10-30T14:00:00Z",
    "submission_deadline_at": "2026-10-30T14:00:00Z",
    "deadline_tz": "Europe/Rome",
@@ -418,7 +418,7 @@
    "summary_en": "Terraviva urban-regeneration ideas competition to turn a former industrial site in Brugnera (Italy) into a new district; USD 30,000 prizes (≈ €24,000 paid in EUR).",
    "summary_uz": "Brunyera (Italiya)dagi sobiq sanoat hududini yangi mavzega aylantiriş böyiça Terraviva ğoyalar tanlovi; mukofot 30 000 USD (yevroda ≈ 24 000 €).",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -478,7 +478,7 @@
    "summary_en": "Volume Zero ideas competition for an inclusive micro public space of up to 278 m², submitted on one A1 sheet.",
    "summary_uz": "278 m² gaça bölgan inklyuziv kiçik jamoat makoni uçun Volume Zero ğoyalar tanlovi; bitta A1 varaqda topşiriladi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -536,7 +536,7 @@
    "summary_en": "Low-cost Archiol ideas competition for a people-centred smart-city master plan; prizes depend on participation.",
    "summary_uz": "Insonga yönaltirilgan aqlli şahar boş rejasi uçun arzon Archiol ğoyalar tanlovi; mukofotlar iştirokçilar soniga boğliq.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-16",
@@ -594,7 +594,7 @@
    "summary_en": "Archiol ideas competition to turn neglected urban rivers into resilient public parks.",
    "summary_uz": "E'tibordan çetda qolgan şahar daryolarini bardoşli jamoat boğlariga aylantiriş böyiça Archiol ğoyalar tanlovi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -655,7 +655,7 @@
    "summary_en": "Now Now/ICLEI Africa ideas competition for upgrading fresh-produce markets in Nairobi or Kisumu with a master plan and modular toolkit.",
    "summary_uz": "Nayrobi yoki Kisumudagi oziq-ovqat bozorlarini boş reja va modulli yeçimlar bilan yangilaş böyiça Now Now/ICLEI Africa ğoyalar tanlovi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-15",
@@ -717,7 +717,7 @@
    "summary_en": "ArchiBriefer ideas competition to turn a 10×10 m Barcelona plot into a climate-adaptive pocket park; no cash prize.",
    "summary_uz": "Barselonadagi 10×10 m böş yerni iqlimga moslaşgan kiçik boğga aylantiriş böyiça ArchiBriefer ğoyalar tanlovi; pul mukofoti yöq.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -808,8 +808,8 @@
    "verified_uz": "qisman tekşirilgan (rasmiy sahifa faqat JavaScript bilan oçiladi; ma'lumotlar Bustler va Internshala e'lonlaridan)",
    "deadline_note": "Registration closes 23 Oct 2026, submission 29 Oct 2026, both 23:59 IST.",
    "deadline_note_uz": "Röyxatdan ötiş 2026-yil 23-oktabr, topşiriş 2026-yil 29-oktabr, ikkalasi ham Hindiston vaqti (IST) bilan 23:59 da yopiladi.",
-   "remove_reason": "official page does not load",
-   "remove_reason_uz": "rasmiy sahifa oçilmaydi"
+   "remove_reason": "official page is JavaScript-only and shows no competition details (registration closes 23 Oct anyway)",
+   "remove_reason_uz": "rasmiy sahifa faqat JavaScript bilan işlaydi va tanlov ma'lumotlarini körsatmaydi (röyxatdan ötiş baribir 23-oktabrda yopiladi)"
   },
   {
    "id": "a-design-award-city-planning-2027",
@@ -849,7 +849,7 @@
    "summary_en": "Annual paid design award with a City Planning and Urban Design category accepting built and concept work.",
    "summary_uz": "Amalga oşirilgan va konseptual işlarni qabul qiluvçi 'Şaharsozlik va urban dizayn' kategoriyasiga ega yillik pullik dizayn mukofoti.",
    "verified": "verified (fee amount not published on page)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -909,7 +909,7 @@
    "summary_en": "Paid APR award for built or concept urban design and architecture projects, exposure-based.",
    "summary_uz": "Qurilgan yoki konseptual şaharsozlik va arxitektura loyihalari uçun APR pullik mukofoti, asosan reklama/taniliş uçun.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -973,7 +973,7 @@
    "summary_en": "Biennial Europan competition for young architects on real European sites; session 19 launches March 2027.",
    "summary_uz": "Yoş arxitektorlar uçun haqiqiy Yevropa hududlarida ikki yilda bir marta ötkaziladigan Europan tanlovi; 19-sessiya 2027-yil martda boşlanadi.",
    "verified": "partially verified (calendar verified; fee, age limit and eligibility not yet published)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -1040,7 +1040,7 @@
    "summary_en": "UIA-endorsed competition for young licensed architects to design a pavilion on Beijing's Yongding-Chang'an axis, with a commission for the winner.",
    "summary_uz": "Yoş litsenziyali arxitektorlar uçun Pekindagi Yongding-Chang'an öqida pavilyon loyihalaş böyiça UIA tasdiqlagan tanlov; ğolibga buyurtma beriladi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-14",
@@ -1105,7 +1105,7 @@
    "summary_en": "Free two-stage competition for a fixed-plus-mobile pavilion system for World Design Capital Busan 2028, open to registered firms worldwide.",
    "summary_uz": "World Design Capital Busan 2028 uçun statsionar va köçma pavilon tizimi böyiça bepul ikki bosqiçli tanlov; butun dunyodagi röyxatdan ötgan firmalar uçun oçiq.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -1168,7 +1168,7 @@
    "summary_en": "Free international competition for a new academic wing and schoolyard of the 18th School in central Sofia, with a follow-up design contract.",
    "summary_uz": "Sofiya markazidagi 18-maktab uçun yangi öquv binosi va maktab hovlisi böyiça bepul xalqaro tanlov; keyingi loyiha şartnomasi bilan.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -1298,7 +1298,7 @@
    "summary_en": "Free call for experimental temporary gardens to be built at the 2027 International Garden Festival at Reford Gardens, Quebec.",
    "summary_uz": "Kvebekdagi Reford boğlarida 2027-yilgi Xalqaro boğlar festivali uçun quriladigan eksperimental vaqtinçalik boğlar böyiça bepul tanlov.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -1480,7 +1480,7 @@
    "summary_en": "Free AUDRC ideas competition for a memorial to the sixth mass extinction, any site, AUD 15,000 prize.",
    "summary_uz": "Oltinçi ommaviy yöqolişga bağişlangan yodgorlik uçun bepul AUDRC ğoyalar tanlovi; istalgan joy, mukofot 15 000 AUD.",
    "verified": "verified (audrc.org lists the competition; full brief PDF read via AAANZ)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-14",
@@ -1539,7 +1539,7 @@
    "summary_en": "Small ideas challenge by Morphology Lab: an architectural proposal built from only three elements.",
    "summary_uz": "Morphology Lab tomonidan kiçik ğoyalar tanlovi: faqat uçta elementdan iborat arxitektura taklifi.",
    "verified": "partially verified (no organizer site; competitions.archi listing only; fee not stated)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -1603,7 +1603,7 @@
    "summary_en": "UIA award recognising architects' overall work on circular and sustainable architecture; free, deadline 29 Jan 2027.",
    "summary_uz": "Arxitektorlarning aylanma va barqaror arxitektura böyiça umumiy faoliyatini taqdirlovçi UIA mukofoti; bepul, muddat 2027-yil 29-yanvar.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -1665,7 +1665,7 @@
    "summary_en": "Design a quiet observation tower for reflection on Latvia's Baltic coast near Cape Kolka. Prize fund €10,000.",
    "summary_uz": "Latviyaning Kolka burni yaqinidagi Boltiq sohilida tafakkur uçun sokin kuzatuv minorasini loyihalaş. Mukofot jamğarmasi 10 000 €.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-16",
@@ -1723,7 +1723,7 @@
    "summary_en": "Ideas competition for a kindergarten that supports child development, on a site of the entrant's choice. Prize fund €10,000.",
    "summary_uz": "Bola rivojlanişini qöllab-quvvatlovçi boğça uçun ğoyalar tanlovi, uçastka iştirokçi tanlovi böyiça. Mukofot jamğarmasi 10 000 €.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -1781,7 +1781,7 @@
    "summary_en": "Design an open-air timber yoga pavilion beneath a historic oak in the Italian countryside. Prize fund €8,000.",
    "summary_uz": "Italiya qişloğida tarixiy eman ostida oçiq havodagi yoğoç yoga pavilyonini loyihalaş. Mukofot jamğarmasi 8 000 €.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -1839,7 +1839,7 @@
    "summary_en": "Visual-only ideas competition for a museum whose two halls evoke contrasting emotions. Prize fund €8,000.",
    "summary_uz": "Ikki zali qarama-qarşi his-tuyğularni uyğotadigan muzey uçun faqat vizual ğoyalar tanlovi. Mukofot jamğarmasi 8 000 €.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -1899,7 +1899,7 @@
    "summary_en": "Convert a former horse barn near Braga into a communal long-table restaurant with guest rooms. Prize fund €10,000.",
    "summary_uz": "Braga yaqinidagi sobiq otxonani mehmon xonalari bilan uzun umumiy stolli restoranga aylantiriş. Mukofot jamğarmasi 10 000 €.",
    "verified": "partially verified: dates/prizes confirmed; fee amounts shown (€140/€120) but tier mapping unclear on page",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -1961,7 +1961,7 @@
    "summary_en": "Design a small sustainable wine tasting room for an organic cooperative in Piedmont's Colli Tortonesi. Prize fund €10,000.",
    "summary_uz": "Pyemont Colli Tortonesi hududidagi organik kooperativ uçun kiçik barqaror vino degustatsiya zalini loyihalaş. Mukofot jamğarmasi 10 000 €.",
    "verified": "partially verified: dates/prizes confirmed; fee tier mapping unclear on page",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -2024,7 +2024,7 @@
    "summary_en": "Project competition to turn part of the historic Cantoni cotton mill in Bellano (Lake Como) into a museum and cultural hub; winners advance to the €50,000 Buildner Medal final.",
    "summary_uz": "Bellanodagi (Komo köli) tarixiy Cantoni paxta fabrikasining bir qismini muzey va madaniy markazga aylantiriş böyiça loyiha tanlovi; ğoliblar 50 000 € lik Buildner Medal finaliga çiqadi.",
    "verified": "verified (official page found at /cottonmill/; single-payment and student fees not displayed)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -2087,7 +2087,7 @@
    "summary_en": "Annual award for unbuilt architectural designs in three size categories, with a €50,000 prize fund.",
    "summary_uz": "Uç ölçam toifasidagi qurilmagan arxitektura loyihalari uçun yillik mukofot, mukofot jamğarmasi 50 000 €.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-17",
@@ -2209,7 +2209,7 @@
    "summary_en": "Reimagine a historic Lake Garda estate as a contemporary retirement residence. USD 10,000 pool (€8,000 paid).",
    "summary_uz": "Garda köli böyidagi tarixiy mulkni zamonaviy keksalar qarorgohi sifatida qayta tasavvur qiliş. Mukofot 10 000 USD (yevroda 8 000 €).",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -2269,7 +2269,7 @@
    "summary_en": "Redesign an unused historic-centre apartment in Pavia as a home for students. €8,000 pool.",
    "summary_uz": "Paviya tarixiy markazidagi foydalanilmayotgan kvartirani talabalar uçun uyga aylantiriş. Mukofot 8 000 €.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-17",
@@ -2329,7 +2329,7 @@
    "summary_en": "Reinvent the kiosk as a small civic landmark for public space, on any site worldwide. USD 8,000 pool.",
    "summary_uz": "Kioskni jamoat makoni uçun kiçik fuqarolik belgisi sifatida qayta ixtiro qiliş, dunyoning istalgan joyida. Mukofot 8 000 AQŞ dollari.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -2387,7 +2387,7 @@
    "summary_en": "Turn a historic farm stable near Pavia into two contemporary duplex dwellings. USD 10,000 pool (≈ €8,000 paid).",
    "summary_uz": "Paviya yaqinidagi tarixiy ferma otxonasini ikki zamonaviy dupleks uyga aylantiriş. Mukofot 10 000 USD (yevroda ≈ 8 000 €).",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -2445,7 +2445,7 @@
    "summary_en": "YAC competition with Marradi municipality to turn Dino Campana's house into a centre for contemporary poetry. €15,000 in prizes.",
    "summary_uz": "YAC va Marradi munitsipaliteti tanlovi: Dino Kampana uyini zamonaviy şe'riyat markaziga aylantiriş. Mukofot jamğarmasi 15 000 €.",
    "verified": "verified (submission time and board format not on page)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -2503,7 +2503,7 @@
    "summary_en": "Long-running ideas competition for visionary skyscrapers and vertical density, with no site or programme limits.",
    "summary_uz": "Joy yoki dastur çeklovisiz, istiqbolli osmonöpar binolar va vertikal ziçlik böyiça köp yillardan beri ötkazib kelinayotgan ğoyalar tanlovi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -2563,7 +2563,7 @@
    "summary_en": "AI-assisted design competition with the Antoni Gaudí Foundation for a market, digital culture centre and plaza near Sagrada Família. USD 10,000 in prizes.",
    "summary_uz": "Antoni Gaudi jamğarmasi bilan AI yordamida loyihalaş tanlovi: Sagrada Familia yaqinida bozor, raqamli madaniyat markazi va maydon. Mukofotlar 10 000 AQŞ dollari.",
    "verified": "verified (dates on page lack year; deadline time from FAQ)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-14",
@@ -2625,7 +2625,7 @@
    "summary_en": "Ideas competition to design a micro-living unit of no more than 250 sq ft, treating urban density as an opportunity.",
    "summary_uz": "Şahar ziçligini imkoniyat sifatida körib, maydoni 250 kv. futdan oşmaydigan mikro-turar-joy birligini loyihalaş böyiça ğoyalar tanlovi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -2685,7 +2685,7 @@
    "summary_en": "Seventh edition of a tiny-house ideas competition ('Less House, More Home') for an adaptable, sustainable home under 300 sq ft.",
    "summary_uz": "300 kv. futdan kiçik, moslaşuvçan va barqaror uy loyihalaş böyiça 'Less House, More Home' mavzusidagi kiçik uylar ğoyalar tanlovining yettinçi naşri.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -2743,7 +2743,7 @@
    "summary_en": "Low-cost ideas competition to design a village for remote workers that evolves from temporary stays into a community.",
    "summary_uz": "Masofaviy işlovçilar uçun vaqtinçalik turişdan jamoaga aylanadigan qişloqni loyihalaş böyiça arzon ğoyalar tanlovi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-14",
@@ -2831,8 +2831,8 @@
     "badal miqdori tasdiqlanmagan"
    ],
    "verified_uz": "qisman tekşirilgan (rasmiy sahifa dinamik yuklanadi; sana va mukofotlar unga havola beruvçi competitions.archi e'loni orqali tasdiqlangan; badal va materiallar körinmaydi)",
-   "remove_reason": "official page shows only a loading placeholder",
-   "remove_reason_uz": "rasmiy sahifa yuklanmaydi"
+   "remove_reason": "Official page still shows only a 'Loading competition details...' placeholder (JS-only); no details readable",
+   "remove_reason_uz": "Rasmiy sahifada faqat 'yuklanmoqda' yozuvi körinadi (JS); ma'lumotlarni öqib bölmaydi"
   },
   {
    "id": "archibriefer-community-workshop-pavilion",
@@ -2871,7 +2871,7 @@
    "summary_uz": "150 m² gaça bölgan mahalla ustaxona-pavilyoni böyiça arzon ğoyalar tanlovi.",
    "verified": "verified",
    "deadline_note": "No exact time stated on the official page; 23:59 organizer time assumed — submit a day early.",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -2933,7 +2933,7 @@
    "summary_en": "Major global awards program for built (last 3 years) and selected unbuilt architecture, with rising fees by deadline.",
    "summary_uz": "Sönggi 3 yilda qurilgan va ayrim qurilmagan loyihalar uçun yirik xalqaro mukofot dasturi; tölov muddatga qarab oşadi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -2995,7 +2995,7 @@
    "summary_en": "International awards for recently completed and future projects, including master planning and public realm categories.",
    "summary_uz": "Yaqinda qurilgan va kelajakdagi loyihalar uçun xalqaro mukofot, jumladan boş rejalaştiriş va jamoat makonlari toifalari.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -3059,7 +3059,7 @@
    "summary_en": "The Architectural Review's awards for projects on the drawing board or under construction, with low-cost prizes for students and unbuilt competition entries.",
    "summary_uz": "The Architectural Review jurnalining loyihalaş yoki quriliş bosqiçidagi işlar uçun mukofoti; talabalar va yutmagan tanlov loyihalari uçun arzon nominatsiyalar ham bor.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -3119,7 +3119,7 @@
    "summary_en": "Multi-discipline international awards accepting built and concept projects, with fees rising from USD 140.",
    "summary_uz": "Qurilgan va konseptual loyihalarni qabul qiluvçi köp yönalişli xalqaro mukofot; tölov 140 dollardan boşlanadi.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -3204,8 +3204,8 @@
     "qisman tekşirilgan"
    ],
    "verified_uz": "qisman tekşirilgan (rasmiy saytda öqiladigan matn yöq; muddat wettbewerbe-aktuell e'loni orqali tasdiqlangan; badal va talablar tasdiqlanmagan)",
-   "remove_reason": "official site returns no readable content",
-   "remove_reason_uz": "rasmiy saytda öqiladigan ma'lumot yöq",
+   "remove_reason": "official site returns no readable content (JS app, metadata only); fee unknown",
+   "remove_reason_uz": "rasmiy sayt öqiladigan ma'lumot bermaydi (faqat JS ilova); badal noma'lum",
    "deadline_note_uz": "Rasmiy sahifada aniq vaqt körsatilmagan; taşkilotçi vaqti bilan 23:59 deb olindi — bir kun oldin topşiring."
   },
   {
@@ -3245,7 +3245,7 @@
    "summary_en": "Helsinki-based paid award for completed architecture, interior and design projects.",
    "summary_uz": "Yakunlangan arxitektura, interyer va dizayn loyihalari uçun Xelsinki asosidagi pullik mukofot.",
    "verified": "partially verified (fees confirmed on official page; tier dates and completion cut-off ambiguous between official page and archup)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -3305,7 +3305,7 @@
    "summary_uz": "Rethinking The Future'ning qurilgan va konsept işlar uçun 35 toifali mukofoti; faqat keçki röyxat bosqiçi qolgan.",
    "verified": "verified",
    "deadline_note": "No exact time stated on the official page; 23:59 organizer time assumed — submit a day early.",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-13",
@@ -3363,7 +3363,7 @@
    "summary_uz": "IAA taşkil etgan köp yönalişli pullik dizayn mukofoti; yakuniy uzaytirilgan muddat 2026-yil 29-oktabr.",
    "verified": "verified",
    "deadline_note": "No exact time stated on the official page; 23:59 organizer time assumed — submit a day early.",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-15",
@@ -3421,7 +3421,7 @@
    "summary_en": "Award for built and concept projects that reinterpret tradition in a modern way.",
    "summary_uz": "An'anani zamonaviy talqin qiluvçi qurilgan va konsept loyihalar uçun mukofot.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-16",
@@ -3481,7 +3481,7 @@
    "summary_en": "Chinese space/architecture design awards accepting completed and concept projects.",
    "summary_uz": "Yakunlangan va konsept loyihalarni qabul qiluvçi Xitoy makon/arxitektura dizayni mukofoti.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-13",
    "updated": "2026-10-21",
@@ -3633,7 +3633,7 @@
     "sahifa kiriş qismida '2026-yil iyul' deyilgan, jadvalda esa 2027-yil yozi (xato)"
    ],
    "verified_uz": "tekşirilgan",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "added": "2026-10-14",
    "updated": "2026-10-16",
    "status": "open"
@@ -3699,7 +3699,7 @@
     "muddat vaqti va vaqt mintaqasi körsatilmagan"
    ],
    "verified_uz": "tekşirilgan",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "added": "2026-10-14",
    "updated": "2026-10-14",
    "status": "open"
@@ -3767,7 +3767,7 @@
     "muddat vaqt mintaqasi körsatilmagan"
    ],
    "verified_uz": "qisman tekşirilgan (taşkilotçi, planşet formati va muddat vaqt mintaqasi rasmiy sahifada körsatilmagan)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "added": "2026-10-14",
    "updated": "2026-10-21",
    "status": "open"
@@ -3814,7 +3814,7 @@
    "summary_en": "Annual multi-discipline design award from an Asia-Pacific design educators' network; architects can enter built or concept work in the Architectural category for recognition rather than cash.",
    "summary_uz": "Osiyo-Tinç okeani dizayn öqituvçilari tarmoğining yillik köp yönalişli mukofoti; arxitektorlar 'Arxitektura' nominatsiyasiga qurilgan yoki konseptual işini pul emas, e'tirof uçun yuborişi mumkin.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-15",
    "updated": "2026-10-15",
@@ -3884,7 +3884,7 @@
    "summary_en": "Paid international design award run by IAA with an architecture category; suits architects wanting to publicise a recent built or concept project.",
    "summary_uz": "IAA tomonidan ötkaziladigan pullik xalqaro dizayn mukofoti, arxitektura nominatsiyasi bor; yaqindagi qurilgan yoki konseptual loyihasini tanitmoqçi bölgan arxitektorlar uçun mos.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-15",
    "updated": "2026-10-15",
@@ -3954,7 +3954,7 @@
    "summary_en": "Low-cost online ideas competition by Alanya University on aesthetics in architecture and urban design, accepting existing or conceptual projects from anywhere.",
    "summary_uz": "Alanya universitetining arxitektura va şaharsozlikda estetika mavzusidagi arzon onlayn ğoyalar tanlovi; istalgan joydagi mavjud yoki konseptual loyihalar qabul qilinadi.",
    "verified": "partially verified (official page has conflicting fee and leftover dates from earlier editions)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-15",
    "updated": "2026-10-15",
@@ -4041,7 +4041,7 @@
     "topşiriladigan materiallar va planşet formati faqat yuklab olinadigan topşiriqda (veb-sahifada emas)"
    ],
    "verified_uz": "qisman tekşirilgan (materiallar faqat yuklab olinadigan topşiriqda; röyxat 2027-yil yanvarda oçiladi)",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "added": "2026-10-16",
    "updated": "2026-10-16",
    "status": "open",
@@ -4086,26 +4086,26 @@
    "submission_deadline": "2027-01-22",
    "results_date": "2027-03-28",
    "fee_text": "USD tiers rising every ~2 weeks: $51 (7–21 Oct 2026) → $53 (22 Oct–6 Nov) → $54 (7–21 Nov) → $56 (22 Nov–6 Dec) → late $58 (7 Dec 2026–12 Jan 2027). Student and group discounts.",
-   "fee_current": "51 USD (until 2026-10-21 23:59 UTC - ends today; $53 from 22 Oct)",
+   "fee_current": "USD 53 (22 Oct–6 Nov 2026; then $54)",
    "fee_text_uz": "USD bosqiçlari taxminan har 2 haftada oşadi: 51 $ (2026-yil 7–21-okt) → 53 $ (22-okt–6-noy) → 54 $ (7–21-noy) → 56 $ (22-noy–6-dek) → keçki 58 $ (2026-yil 7-dek–2027-yil 12-yanv). Talaba va guruh çegirmalari bor.",
-   "fee_current_uz": "51 USD (2026-10-21, 23:59 UTC gaça - bugun tugaydi; 22-oktabrdan 53 $)",
+   "fee_current_uz": "53 USD (2026-yil 22-oktabr – 6-noyabr; keyin 54 $)",
    "key_points_en": [
     "Low-impact pavilion, shelter or rest area inside an urban forest – site chosen by the entrant.",
-    "Fee $51 until 21 Oct, then rises gradually to $58.",
+    "Fee now $53 until 6 Nov, then rises gradually to $58.",
     "Prize money not guaranteed – depends on number of entries.",
     "Register by 12 Jan, submit by 22 Jan 2027 (UTC); teams up to 4, English only."
    ],
    "key_points_uz": [
     "Şahar örmonidagi kam ta'sirli pavilon, boşpana yoki dam oliş joyi – joyni iştirokçi tanlaydi.",
-    "Badal 21-oktabrgaça 51 $, keyin asta-sekin 58 $ gaça oşadi.",
+    "Badal hozir 6-noyabrgaça 53 $, keyin asta-sekin 58 $ gaça oşadi.",
     "Pul mukofoti kafolatlanmagan – iştirokçilar soniga boğliq.",
     "Röyxat 2027-yil 12-yanvargaça, topşiriş 22-yanvargaça (UTC); jamoa 4 kişigaça, faqat ingliz tilida."
    ],
    "summary_en": "Low-cost Archiol ideas competition for a sustainable pavilion or shelter in an urban forest on a site of the entrant's choice; prizes depend on participation.",
    "summary_uz": "Iştirokçi tanlagan şahar örmonida barqaror pavilon yoki boşpana loyihalaş böyiça arzon Archiol ğoyalar tanlovi; mukofotlar iştirokçilar soniga boğliq.",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "added": "2026-10-16",
-   "updated": "2026-10-21",
+   "updated": "2026-10-22",
    "status": "open",
    "registration_deadline_at": "2027-01-12T23:59:00Z",
    "submission_deadline_at": "2027-01-22T23:59:00Z",
@@ -4165,7 +4165,7 @@
    ],
    "summary_en": "Low-cost Archiol urban-design ideas competition for a resilient, inclusive coastal city in 2050 on a hypothetical site; prizes depend on participation.",
    "summary_uz": "Faraziy joyda 2050-yilgi çidamli va inklyuziv qirğoq şahri böyiça arzon Archiol şaharsozlik ğoyalar tanlovi; mukofotlar iştirokçilar soniga boğliq.",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "added": "2026-10-16",
    "updated": "2026-10-17",
    "status": "open",
@@ -4216,7 +4216,7 @@
    "summary_en": "The AR/AJ W Awards celebrate women and non-binary architects and research on gender and space; two of three prizes accept entries from anywhere, free of charge.",
    "summary_uz": "AR va AJ tomonidan ötkaziladigan W Awards ayol va non-binar arxitektorlarni hamda gender va makon tadqiqotlarini taqdirlaydi; uçta mukofotdan ikkitasiga dunyoning istalgan joyidan tekin topşiriş mumkin.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-17",
    "updated": "2026-10-17",
@@ -4285,7 +4285,7 @@
    "summary_en": "AI-assisted ideas competition by FORMAS.AI and PAACADEMY asking for the transformation of an existing site across three future generations, with a dedicated professional category.",
    "summary_uz": "FORMAS.AI va PAACADEMY tomonidan sun'iy intellekt vositalari bilan ötkaziladigan ğoyalar tanlovi: mavjud hududni uç kelajak avlod davomida özgartiriş taklif qilinadi, professionallar uçun alohida toifa bor.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-17",
    "updated": "2026-10-21",
@@ -4322,15 +4322,15 @@
    "flags": [
     "fee tiers taken from competitions.archi listing (not shown on official page)",
     "eligibility wording not shown on official page (listing: architects, engineers, students)",
-    "VAT treatment unverified"
+    "22% Italian VAT added on top of the fee (€89 → €108.58)"
    ],
    "official_url": "https://www.reuseitaly.com/competitions/reuse-the-theater-falerone-marche/",
    "registration_deadline": "2026-11-19",
    "submission_deadline": "2026-11-19",
    "results_date": null,
    "deadline_note": "Registration and submission close 19 Nov 2026 (23:59 Rome time per listing); results December 2026; exhibition in Falerone February 2027.",
-   "fee_text": "Early €69 (from 15 Jun 2026); Regular €79 (from 31 Jul 2026); Late €89 (from 11 Sep 2026)",
-   "fee_current": "€89 (late registration)",
+   "fee_text": "Early €69 (from 15 Jun 2026); Regular €79 (from 31 Jul 2026); Late €89 (from 11 Sep 2026); +22% VAT (late fee €108.58 incl. VAT per official registration page)",
+   "fee_current": "€89 + VAT = €108.58 (late registration)",
    "prize_text": "€5,000 total: 1st €3,000, 2nd €1,500, 3rd €500; honourable mentions and special mentions for innovation; publication in an ISBN book and local exhibition",
    "submission_type": "new_design",
    "team": "Individuals or teams of up to 4; open internationally to architects, engineers and students",
@@ -4341,22 +4341,22 @@
     "Single A1 board; teams up to 4.",
     "€5,000 prize pool plus book publication and exhibition in Falerone.",
     "Jury includes Javier Sánchez (JSa) and Anteo Taro Boschi Sanada (KKAA).",
-    "Closes 19 Nov 2026; current fee €89."
+    "Closes 19 Nov 2026; current fee €89 + VAT (€108.58)."
    ],
    "key_points_uz": [
     "Italiyaning Marke viloyatidagi Falerio Picenus Rim teatrini qayta jonlantiruvçi zamonaviy sahna loyihalaş.",
     "Bitta A1 planşet; jamoa 4 kişigaça.",
     "5 000 € mukofot jamğarmasi, kitobda naşr va Faleroneda körgazma.",
     "Hakamlar: Javier Sánchez (JSa), Anteo Taro Boschi Sanada (KKAA) va boşqalar.",
-    "2026-yil 19-noyabrda yopiladi; hozirgi badal 89 €."
+    "2026-yil 19-noyabrda yopiladi; hozirgi badal 89 € + QQS (108,58 €)."
    ],
    "summary_en": "Reuse Italy's 15th call asks for a flexible contemporary stage completing a Roman theatre in Falerone, turning it into an inclusive cultural venue and performance park.",
    "summary_uz": "Reuse Italy'ning 15-tanlovi Faleronedagi Rim teatrini töldiruvçi moslaşuvçan zamonaviy sahna va uni inklyuziv madaniy maydon hamda tomoşa boğiga aylantirişni taklif qiladi.",
    "verified": "partially verified: deadline, prizes, A1 deliverable and team size confirmed on official page; fees and eligibility from competitions.archi listing",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "status": "open",
    "added": "2026-10-17",
-   "updated": "2026-10-21",
+   "updated": "2026-10-22",
    "registration_deadline_at": "2026-11-19T22:59:00Z",
    "submission_deadline_at": "2026-11-19T22:59:00Z",
    "deadline_tz": "Europe/Rome",
@@ -4370,13 +4370,13 @@
    "team_uz": "Yakka yoki 4 kişigaça jamoa; arxitektorlar, muhandislar va talabalar uçun xalqaro miqyosda oçiq",
    "deliverables_uz": "1 ta A1 planşet (59,4 × 84,1 sm)",
    "language_uz": "Ingliz tili",
-   "fee_text_uz": "Erta 69 € (2026-yil 15-iyundan); Oddiy 79 € (2026-yil 31-iyuldan); Keç 89 € (2026-yil 11-sentabrdan)",
+   "fee_text_uz": "Erta 69 € (2026-yil 15-iyundan); Oddiy 79 € (2026-yil 31-iyuldan); Keç 89 € (2026-yil 11-sentabrdan); +22% QQS (rasmiy röyxatdan ötiş sahifasiga köra keç badal QQS bilan 108,58 €)",
    "deadline_note_uz": "Röyxatdan ötiş va topşiriş 2026-yil 19-noyabrda yopiladi (e'longa köra Rim vaqti bilan 23:59); natijalar 2026-yil dekabrda; Faleroneda körgazma 2027-yil fevralda.",
-   "fee_current_uz": "89 € (keç röyxatdan ötiş)",
+   "fee_current_uz": "89 € + QQS = 108,58 € (keç röyxatdan ötiş)",
    "flags_uz": [
     "badal bosqiçlari competitions.archi e'lonidan olingan (rasmiy sahifada körsatilmagan)",
     "qatnaşiş şartlari rasmiy sahifada körsatilmagan (e'londa: arxitektorlar, muhandislar, talabalar)",
-    "QQS tartibi tasdiqlanmagan"
+    "badalga 22% Italiya QQS qöşiladi (89 € → 108,58 €)"
    ],
    "verified_uz": "qisman tekşirilgan (muddat, mukofotlar, A1 talab va jamoa hajmi rasmiy sahifada tasdiqlangan; badal va şartlar competitions.archi e'lonidan)"
   },
@@ -4445,8 +4445,8 @@
     "muddatlar rasmiy sahifada yöq; Bustler/Toronto arxitektorlar jamiyatidan olingan (competitions.archi'da 2027-yil 28-fevral)"
    ],
    "verified_uz": "qisman tekşirilgan (qatnaşiş şartlari, jamoa hajmi va mukofotlar rasmiy sahifada tasdiqlangan; muddatlar va topşiriq Bustler/TSA e'lonlaridan, badal körsatilmagan)",
-   "remove_reason": "Official page no longer publishes a deadline; guidelines PDF unreadable",
-   "remove_reason_uz": "Rasmiy sahifada muddat körsatilmagan; nizom PDF fayli oçilmaydi"
+   "remove_reason": "Official ICAAF page (and its Iran-info page) still publishes no registration/submission deadline or international fee",
+   "remove_reason_uz": "Rasmiy ICAAF sahifasida röyxatdan ötiş/topşiriş muddati va xalqaro badal hali ham körsatilmagan"
   },
   {
    "id": "budva-coastal-zone-urban-concept",
@@ -4489,7 +4489,7 @@
    "summary_en": "Montenegro's ministry seeks an urban and architectural concept turning a large stretch of Budva's seafront into one coherent public space linking beach, promenade and port.",
    "summary_uz": "Çernogoriya vazirligi Budva sohilining katta qismini plyaj, sayilgoh va portni birlaştiruvçi yaxlit jamoat makoniga aylantiradigan şaharsozlik va arxitektura konsepsiyasini izlamoqda.",
    "verified": "verified",
-   "check_date": "2026-10-21",
+   "check_date": "2026-10-22",
    "added": "2026-10-21",
    "updated": "2026-10-21",
    "status": "open",
@@ -4515,6 +4515,140 @@
    "submission_deadline_at": "2026-12-15T11:00:00Z",
    "deadline_tz": "Europe/Podgorica",
    "deadline_time_exact": true
+  },
+  {
+   "id": "design-discovery-awards-2026-season-2",
+   "name": "Design Discovery Awards 2026 – Season 2",
+   "organizer": "Design Discovery Awards (D&A)",
+   "group": "paid",
+   "is_free": false,
+   "kind": "award",
+   "flags": [
+    "paid award (pay-to-enter, certificate-type prize, no cash)",
+    "organizer address/legal entity not stated on site",
+    "completed projects from last 5 years"
+   ],
+   "official_url": "https://designdiscoveryawards.com/About",
+   "registration_deadline": null,
+   "submission_deadline": "2027-01-01",
+   "results_date": "2027-01-15",
+   "deadline_note": "Fee-discount deadlines: Early Bird 29 Sep 2026 (-15%), Regular 29 Oct 2026 (-10%), Final 29 Nov 2026 (-5%), Final Extension 1 Jan 2027 (no discount). No time or time zone stated; fees in GBP, so London time assumed. Annual winners list on 15 Jan 2027.",
+   "fee_text": "Base fee per entry: professional £150 first entry / £75 each additional; student £50 / £25. Discounts off the base: -15% until 29 Sep, -10% until 29 Oct, -5% until 29 Nov 2026; no discount until 1 Jan 2027.",
+   "fee_current": "£135 (professional first entry, -10% Regular rate until 29 Oct 2026)",
+   "prize_text": "No cash prize: award levels Design of the Year (top score per category), Platinum, Gold, Silver; e-certificate, award badge/logo, website exposure and press coverage.",
+   "submission_type": "existing_ok",
+   "team": "Open to all countries: companies, teams, freelancers, manufacturers and students. Work must have been created within the last 5 years.",
+   "deliverables": "Online entry via account; up to 10 separate images per entry (JPG/PNG, max 4 MB each, no collages); photo rights required.",
+   "language": "English",
+   "key_points_en": [
+    "Paid award for completed work from the last 5 years; categories include Architecture, Interior and Landscape Design (no urban design category).",
+    "Fee £150 per professional entry with sliding discounts; today the Regular -10% rate (≈£135) applies until 29 Oct 2026.",
+    "Final extension deadline 1 Jan 2027; annual winners announced 15 Jan 2027.",
+    "Prize is recognition only (Design of the Year / Platinum / Gold / Silver), no cash.",
+    "Small organizer with no published address - low prestige; consider only for portfolio marketing."
+   ],
+   "key_points_uz": [
+    "Sönggi 5 yilda bajarilgan işlar uçun pullik mukofot; arxitektura, interyer va landşaft dizayni nominatsiyalari bor (şaharsozlik nominatsiyasi yöq).",
+    "Professional uçun bir iş 150 £, çegirmalar bilan; hozir 29-oktabrgaça -10% (≈135 £) amal qiladi.",
+    "Yakuniy uzaytirilgan muddat 2027-yil 1-yanvar; yillik ğoliblar 2027-yil 15-yanvarda e'lon qilinadi.",
+    "Mukofot faqat e'tirof (Design of the Year / Platinum / Gold / Silver), pul mukofoti yöq.",
+    "Taşkilotçining manzili körsatilmagan, nufuzi past - faqat portfolio marketingi uçun özingiz qaror qiling."
+   ],
+   "summary_en": "Pay-to-enter design award for architecture, interior and landscape projects completed in the last five years; certificates and badges instead of cash.",
+   "summary_uz": "Sönggi beş yilda bajarilgan arxitektura, interyer va landşaft loyihalari uçun pullik dizayn mukofoti; pul örniga sertifikat va belgi beriladi.",
+   "verified": "verified",
+   "prize_text_uz": "Pul mukofoti yöq: Design of the Year (har nominatsiyada eng yuqori ball), Platinum, Gold, Silver darajalari; elektron sertifikat, mukofot belgisi, saytda va matbuotda e'lon.",
+   "team_uz": "Barça davlatlardan: kompaniyalar, jamoalar, frilanserlar, işlab çiqaruvçilar va talabalar. Iş sönggi 5 yil içida yaratilgan bölişi kerak.",
+   "deliverables_uz": "Akkaunt orqali onlayn ariza; har bir işga 10 tagaça alohida rasm (JPG/PNG, har biri 4 MB gaça, kollaj mumkin emas); suratlarga huquq bölişi şart.",
+   "language_uz": "Ingliz tili",
+   "fee_text_uz": "Bir iş uçun asosiy badal: professional – birinçi iş 150 £, keyingisi 75 £; talaba – 50 £ / 25 £. Çegirmalar: 29-sentabrgaça -15%, 29-oktabrgaça -10%, 29-noyabrgaça -5%; 1-yanvargaça çegirmasiz.",
+   "deadline_note_uz": "Çegirma muddatlari: Early Bird 2026-yil 29-sentabr (-15%), Regular 29-oktabr (-10%), Final 29-noyabr (-5%), Final Extension 2027-yil 1-yanvar (çegirmasiz). Soat va vaqt mintaqasi körsatilmagan; badal funt sterlingda, şu sababli London vaqti olingan. Yillik ğoliblar 2027-yil 15-yanvarda.",
+   "fee_current_uz": "135 £ (professional, birinçi iş, 29-oktabrgaça -10% narx)",
+   "flags_uz": [
+    "pullik mukofot (pul mukofoti yöq, sertifikat)",
+    "taşkilotçi manzili/yuridik şaxsi saytda körsatilmagan",
+    "faqat sönggi 5 yildagi bajarilgan işlar"
+   ],
+   "verified_uz": "tekşirilgan",
+   "geo": [
+    51.51,
+    -0.13
+   ],
+   "popularity": 2,
+   "deadline_tz": "Europe/London",
+   "deadline_time_exact": false,
+   "check_date": "2026-10-22",
+   "added": "2026-10-22",
+   "updated": "2026-10-22",
+   "status": "open",
+   "registration_deadline_at": null,
+   "submission_deadline_at": "2027-01-01T23:59:00Z"
+  },
+  {
+   "id": "world-design-awards-2026-tac",
+   "name": "World Design Awards 2026",
+   "organizer": "The Architecture Community",
+   "group": "paid",
+   "is_free": false,
+   "kind": "award",
+   "flags": [
+    "paid award, trophy/certificate only (no cash)",
+    "organizer location not published - deadline time zone unknown, treated as UTC",
+    "registration closes 31 Oct 2026"
+   ],
+   "official_url": "https://www.thearchitecturecommunity.com/wda-brief/",
+   "registration_deadline": "2026-10-31",
+   "submission_deadline": "2026-11-05",
+   "results_date": "2026-11-30",
+   "deadline_note": "Registration closes 31 Oct 2026 and submissions are due 5 Nov 2026; no time or time zone is published (UTC end of day assumed - submit a day early). Results 30 Nov 2026.",
+   "fee_text": "Per project entry: US$150 super-early (30 Nov 2025 - 1 Mar 2026, expired); US$250 regular (2 Mar - 31 Oct 2026). No student rate published.",
+   "fee_current": "US$250 per entry",
+   "prize_text": "Winner's kit: trophy, certificate, book and digital winner logo, plus publication on the organizer's website and partner media; no cash prize.",
+   "submission_type": "both",
+   "team": "Worldwide: architects, students, engineers, designers and artists; no restriction on construction status or project date; unlimited entries in multiple categories.",
+   "deliverables": "Zip up to 80 MB: up to 4 A3 sheets (RGB JPG), cover image 1200x630 px JPG, design description (DOC), studio logo and studio bio up to 100 words.",
+   "language": "English",
+   "key_points_en": [
+    "20+ categories incl. Urban Design, Landscape Design, Housing, Cultural, Mixed-Use and interiors.",
+    "Built and unbuilt projects of any date are accepted - existing portfolio work can be entered.",
+    "Register by 31 Oct 2026 (US$250 per entry) and upload by 5 Nov 2026; results 30 Nov 2026.",
+    "Prize is a trophy/certificate kit and publication only - low-prestige commercial award."
+   ],
+   "key_points_uz": [
+    "20 dan ortiq nominatsiya: Urban Design, Landscape Design, uy-joy, madaniy, kömp funksiyali binolar va interyerlar.",
+    "Qurilgan va qurilmagan, istalgan yildagi loyihalar qabul qilinadi - mavjud portfolio işlarini topşiriş mumkin.",
+    "2026-yil 31-oktabrgaça röyxatdan öting (bir iş 250 $) va 5-noyabrgaça yuklang; natijalar 30-noyabrda.",
+    "Mukofot - kubok/sertifikat va naşr, pul yöq; nufuzi past tijoriy mukofot."
+   ],
+   "summary_en": "Commercial awards programme for built and unbuilt architecture, urban and landscape design; US$250 per entry with trophies instead of cash.",
+   "summary_uz": "Qurilgan va qurilmagan arxitektura, şaharsozlik va landşaft loyihalari uçun tijoriy mukofot dasturi; bir iş 250 $, pul örniga kubok beriladi.",
+   "verified": "verified",
+   "prize_text_uz": "Ğolib töplami: kubok, sertifikat, kitob va raqamli ğolib logotipi, taşkilotçi sayti va hamkor naşrlarda e'lon; pul mukofoti yöq.",
+   "team_uz": "Butun dunyodan: arxitektorlar, talabalar, muhandislar, dizaynerlar va rassomlar; quriliş holati va loyiha yiliga çeklov yöq; bir neçta nominatsiyada çeksiz miqdorda iş topşiriş mumkin.",
+   "deliverables_uz": "80 MB gaça zip: 4 tagaça A3 varaq (RGB JPG), 1200x630 px muqova rasmi (JPG), loyiha tavsifi (DOC), studiya logotipi va 100 sözgaça studiya haqida ma'lumot.",
+   "language_uz": "Ingliz tili",
+   "fee_text_uz": "Bir loyiha uçun: 150 $ (30.11.2025 – 01.03.2026, muddati ötgan); 250 $ (02.03 – 31.10.2026). Talabalar uçun alohida narx e'lon qilinmagan.",
+   "deadline_note_uz": "Röyxatdan ötiş 2026-yil 31-oktabrda yopiladi, işlar 5-noyabrgaça topşiriladi; soat va vaqt mintaqasi körsatilmagan (UTC böyiça kun oxiri olingan - bir kun oldin topşiring). Natijalar 2026-yil 30-noyabrda.",
+   "fee_current_uz": "Bir iş uçun 250 $",
+   "flags_uz": [
+    "pullik mukofot, faqat kubok/sertifikat (pul yöq)",
+    "taşkilotçi manzili e'lon qilinmagan - muddat vaqt mintaqasi noma'lum, UTC olingan",
+    "röyxatdan ötiş 2026-yil 31-oktabrda yopiladi"
+   ],
+   "verified_uz": "tekşirilgan",
+   "geo": [
+    51.48,
+    0.0
+   ],
+   "popularity": 2,
+   "deadline_tz": "UTC",
+   "deadline_time_exact": false,
+   "check_date": "2026-10-22",
+   "added": "2026-10-22",
+   "updated": "2026-10-22",
+   "status": "open",
+   "registration_deadline_at": "2026-10-31T23:59:00Z",
+   "submission_deadline_at": "2026-11-05T23:59:00Z"
   }
  ],
  "digests": [
@@ -4957,10 +5091,56 @@
      }
     ]
    }
+  },
+  {
+   "date": "2026-10-22",
+   "new_ids": [
+    "design-discovery-awards-2026-season-2",
+    "world-design-awards-2026-tac"
+   ],
+   "summary_uz": "Oçiq tanlovlar: 64 (2 ta yangi, 0 ta yopildi).\nYangi: Design Discovery Awards 2026 – Season 2, World Design Awards 2026 (ikkalasi pullik).\nŞoşilinç (14 kun): Villa Gioia – retirement residence (23.10 18:00), WDC Busan 2028 Pavilion International Design Competition (26.10 13:00), International Garden Festival 2027 (28.10 02:00), Rome Design Awards 2026 – Season 2 (30.10 08:59), Tactical Urbanism NOW! 2026 (30.10 19:00), Memorial to the Sixth Extinction (01.11 20:59).\nNarx özgarişi: French Design Awards (23.10 dan 229 $), WAN (29.10 dan 725 £), Design Discovery (29.10 dan keyin).",
+   "summary_en": "Open competitions: 64 (2 new, 0 closed).\nNew: Design Discovery Awards 2026 – Season 2, World Design Awards 2026 (both paid).\nUrgent (14 days): Villa Gioia – retirement residence (23.10 18:00), WDC Busan 2028 Pavilion International Design Competition (26.10 13:00), International Garden Festival 2027 (28.10 02:00), Rome Design Awards 2026 – Season 2 (30.10 08:59), Tactical Urbanism NOW! 2026 (30.10 19:00), Memorial to the Sixth Extinction (01.11 20:59).\nFee rises: French Design Awards ($229 from Oct 23), WAN (£725 from Oct 30), Design Discovery (after Oct 29).",
+   "removed": [],
+   "verification": {
+    "checked": 69,
+    "ok": 59,
+    "fixed": 3,
+    "unreadable": 7,
+    "changes": [
+     {
+      "id": "reuse-italy-theater-falerone",
+      "name": "Reuse the Theater – Falerone (Roman Theatre of Falerio Picenus)",
+      "what_en": "fee payable now: €89 → €89 + VAT = €108.58",
+      "what_uz": "hozirgi badal: 89 € → 89 € + QQS = 108,58 €"
+     },
+     {
+      "id": "archiol-urban-forest-pavilion",
+      "name": "Urban Forest Pavilion",
+      "what_en": "current fee: $51 → $53 (until 6 Nov)",
+      "what_uz": "joriy badal: 51 $ → 53 $ (6-noyabrgaça)"
+     }
+    ]
+   },
+   "korea": {
+    "new": [],
+    "closed": [],
+    "changes": [
+     {
+      "id": "seoul-736",
+      "what_en": "Portal registrations rose from 246 to 258; still open (register button shown); no official notice or dates found.",
+      "what_uz": "Portalda röyxatlar soni 246 dan 258 taga oşdi; tanlov hamon oçiq (tugma faol); rasmiy e'lon va sanalar topilmadi."
+     },
+     {
+      "id": "seoul-735",
+      "what_en": "Portal registrations rose from 119 to 230; still open (register button shown); no official Gangbuk-gu notice or dates found.",
+      "what_uz": "Portalda röyxatlar soni 119 dan 230 taga oşdi; tanlov hamon oçiq (tugma faol); Gangbuk-gu rasmiy e'loni va sanalar topilmadi."
+     }
+    ]
+   }
   }
  ],
  "korea": {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "portal": {
    "name": "PROJECT SEOUL — 서울시 설계공모",
    "url": "https://project.seoul.go.kr/main/viewMain.do",
@@ -4970,7 +5150,7 @@
    "operator_en": "Seoul Metropolitan Government",
    "proof_uz": "Sayt pastida \"© Seoul Metropolitan Gov.\" yozuvi, manzil — Seul meriyasi (Sejong-daero 110, Jung-gu). Portal şahar, SH korporatsiyasi va 25 ta tuman hokimiyatining jamoat binolari loyiha tanlovlarini e'lon qiladi.",
    "proof_en": "The footer reads \"© Seoul Metropolitan Gov.\" and gives Seoul City Hall's address (Sejong-daero 110, Jung-gu). The portal publishes public-building design competitions of the city, SH Corporation and all 25 district offices.",
-   "check_date": "2026-10-21"
+   "check_date": "2026-10-22"
   },
   "items": [
    {
@@ -5014,8 +5194,8 @@
     "portal_url": "https://project.seoul.go.kr/view/viewDetailCptt.do?cpttMstSeq=738",
     "notice_url": null,
     "status": "closed",
-    "verified": "partially verified: title, site, proposal type and open registration confirmed on the official Seoul portal (82 registrations on 2026-10-15). Dates and fee come from a secondary aggregator (jootek.com/folio/contests/18955). The official Jung-gu / KONEPS notice could not be retrieved (the Jung-gu site blocks automated fetching). Re-checked 2026-10-15: portal unchanged apart from the count; jootek still shows registration D-4 (consistent with 19 Oct). Re-checked 2026-10-16: registrations rose to 106, register button still shown, no other change; official Jung-gu notice still not found. Re-checked 2026-10-16: seqs 733-759 probed; only existing items returned pages (733, 737 and 740-759 return no page). Re-checked 2026-10-17: 106 registrations, register button shown, 'time remaining' blank — unchanged; jootek (updated 2026-10-16) still shows D-3, consistent with 19 Oct; official Jung-gu notice still not found. Seqs 733-759 probed on 2026-10-17: no new items (733 redirects to the homepage; 737 and 740-759 return no page). Re-checked 2026-10-21: portal still shows 106 registrations and the register button ('time remaining' blank), but the registration deadline (19 Oct 2026, per jootek) has passed, so the item is set to closed for new entrants; submission deadline still unknown, results expected 4 Dec 2026. Official Jung-gu notice still not found. Seqs 733-759 probed on 2026-10-21: no new items (733 redirects to the homepage; 737 and 740-759 return no page).",
-    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi, tanlov turi va röyxatdan ötiş oçiqligi Seulning rasmiy portalida tasdiqlandi. Sanalar va loyihalaş haqi ikkilamçi manbadan (jootek.com) olindi. Jung-gu tumanining rasmiy e'loni topilmadi. 2026-10-15 da qayta tekşirildi: portalda 82 ta röyxat, boşqa özgariş yöq. 2026-10-16: röyxatlar soni 106 taga yetdi, röyxatdan ötiş tugmasi hamon faol; Jung-gu rasmiy e'loni hali topilmadi. 2026-10-16 da 733-759 raqamli sahifalar sinab körildi, yangi tanlov topilmadi. 2026-10-17: 106 ta röyxat, tugma faol — özgariş yöq; jootek hamon D-3 körsatadi (19-oktabrga mos); rasmiy e'lon topilmadi. 733-759 raqamli sahifalar qayta sinab körildi, yangi tanlov yöq. 2026-10-21 da qayta tekşirildi: portalda hamon 106 ta röyxat va röyxatdan ötiş tugmasi bor, lekin röyxatdan ötiş muddati (2026-yil 19-oktyabr, jootek böyiça) ötib ketgani uçun yangi iştirokçilar uçun tanlov yopiq deb belgilandi; topşiriş muddati noma'lum, natijalar 4-dekabrda kutilmoqda. Jung-gu rasmiy e'loni hali topilmadi. 2026-10-21 da 733-759 raqamli sahifalar sinab körildi: yangi tanlov yöq."
+    "verified": "partially verified: title, site, proposal type and open registration confirmed on the official Seoul portal (82 registrations on 2026-10-15). Dates and fee come from a secondary aggregator (jootek.com/folio/contests/18955). The official Jung-gu / KONEPS notice could not be retrieved (the Jung-gu site blocks automated fetching). Re-checked 2026-10-15: portal unchanged apart from the count; jootek still shows registration D-4 (consistent with 19 Oct). Re-checked 2026-10-16: registrations rose to 106, register button still shown, no other change; official Jung-gu notice still not found. Re-checked 2026-10-16: seqs 733-759 probed; only existing items returned pages (733, 737 and 740-759 return no page). Re-checked 2026-10-17: 106 registrations, register button shown, 'time remaining' blank — unchanged; jootek (updated 2026-10-16) still shows D-3, consistent with 19 Oct; official Jung-gu notice still not found. Seqs 733-759 probed on 2026-10-17: no new items (733 redirects to the homepage; 737 and 740-759 return no page). Re-checked 2026-10-21: portal still shows 106 registrations and the register button ('time remaining' blank), but the registration deadline (19 Oct 2026, per jootek) has passed, so the item is set to closed for new entrants; submission deadline still unknown, results expected 4 Dec 2026. Official Jung-gu notice still not found. Seqs 733-759 probed on 2026-10-21: no new items (733 redirects to the homepage; 737 and 740-759 return no page). Re-checked 2026-10-22: portal unchanged (106 registrations, register button shown, 'time remaining' blank); jootek still gives no submission date; official Jung-gu notice still not found; stays closed. Seqs 733-759 probed on 2026-10-22: no new items (733 redirects to the homepage; 737 and 740-759 return no page).",
+    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi, tanlov turi va röyxatdan ötiş oçiqligi Seulning rasmiy portalida tasdiqlandi. Sanalar va loyihalaş haqi ikkilamçi manbadan (jootek.com) olindi. Jung-gu tumanining rasmiy e'loni topilmadi. 2026-10-15 da qayta tekşirildi: portalda 82 ta röyxat, boşqa özgariş yöq. 2026-10-16: röyxatlar soni 106 taga yetdi, röyxatdan ötiş tugmasi hamon faol; Jung-gu rasmiy e'loni hali topilmadi. 2026-10-16 da 733-759 raqamli sahifalar sinab körildi, yangi tanlov topilmadi. 2026-10-17: 106 ta röyxat, tugma faol — özgariş yöq; jootek hamon D-3 körsatadi (19-oktabrga mos); rasmiy e'lon topilmadi. 733-759 raqamli sahifalar qayta sinab körildi, yangi tanlov yöq. 2026-10-21 da qayta tekşirildi: portalda hamon 106 ta röyxat va röyxatdan ötiş tugmasi bor, lekin röyxatdan ötiş muddati (2026-yil 19-oktyabr, jootek böyiça) ötib ketgani uçun yangi iştirokçilar uçun tanlov yopiq deb belgilandi; topşiriş muddati noma'lum, natijalar 4-dekabrda kutilmoqda. Jung-gu rasmiy e'loni hali topilmadi. 2026-10-21 da 733-759 raqamli sahifalar sinab körildi: yangi tanlov yöq. 2026-10-22 da qayta tekşirildi: portalda özgariş yöq (106 ta röyxat, tugma körinadi); topşiriş muddati hamon noma'lum, Jung-gu rasmiy e'loni topilmadi; yopiq holiça qoladi. 2026-10-22 da 733-759 raqamli sahifalar sinab körildi: yangi tanlov yöq."
    },
    {
     "id": "seoul-739",
@@ -5058,8 +5238,8 @@
     "portal_url": "https://project.seoul.go.kr/view/viewDetailCptt.do?cpttMstSeq=739",
     "notice_url": null,
     "status": "closed",
-    "verified": "partially verified: title, site (회현동1가 100-72 외 6필지) and open registration confirmed on the official Seoul portal (80 registrations on 2026-10-15). Dates and fee come from jootek.com/folio/contests/18957. The official Jung-gu / KONEPS notice was not retrieved. Re-checked 2026-10-15. Re-checked 2026-10-16: 80 registrations, register button shown — unchanged; jootek confirms notice date 2026-10-07, registration to 19 Oct, results 4 Dec; no submission date found. Re-checked 2026-10-17: 80 registrations, register button shown — unchanged; official notice still not found. Re-checked 2026-10-21: portal still shows 80 registrations and the register button ('time remaining' blank), but the registration deadline (19 Oct 2026, per jootek) has passed, so the item is set to closed for new entrants; submission deadline still unknown, results expected 4 Dec 2026. Official Jung-gu notice still not found.",
-    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi va röyxatdan ötiş oçiqligi Seulning rasmiy portalida tasdiqlandi. Sanalar va loyihalaş haqi ikkilamçi manbadan (jootek.com) olindi. Rasmiy e'lon topilmadi. 2026-10-15 da qayta tekşirildi: portalda 80 ta röyxat. 2026-10-16: 80 ta röyxat, tugma faol — özgariş yöq; jootek ma'lumotiga köra e'lon sanasi 2026-10-07, röyxat 19-oktabrgaça, natijalar 4-dekabrda; işlarni topşiriş sanasi topilmadi. 2026-10-17: 80 ta röyxat, tugma faol — özgariş yöq; rasmiy e'lon topilmadi. 2026-10-21 da qayta tekşirildi: portalda hamon 80 ta röyxat va röyxatdan ötiş tugmasi bor, lekin röyxatdan ötiş muddati (2026-yil 19-oktyabr, jootek böyiça) ötib ketgani uçun yangi iştirokçilar uçun tanlov yopiq deb belgilandi; topşiriş muddati noma'lum, natijalar 4-dekabrda kutilmoqda. Jung-gu rasmiy e'loni hali topilmadi."
+    "verified": "partially verified: title, site (회현동1가 100-72 외 6필지) and open registration confirmed on the official Seoul portal (80 registrations on 2026-10-15). Dates and fee come from jootek.com/folio/contests/18957. The official Jung-gu / KONEPS notice was not retrieved. Re-checked 2026-10-15. Re-checked 2026-10-16: 80 registrations, register button shown — unchanged; jootek confirms notice date 2026-10-07, registration to 19 Oct, results 4 Dec; no submission date found. Re-checked 2026-10-17: 80 registrations, register button shown — unchanged; official notice still not found. Re-checked 2026-10-21: portal still shows 80 registrations and the register button ('time remaining' blank), but the registration deadline (19 Oct 2026, per jootek) has passed, so the item is set to closed for new entrants; submission deadline still unknown, results expected 4 Dec 2026. Official Jung-gu notice still not found. Re-checked 2026-10-22: portal unchanged (80 registrations, register button shown); official Jung-gu notice still not found; stays closed.",
+    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi va röyxatdan ötiş oçiqligi Seulning rasmiy portalida tasdiqlandi. Sanalar va loyihalaş haqi ikkilamçi manbadan (jootek.com) olindi. Rasmiy e'lon topilmadi. 2026-10-15 da qayta tekşirildi: portalda 80 ta röyxat. 2026-10-16: 80 ta röyxat, tugma faol — özgariş yöq; jootek ma'lumotiga köra e'lon sanasi 2026-10-07, röyxat 19-oktabrgaça, natijalar 4-dekabrda; işlarni topşiriş sanasi topilmadi. 2026-10-17: 80 ta röyxat, tugma faol — özgariş yöq; rasmiy e'lon topilmadi. 2026-10-21 da qayta tekşirildi: portalda hamon 80 ta röyxat va röyxatdan ötiş tugmasi bor, lekin röyxatdan ötiş muddati (2026-yil 19-oktyabr, jootek böyiça) ötib ketgani uçun yangi iştirokçilar uçun tanlov yopiq deb belgilandi; topşiriş muddati noma'lum, natijalar 4-dekabrda kutilmoqda. Jung-gu rasmiy e'loni hali topilmadi. 2026-10-22: portalda özgariş yöq (80 ta röyxat, tugma körinadi); Jung-gu rasmiy e'loni topilmadi; yopiq holiça qoladi."
    },
    {
     "id": "seoul-736",
@@ -5102,8 +5282,8 @@
     "portal_url": "https://project.seoul.go.kr/view/viewDetailCptt.do?cpttMstSeq=736",
     "notice_url": null,
     "status": "open",
-    "verified": "partially verified: title, site and the active registration button confirmed on the official Seoul portal on 2026-10-14. Organizer, dates, fee and eligibility were not found in any official or secondary source, and 'open' rests on the portal button only (that button is not fully reliable, see #732). Re-checked 2026-10-15: title and site (한강로2가 12-12 외 7필지) unchanged, register button shown, 164 registrations (lower than the 226 recorded on 2026-10-14; unexplained). No official notice found in a new search. Re-checked 2026-10-16: 164 registrations, register button shown — unchanged; new searches (news, jootek) found no official notice. Re-checked 2026-10-17: 164 registrations, register button shown — unchanged; new searches (news, fnnews 2026-10-11) found no official notice or dates. Re-checked 2026-10-21: registrations rose from 164 to 246, register button shown, 'time remaining' blank; new searches found no official notice or dates.",
-    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi va röyxatdan ötiş tugmasi rasmiy portalda tasdiqlandi. Taşkilotçi, sanalar, haq va iştirok şartlari topilmadi. 2026-10-15 da qayta tekşirildi: nomi va uçastka özgarmagan, portalda 164 ta röyxat (oldingi 226 dan kam, sababi noma'lum). Rasmiy e'lon yangi qidiruvda ham topilmadi. 2026-10-16: 164 ta röyxat, tugma faol — özgariş yöq; yangi qidiruvda rasmiy e'lon topilmadi. 2026-10-17: 164 ta röyxat, tugma faol — özgariş yöq; yangi qidiruvda rasmiy e'lon va sanalar topilmadi. 2026-10-21 da qayta tekşirildi: röyxatlar soni 164 dan 246 taga oşdi, röyxatdan ötiş tugmasi faol; yangi qidiruvda rasmiy e'lon yoki sanalar topilmadi."
+    "verified": "partially verified: title, site and the active registration button confirmed on the official Seoul portal on 2026-10-14. Organizer, dates, fee and eligibility were not found in any official or secondary source, and 'open' rests on the portal button only (that button is not fully reliable, see #732). Re-checked 2026-10-15: title and site (한강로2가 12-12 외 7필지) unchanged, register button shown, 164 registrations (lower than the 226 recorded on 2026-10-14; unexplained). No official notice found in a new search. Re-checked 2026-10-16: 164 registrations, register button shown — unchanged; new searches (news, jootek) found no official notice. Re-checked 2026-10-17: 164 registrations, register button shown — unchanged; new searches (news, fnnews 2026-10-11) found no official notice or dates. Re-checked 2026-10-21: registrations rose from 164 to 246, register button shown, 'time remaining' blank; new searches found no official notice or dates. Re-checked 2026-10-22: registrations rose from 246 to 258, register button shown, 'time remaining' blank; new searches found no official notice or dates.",
+    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi va röyxatdan ötiş tugmasi rasmiy portalda tasdiqlandi. Taşkilotçi, sanalar, haq va iştirok şartlari topilmadi. 2026-10-15 da qayta tekşirildi: nomi va uçastka özgarmagan, portalda 164 ta röyxat (oldingi 226 dan kam, sababi noma'lum). Rasmiy e'lon yangi qidiruvda ham topilmadi. 2026-10-16: 164 ta röyxat, tugma faol — özgariş yöq; yangi qidiruvda rasmiy e'lon topilmadi. 2026-10-17: 164 ta röyxat, tugma faol — özgariş yöq; yangi qidiruvda rasmiy e'lon va sanalar topilmadi. 2026-10-21 da qayta tekşirildi: röyxatlar soni 164 dan 246 taga oşdi, röyxatdan ötiş tugmasi faol; yangi qidiruvda rasmiy e'lon yoki sanalar topilmadi. 2026-10-22 da qayta tekşirildi: röyxatlar soni 246 dan 258 taga oşdi, tugma faol; yangi qidiruvda rasmiy e'lon yoki sanalar topilmadi."
    },
    {
     "id": "seoul-735",
@@ -5146,8 +5326,8 @@
     "portal_url": "https://project.seoul.go.kr/view/viewDetailCptt.do?cpttMstSeq=735",
     "notice_url": null,
     "status": "open",
-    "verified": "partially verified: title, site (수유동 53-25, 53-26) and the active registration button confirmed on the official Seoul portal. The program comes from news (sijung.co.kr). Organizer, dates, fee and eligibility were not found (the Gangbuk-gu notice board returned no content). Re-checked 2026-10-15: unchanged (20 registrations, register button shown); no official notice found in a new search. Re-checked 2026-10-16: registrations jumped from 20 to 119, register button shown; the 설계지침서 download button has no extractable file; no official Gangbuk-gu notice found. Re-checked 2026-10-17: 119 registrations, register button shown — unchanged; no official Gangbuk-gu notice found in new searches. Re-checked 2026-10-21: 119 registrations, register button shown — unchanged; no official Gangbuk-gu notice found.",
-    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi va röyxatdan ötiş oçiqligi rasmiy portalda tasdiqlandi. Dastur yangiliklardan olindi. Sanalar va haq topilmadi. 2026-10-15 da qayta tekşirildi: özgariş yöq (20 ta röyxat); rasmiy e'lon yangi qidiruvda ham topilmadi. 2026-10-16: röyxatlar soni 20 tadan 119 taga keskin oşdi, tugma faol; 설계지침서 faylini yuklab bölmadi; Gangbuk-gu rasmiy e'loni topilmadi. 2026-10-17: 119 ta röyxat, tugma faol — özgariş yöq; Gangbuk-gu rasmiy e'loni topilmadi. 2026-10-21: 119 ta röyxat, tugma faol — özgariş yöq; Gangbuk-gu rasmiy e'loni topilmadi."
+    "verified": "partially verified: title, site (수유동 53-25, 53-26) and the active registration button confirmed on the official Seoul portal. The program comes from news (sijung.co.kr). Organizer, dates, fee and eligibility were not found (the Gangbuk-gu notice board returned no content). Re-checked 2026-10-15: unchanged (20 registrations, register button shown); no official notice found in a new search. Re-checked 2026-10-16: registrations jumped from 20 to 119, register button shown; the 설계지침서 download button has no extractable file; no official Gangbuk-gu notice found. Re-checked 2026-10-17: 119 registrations, register button shown — unchanged; no official Gangbuk-gu notice found in new searches. Re-checked 2026-10-21: 119 registrations, register button shown — unchanged; no official Gangbuk-gu notice found. Re-checked 2026-10-22: registrations jumped from 119 to 230, register button shown, 'time remaining' blank; no official Gangbuk-gu notice or dates found in new searches.",
+    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi va röyxatdan ötiş oçiqligi rasmiy portalda tasdiqlandi. Dastur yangiliklardan olindi. Sanalar va haq topilmadi. 2026-10-15 da qayta tekşirildi: özgariş yöq (20 ta röyxat); rasmiy e'lon yangi qidiruvda ham topilmadi. 2026-10-16: röyxatlar soni 20 tadan 119 taga keskin oşdi, tugma faol; 설계지침서 faylini yuklab bölmadi; Gangbuk-gu rasmiy e'loni topilmadi. 2026-10-17: 119 ta röyxat, tugma faol — özgariş yöq; Gangbuk-gu rasmiy e'loni topilmadi. 2026-10-21: 119 ta röyxat, tugma faol — özgariş yöq; Gangbuk-gu rasmiy e'loni topilmadi. 2026-10-22 da qayta tekşirildi: röyxatlar soni 119 dan 230 taga oşdi, tugma faol; yangi qidiruvda Gangbuk-gu rasmiy e'loni va sanalar topilmadi."
    },
    {
     "id": "seoul-734",
@@ -5190,8 +5370,8 @@
     "portal_url": "https://project.seoul.go.kr/view/viewDetailCptt.do?cpttMstSeq=734",
     "notice_url": "https://www.i-sh.co.kr/app/lay2/program/S1T294C302/www/brd/m_258/list.do?multi_itm_seq=64",
     "status": "open",
-    "verified": "partially verified: the organizer (SH) is confirmed by the official SH 현상설계 board, which lists '개포 구룡마을 주상복합(F2) 설계공모 사전공고' (건축설계1부, 2026-08-19); the notice_url points to that list page, as the detail link could not be extracted. Site and open registration are confirmed on the Seoul portal. Dates, fee and eligibility were not found. Re-checked 2026-10-15: site 양재대로 478 일원 F2블럭, 27 registrations, register button shown — unchanged. Re-checked 2026-10-16: 27 registrations, register button shown — unchanged; the SH 현상설계 board still has only the 2026-08-19 사전공고 (no main notice or registration-result post yet). Re-checked 2026-10-17: 27 registrations, register button shown — unchanged; no main SH notice found in new searches. Re-checked 2026-10-21: 27 registrations, register button shown — unchanged; the SH 현상설계 board still has only the 2026-08-19 사전공고.",
-    "verified_uz": "qisman tasdiqlangan: taşkilotçi (SH) SH korporatsiyasining rasmiy e'lonlar sahifasida tasdiqlandi (2026-08-19 dagi dastlabki e'lon). Uçastka va röyxatdan ötiş portalda tasdiqlandi. Sanalar va haq topilmadi. 2026-10-15 da qayta tekşirildi: 27 ta röyxat, özgariş yöq. 2026-10-16: 27 ta röyxat, tugma faol — özgariş yöq; SH 현상설계 sahifasida hali faqat 2026-08-19 dagi dastlabki e'lon (사전공고) bor. 2026-10-17: 27 ta röyxat, tugma faol — özgariş yöq; SH asosiy e'loni topilmadi. 2026-10-21: 27 ta röyxat, tugma faol — özgariş yöq; SH 현상설계 sahifasida hamon faqat 2026-08-19 dagi dastlabki e'lon bor."
+    "verified": "partially verified: the organizer (SH) is confirmed by the official SH 현상설계 board, which lists '개포 구룡마을 주상복합(F2) 설계공모 사전공고' (건축설계1부, 2026-08-19); the notice_url points to that list page, as the detail link could not be extracted. Site and open registration are confirmed on the Seoul portal. Dates, fee and eligibility were not found. Re-checked 2026-10-15: site 양재대로 478 일원 F2블럭, 27 registrations, register button shown — unchanged. Re-checked 2026-10-16: 27 registrations, register button shown — unchanged; the SH 현상설계 board still has only the 2026-08-19 사전공고 (no main notice or registration-result post yet). Re-checked 2026-10-17: 27 registrations, register button shown — unchanged; no main SH notice found in new searches. Re-checked 2026-10-21: 27 registrations, register button shown — unchanged; the SH 현상설계 board still has only the 2026-08-19 사전공고. Re-checked 2026-10-22: 27 registrations, register button shown — unchanged; the SH 현상설계 board still has only the 2026-08-19 사전공고.",
+    "verified_uz": "qisman tasdiqlangan: taşkilotçi (SH) SH korporatsiyasining rasmiy e'lonlar sahifasida tasdiqlandi (2026-08-19 dagi dastlabki e'lon). Uçastka va röyxatdan ötiş portalda tasdiqlandi. Sanalar va haq topilmadi. 2026-10-15 da qayta tekşirildi: 27 ta röyxat, özgariş yöq. 2026-10-16: 27 ta röyxat, tugma faol — özgariş yöq; SH 현상설계 sahifasida hali faqat 2026-08-19 dagi dastlabki e'lon (사전공고) bor. 2026-10-17: 27 ta röyxat, tugma faol — özgariş yöq; SH asosiy e'loni topilmadi. 2026-10-21: 27 ta röyxat, tugma faol — özgariş yöq; SH 현상설계 sahifasida hamon faqat 2026-08-19 dagi dastlabki e'lon bor. 2026-10-22: 27 ta röyxat, tugma faol — özgariş yöq; SH 현상설계 sahifasida hamon faqat 2026-08-19 dagi dastlabki e'lon bor."
    },
    {
     "id": "seoul-728",
@@ -5234,8 +5414,8 @@
     "portal_url": "https://project.seoul.go.kr/view/viewDetailCptt.do?cpttMstSeq=728",
     "notice_url": null,
     "status": "closed",
-    "verified": "partially verified: title, site and counts (191/41) confirmed on the official Seoul portal. The KONEPS notice data (R26BK01568368, 국제입찰=예, opening 2026-08-13 17:00, price and budget) comes via the sankun.com mirror. The program comes from Seoul Shinmun / Yeongdeungpo-gu news. The 지침서 was not read, so the joint-entry rule rests on 건축사법 Art. 23(5), not on the brief. Re-checked 2026-10-15: portal still shows 191/41 (the register button is still displayed, but the KONEPS opening date has passed, so it stays closed). Re-checked 2026-10-16: portal still shows 191/41, no winner posted; stays closed. Re-checked 2026-10-17: portal still shows 191/41, register button displayed, no winner posted; stays closed. Re-checked 2026-10-21: portal still shows 191/41, register button displayed, no winner posted; stays closed.",
-    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi va iştirokçilar soni rasmiy portalda tasdiqlandi. KONEPS ma'lumotlari ikkilamçi manbadan (sankun.com) olindi. Qöşma iştirok qoidasi qonunga (건축사법 23-modda) asoslangan, tanlov hujjatiga emas. 2026-10-15 da qayta tekşirildi: portalda hamon 191/41; tugma körinsa ham muddat ötgan, şuning uçun yopiq. 2026-10-16: portalda hamon 191/41, ğolib e'lon qilinmagan; yopiq holatda qoladi. 2026-10-17: portalda hamon 191/41, ğolib e'lon qilinmagan; yopiq holatda qoladi. 2026-10-21: portalda hamon 191/41, ğolib e'lon qilinmagan; yopiq holiça qoladi."
+    "verified": "partially verified: title, site and counts (191/41) confirmed on the official Seoul portal. The KONEPS notice data (R26BK01568368, 국제입찰=예, opening 2026-08-13 17:00, price and budget) comes via the sankun.com mirror. The program comes from Seoul Shinmun / Yeongdeungpo-gu news. The 지침서 was not read, so the joint-entry rule rests on 건축사법 Art. 23(5), not on the brief. Re-checked 2026-10-15: portal still shows 191/41 (the register button is still displayed, but the KONEPS opening date has passed, so it stays closed). Re-checked 2026-10-16: portal still shows 191/41, no winner posted; stays closed. Re-checked 2026-10-17: portal still shows 191/41, register button displayed, no winner posted; stays closed. Re-checked 2026-10-21: portal still shows 191/41, register button displayed, no winner posted; stays closed. Re-checked 2026-10-22: portal still shows 191/41, register button displayed, no winner posted; stays closed.",
+    "verified_uz": "qisman tasdiqlangan: nomi, uçastkasi va iştirokçilar soni rasmiy portalda tasdiqlandi. KONEPS ma'lumotlari ikkilamçi manbadan (sankun.com) olindi. Qöşma iştirok qoidasi qonunga (건축사법 23-modda) asoslangan, tanlov hujjatiga emas. 2026-10-15 da qayta tekşirildi: portalda hamon 191/41; tugma körinsa ham muddat ötgan, şuning uçun yopiq. 2026-10-16: portalda hamon 191/41, ğolib e'lon qilinmagan; yopiq holatda qoladi. 2026-10-17: portalda hamon 191/41, ğolib e'lon qilinmagan; yopiq holatda qoladi. 2026-10-21: portalda hamon 191/41, ğolib e'lon qilinmagan; yopiq holiça qoladi. 2026-10-22: portalda hamon 191/41, ğolib e'lon qilinmagan; yopiq holiça qoladi."
    }
   ]
  }
