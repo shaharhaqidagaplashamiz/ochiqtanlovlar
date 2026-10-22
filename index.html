@@ -350,7 +350,7 @@ a.ccard:hover .cc .logo~.mono-l,a.ccard:hover .cc:has(.logo) .mono-l{opacity:0}
 .lcard:hover .lp img{transform:scale(1.05)}
 .lcard .ly{position:absolute;left:10px;bottom:10px;background:var(--ink);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.08em;border-radius:999px;padding:4px 10px}
 .lcard .lb{display:flex;flex-direction:column;gap:6px;padding:14px 14px 18px}
-.lcard .lb .ctry{margin:0;align-self:flex-start;white-space:nowrap}.lcard .lb .ctry>span{display:none}
+.lcard .lb .ctry{margin:0;align-self:flex-start;max-width:100%;overflow:hidden}.lcard .lb .ctry b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.lcard .lb .ctry>span{display:none}
 .lcard .cn{font-size:19px}
 .lcard .cgo{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:700;opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s}
 .lcard:hover .cgo{opacity:1;transform:none}
