@@ -560,10 +560,7 @@ html.cc-down .cc-snap i:nth-child(3){transform:translate(-3px,-3px)}html.cc-down
 
 .cq{display:block;margin-top:8px;padding:8px 10px;border-left:2px solid var(--accent);background:var(--raise2);border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:12.5px;line-height:1.45;color:var(--ink2)}
 </style>
-
-</head>
-<body>
-
+</head><body>
 <div class="testbar" role="note"><span class="tb-tag">BETA</span><span id="tb-t">Sayt sinov rejimida işlamoqda. Xato yoki noaniqlik körsangiz, <a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener">Telegram kanalimizga</a> yozing.</span></div>
 <header class="bar" id="bar"><div class="in">
   <a class="mark" href="#bosh" id="top" aria-label="Boş sahifa"><img src="kanal.jpg" alt="" width="32" height="32"></a>
@@ -684,9 +681,7 @@ html.cc-down .cc-snap i:nth-child(3){transform:translate(-3px,-3px)}html.cc-down
 <nav class="dock" id="dock" aria-label="Bölimlar">
   <a href="#bosh" id="d-top">Boş</a><a href="#tanlovlar" id="d-index">Tanlovlar</a><a href="#goliblar" id="d-win">Ğoliblar</a><a href="#korea" id="d-korea">Koreya</a><a href="https://t.me/shaharhaqidagaplashamiz" target="_blank" rel="noopener" id="d-tg">Kanal ↗</a>
 </nav>
-
-<script>
-(function(){
+<script>(function(){
 const T={
  uz:{h1:"Arxitektura va şaharsozlik tanlovlari",lead:"Özbekistonlik arxitektor va şaharsozlar qatnaşa oladigan oçiq tanlov va mukofotlar. Har kuni 09:00 da yangilanadi.",eyebrow:"Oçiq tanlovlar reyestri",
   open:"Oçiq tanlovlar",ctry:"Davlat",soon:"14 kunda tugaydi",brief:"Bugungi xabar",urgent:"Muddati 14 kun içida tugaydi",
@@ -913,7 +908,6 @@ function tick(){const now=Date.now();let rerender=false;
     const d=el.querySelector(".d"),h=el.querySelector(".hms");if(d)d.textContent=parts(ms).d;if(h)h.textContent=hms(ms)});
   if(rerender){renderBrief();renderList();renderKorea()}}
 setInterval(tick,1000);
-
 /* ---- Story reel: the world as a dot raster, competition sites light up, then every dot gathers into a medal drawn like a rotunda plan ---- */
 const MASK={"COLS":96,"ROWS":42,"LAT0":76,"LAT1":-56,"hex":["000100807fe0000101f80000","800172f83fc000022fffff00","8fff914c3f000fe1ffffffff","4fffffdc38301d9fffffffff","0ffffe1818007bffffffffee","061ffe1e000053fffffffc20","0007ff9f000133fffffff060","0003ffdf80057ffffffffc00","0003fffdc000fffffffffa00","0001fffe0000ff3bfffff800","0001fff80003b61bfffff400","0001fff0000325fbffffc400","0001fff0000261ffffff2c00","00007fe00003e07fffff1000","00003fc00007ffffffff0000","00005c20000fffbbffff0000","00003c00000fffbe3ffe0000","00000c90001fffff1e7c0000","00000700000fffde0c708000","000001c0001ffff808380000","00000040000fffe408384000","0000003f000ffff804204000","0000001fc0077ff800410000","0000001fe0001ff000320000","0000003ff0003fe000169000","0000003ffc001fe000108e00","0000001ffe001fe0000c0600","0000001ffc000fe000000000","0000000ffc001fe000001000","00000007fc001fe800007a00","00000007f8001f880000fe00","00000007f0000f880003ff00","00000007e0000f800003ff80","00000007e0000f000001ff80","00000007c00007000001cf80","000000078000000000000702","0000000f0000000000000001","0000000e0000000000000100","0000000e0000000000000004","0000000c0000000000000000","0000000c0000000000000000","000000040000000000000000"]};
 const PHASE={uz:["Tanlovlar xaritasi","Barça yöllar bitta maqsad sari","Ğolib medali"],en:["Map of open calls","All roads lead to one goal","The winner's medal"]};
@@ -1014,10 +1008,10 @@ function loop(now){story(now);requestAnimationFrame(loop)}
 requestAnimationFrame(loop);
 function drawFabric(){lastPhase=-1;lastCap="";story(performance.now())}
 /* ---- end story reel ---- */
-
 /* ---- Winners: competitions whose results we show. Source: memorcontest.uz/winners (checked 14.10.2026) ---- */
 const D="https://drive.google.com/file/d/";
-const WB=/\.github\.io$/.test(location.hostname)?"works/":"https://shaharhaqidagaplashamiz.github.io/ochiqtanlovlar/works/";
+/* image base; small "-t" card thumbnails exist only on the live site (the draft preview has a file limit) */
+const WB="works/",TS=/\.github\.io$/.test(location.hostname)?"-t":"";
 const CONTESTS=[
  {id:"memor-2025",name:"Me'mor//2025",sub_uz:"IV Arxitektura mukofoti",sub_en:"4th Architecture Award",country_uz:"Özbekiston",country_en:"Uzbekistan",year:"2025",
   logo:"works/memor-logo.png",mono:"M",flag:"uz",city_uz:"Toşkent",city_en:"Tashkent",pair:["#8FD3A3","#14692E"],
@@ -1328,7 +1322,7 @@ function renderWin(){const uz=st.lang==="uz",L2=uz?"uz":"en";
     ${(()=>{const card=w=>{const [tr,nom,aw,title,firm,authors,url,qt]=w;const pair=PAIRS[(C.winners.indexOf(w))%PAIRS.length];const id=IM(w);
       const ico=`<svg viewBox="0 0 36 36" aria-hidden="true">${ICON[nom]}</svg>`;
       const np=id?PG(w):0;
-      const pic=id?`<img src="${esc(id)}-1-t.jpg" alt="${esc(title)} — ${esc(C.name)}" loading="lazy" decoding="async">${np>1?`<span class="wk-pages"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="1.5" width="9" height="12" rx="1"/><rect x="1.5" y="3.5" width="9" height="11" rx="1"/></svg>${np}<span class="wp-w"> ${C.unit?C.unit[L2][0]:uz?"planşet":"boards"}</span></span>`:""}`:`<span class="wk-ph">${ico}</span>`;
+      const pic=id?`<img src="${esc(id)}-1${TS}.jpg" alt="${esc(title)} — ${esc(C.name)}" loading="lazy" decoding="async">${np>1?`<span class="wk-pages"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="1.5" width="9" height="12" rx="1"/><rect x="1.5" y="3.5" width="9" height="11" rx="1"/></svg>${np}<span class="wp-w"> ${C.unit?C.unit[L2][0]:uz?"planşet":"boards"}</span></span>`:""}`:`<span class="wk-ph">${ico}</span>`;
       const badge=`<span class="wk-badge">${esc(C.name)}</span>`;
       const media=id?`<button class="wk-img" type="button" data-lb="${WLB.items.indexOf(w)}" style="--a:${pair[0]};--b:${pair[1]}" aria-label="${uz?"Kattalaştiriş":"Enlarge"}: ${esc(title)}">${pic}${badge}<span class="wk-zoom" aria-hidden="true">⤢</span></button>`
         :url?`<a class="wk-img" href="${esc(url)}" target="_blank" rel="noopener" style="--a:${pair[0]};--b:${pair[1]}">${pic}${badge}<span class="wk-zoom" aria-hidden="true">↗</span></a>`
@@ -1369,8 +1363,8 @@ function fillLB(){const uz=st.lang==="uz",L2=uz?"uz":"en",{C,items,did,credit}=W
   const U=C.unit?C.unit[L2][1]:uz?"Planşet":"Board",CR=C.credits&&C.credits[(C.alias||{})[C.winners.indexOf(w)]??C.winners.indexOf(w)];
   $("wlb-c").textContent=C.name;$("wlb-n").textContent=np>1?`${U} ${lbP} / ${np}`:"";
   $("wlb-p").hidden=$("wlb-nx").hidden=np<2;
-  const img=$("wlb-img"),base=WLB.IM(w)+"-"+lbP,key=lbI+"-"+lbP;img.src=(C.unit&&lbP>1)?base+".jpg":base+"-t.jpg";const big=new Image();big.onload=()=>{if(lbI+"-"+lbP===key)img.src=big.src};big.src=base+".jpg";img.alt=`${title} — ${C.name}${np>1?` (${lbP}/${np})`:""}`;
-  $("wlb-pg").innerHTML=np>1?Array.from({length:np},(_,k)=>`<button type="button" data-p="${k+1}" aria-pressed="${k+1===lbP}" aria-label="${U} ${k+1}"><img src="${WLB.IM(w)}-${k+1}${C.unit&&k>0?"":"-t"}.jpg" alt="" loading="lazy" decoding="async"><span>${k+1}</span></button>`).join(""):"";
+  const img=$("wlb-img"),base=WLB.IM(w)+"-"+lbP,key=lbI+"-"+lbP;img.src=(C.unit&&lbP>1)?base+".jpg":base+TS+".jpg";const big=new Image();big.onload=()=>{if(lbI+"-"+lbP===key)img.src=big.src};big.src=base+".jpg";img.alt=`${title} — ${C.name}${np>1?` (${lbP}/${np})`:""}`;
+  $("wlb-pg").innerHTML=np>1?Array.from({length:np},(_,k)=>`<button type="button" data-p="${k+1}" aria-pressed="${k+1===lbP}" aria-label="${U} ${k+1}"><img src="${WLB.IM(w)}-${k+1}${C.unit&&k>0?"":TS}.jpg" alt="" loading="lazy" decoding="async"><span>${k+1}</span></button>`).join(""):"";
   $("wlb-pg").querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{lbP=+b.dataset.p;fillLB()});
   $("wlb-aw").textContent=LB(C,"award",L2,aw);$("wlb-aw").className="aw aw-"+aw;$("wlb-t").textContent=title;
   $("wlb-m").textContent=`${LB(C,"track",L2,tr)} · ${LB(C,"nom",L2,nom)}`;$("wlb-f").textContent=firm||"";$("wlb-a").textContent=authors||"";
@@ -1383,7 +1377,6 @@ function openLB(i){if(!WLB)return;lbI=i;lbP=1;lbLast=document.activeElement;cons
 function closeLB(){const el=$("wlb");if(!el)return;el.hidden=true;document.documentElement.style.overflow="";if(lbLast)lbLast.focus()}
 function stepLB(d){if(!WLB)return;const np=WLB.PG(WLB.items[lbI]);if(np<2)return;lbP=((lbP-1+d+np)%np)+1;fillLB()}
 /* ---- end winners ---- */
-
 /* ---- Home intro (every page load / refresh that opens on the home view, ~1.8 s; not when navigating back to home inside the site): the page is drawn in pencil lines, then colour pours in and it becomes
         the normal design. Any tap, key, wheel or scroll finishes it at once. ---- */
 (()=>{const home=$("v-home");if(!home)return;
@@ -1420,7 +1413,6 @@ function stepLB(d){if(!WLB)return;const np=WLB.PG(WLB.items[lbI]);if(np<2)return
  const wt=q(".t-win .tile-art");if(wt)wt.addEventListener("animationend",e=>{if(e.animationName==="pwash")setTimeout(finish,150)});
  if("ResizeObserver" in window){const ro=new ResizeObserver(()=>{if(home.classList.contains("intro"))tiles.forEach(frame)});tiles.forEach(t=>ro.observe(t.querySelector(".tile-art")))}
 })();
-
 let rz;window.addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawFabric,150)});
 $("l-uz").onclick=()=>{st.lang="uz";ls.set("lang","uz");renderAll()};
 $("l-en").onclick=()=>{st.lang="en";ls.set("lang","en");renderAll()};
@@ -1503,7 +1495,6 @@ renderAll();drawFabric();
  const send=()=>{try{window.goatcounter.count&&window.goatcounter.count({path:location.pathname+(location.hash||"")})}catch(e){}};
  const s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.dataset.goatcounter="https://ochiqtanlovlar.goatcounter.com/count";
  s.onload=send;addEventListener("hashchange",send);document.head.appendChild(s)})();
-
 /* ---- Cursor: drafting target that snaps to clickable things as CAD-style selection corners (fine pointers only) ---- */
 (()=>{if(!matchMedia("(hover:hover) and (pointer:fine)").matches)return;
  const rm=matchMedia("(prefers-reduced-motion: reduce)").matches,root=document.documentElement;
@@ -1531,7 +1522,4 @@ renderAll();drawFabric();
   requestAnimationFrame(loop)};
  root.classList.add("cc-on");requestAnimationFrame(loop);
 })();
-
-</script>
-</body>
-</html>
+</script></body></html>
