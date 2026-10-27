@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "note_uz": "Özbekistonda öqiyotgan talabalar qatnaşa oladigan xalqaro tanlovlar: davlat çeklovi yöq, talabalar uçun alohida toifa yoki sovrin bor yoki talabalar hamma bilan teng qatnaşadi.",
  "note_en": "International competitions that students studying in Uzbekistan can enter: no country restriction, and either a student category/prize or students compete on equal terms.",
  "items": [
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "check_date": "2026-10-27",
    "status": "open",
    "results_date": "2027-05-18",
    "flags": [],
@@ -59,8 +59,8 @@
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "updated": "2026-10-27",
+   "check_date": "2026-10-27",
    "status": "open",
    "results_date": "2027-01-26",
    "flags": [
@@ -109,14 +109,14 @@
    ],
    "summary_en": "Ideas for tall buildings in Vancouver, organised with the city and UBC; includes a student award.",
    "summary_uz": "Vankuverdagi baland binolar uçun ğoyalar; şahar va UBC bilan birga taşkil etilgan, talabalar sovrini bor.",
-   "verified": "partially verified: from the Competitions.archi listing",
-   "verified_uz": "qisman tekşirilgan: Competitions.archi e'lonidan",
+   "verified": "partially verified: official page not reachable from our checker; dates and prizes from ArchUp",
+   "verified_uz": "qisman tekşirilgan: rasmiy sayt tekşiruvçimiz uçun oçilmadi; sanalar va sovrinlar ArchUp dan",
    "fee_usd": null
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "updated": "2026-10-27",
+   "check_date": "2026-10-27",
    "status": "open",
    "submission_type": "new_design",
    "language": "English",
@@ -137,10 +137,10 @@
    "submission_deadline_at": "2026-11-30T23:59:00Z",
    "deadline_time_exact": true,
    "results_date": "2027-01-19",
-   "fee_current": "105 € student / 135 € professional + 4.5% VAT (last-minute tier)",
-   "fee_current_uz": "105 € talaba / 135 € mutaxassis + 4,5% QQS (oxirgi bosqiç)",
-   "fee_text": "Early Bird (22.04–18.06.2026): 75 € student / 85 € professional; Advance (19.06–27.08): 85 € / 105 €; Last Minute (28.08–28.10): 105 € / 135 €. All + 4.5% VAT, non-refundable; group discount for 3+ university registrations.",
-   "fee_text_uz": "Erta (22.04–18.06.2026): 75 € talaba / 85 € mutaxassis; ilgari (19.06–27.08): 85 € / 105 €; oxirgi (28.08–28.10): 105 € / 135 €. Hammasiga + 4,5% QQS, qaytarilmaydi; universitetdan 3+ röyxatga guruh çegirmasi.",
+   "fee_current": "120 € student / 140 € professional + 4.5% VAT (final tier)",
+   "fee_current_uz": "120 € talaba / 140 € mutaxassis + 4,5% QQS (oxirgi bosqiç)",
+   "fee_text": "Final tier until 28.10.2026: 120 € student / 140 € architect, enthusiast or company, + 4.5% VAT; single payment or 3 monthly instalments; group discount for 3+ registrations from one school. Earlier tiers have closed.",
+   "fee_text_uz": "Oxirgi bosqiç 28.10.2026 gaça: 120 € talaba / 140 € arxitektor, havaskor yoki kompaniya, + 4,5% QQS; bir yöla yoki 3 oylik bölib töläş; bir maktabdan 3+ röyxatga guruh çegirmasi. Oldingi bosqiçlar yopilgan.",
    "prize_text": "Total 10,000 €: 1st 5,000, 2nd 2,500, 3rd 1,000; Buildner Student Award 1,000 € (can be combined with a top-3 prize); Sustainability Award 500 €; 6 honourable mentions.",
    "prize_text_uz": "Jami 10 000 €: 1-örin 5 000, 2-örin 2 500, 3-örin 1 000; Buildner talabalar sovrini 1 000 € (top-3 sovrin bilan birga berilişi mumkin); barqarorlik sovrini 500 €; 6 ta faxriy yorliq.",
    "team": "Open to all, including students; no professional qualification required; individuals or teams of up to 4.",
@@ -167,14 +167,14 @@
    ],
    "summary_en": "Fourth edition of Buildner's kindergarten ideas competition; open to everyone with a separate student award.",
    "summary_uz": "Buildnerning bolalar boğçasi ğoyalari tanlovining törtinçi soni; hamma uçun oçiq, talabalar uçun alohida sovrin bor.",
-   "verified": "partially verified: official page not reachable from our checker; details from ArchUp and Dezeen",
-   "verified_uz": "qisman tekşirilgan: rasmiy sayt tekşiruvçimiz uçun oçilmadi; ma'lumotlar ArchUp va Dezeendan",
-   "fee_usd": 118
+   "verified": "verified",
+   "verified_uz": "tekşirilgan (rasmiy sayt)",
+   "fee_usd": 135
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "updated": "2026-10-27",
+   "check_date": "2026-10-27",
    "status": "open",
    "submission_type": "new_design",
    "language": "English",
@@ -195,8 +195,8 @@
    "submission_deadline_at": "2027-02-15T23:59:00Z",
    "deadline_time_exact": false,
    "results_date": "2027-03-30",
-   "fee_current": "120 € student / 140 € professional (last-minute tier)",
-   "fee_current_uz": "120 € talaba / 140 € mutaxassis (oxirgi bosqiç)",
+   "fee_current": "120 € student / 140 € professional + 4.5% VAT",
+   "fee_current_uz": "120 € talaba / 140 € mutaxassis + 4,5% QQS",
    "fee_text": "Early Bird (25.05–30.07.2026): 90 € student / 110 € professional; Advanced (31.07–08.10.2026): 110 € / 120 €; Last Minute (09.10.2026–14.01.2027): 120 € / 140 €. Non-refundable.",
    "fee_text_uz": "Erta (25.05–30.07.2026): 90 € talaba / 110 € mutaxassis; ilgari (31.07–08.10.2026): 110 € / 120 €; oxirgi (09.10.2026–14.01.2027): 120 € / 140 €. Qaytarilmaydi.",
    "prize_text": "Total 10,000 €: 1st 5,000, 2nd 2,500, 3rd 1,000; Buildner Student Award 1,000 €; Sustainability Award 500 €; 6 honourable mentions.",
@@ -221,14 +221,14 @@
    ],
    "summary_en": "Buildner ideas competition for a small wine tasting room on a real farm site in Italy, with a separate student award.",
    "summary_uz": "Italiyadagi haqiqiy ferma hududida kiçik vino tatib köriş zali uçun Buildner ğoyalar tanlovi; talabalar uçun alohida sovrin bor.",
-   "verified": "partially verified: official page not reachable from our checker; details from ArchUp and Competitions.archi",
-   "verified_uz": "qisman tekşirilgan: rasmiy sayt tekşiruvçimiz uçun oçilmadi; ma'lumotlar ArchUp va Competitions.archidan",
-   "fee_usd": 130
+   "verified": "verified",
+   "verified_uz": "tekşirilgan (rasmiy sayt)",
+   "fee_usd": 135
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "updated": "2026-10-27",
+   "check_date": "2026-10-27",
    "status": "open",
    "results_date": "2027-04-13",
    "flags": [],
@@ -248,12 +248,12 @@
    "submission_deadline_at": "2027-02-22T23:59:00Z",
    "deadline_tz": "Europe/London",
    "deadline_time_exact": false,
-   "fee_current": "See official site (advance tier until 12.11)",
-   "fee_current_uz": "Rasmiy saytda (12.11 gaça arzonroq bosqiç)",
-   "fee_text": "Advance registration until 12.11.2026, last-minute 13.11.2026–21.01.2027; amounts on the official site.",
-   "fee_text_uz": "Arzonroq röyxat 12.11.2026 gaça, oxirgi bosqiç 13.11.2026 – 21.01.2027; summalar rasmiy saytda.",
-   "prize_text": "Total 8,000 €: 1st 4,000 €, 2nd 2,000 €, 3rd 1,000 €, Buildner Student Award 1,000 €; 6 honourable mentions.",
-   "prize_text_uz": "Jami 8 000 €: 1-örin 4 000 €, 2-örin 2 000 €, 3-örin 1 000 €, Buildner talabalar sovrini 1 000 €; 6 ta faxriy yorliq.",
+   "fee_current": "110 € student / 120 € professional + 4.5% VAT (advance tier until 12.11)",
+   "fee_current_uz": "110 € talaba / 120 € mutaxassis + 4,5% QQS (12.11 gaça ilgari bosqiç)",
+   "fee_text": "Advance (11.09–12.11.2026): 110 € student / 120 € architect, enthusiast or company; Last minute (13.11.2026–21.01.2027): 120 € / 140 €. All + 4.5% VAT; student rate needs a university e-mail; group discount for 3+ from one school.",
+   "fee_text_uz": "Ilgari (11.09–12.11.2026): 110 € talaba / 120 € arxitektor, havaskor yoki kompaniya; oxirgi (13.11.2026–21.01.2027): 120 € / 140 €. Hammasiga + 4,5% QQS; talaba narxi uçun universitet e-poçtasi kerak; bir maktabdan 3+ röyxatga guruh çegirmasi.",
+   "prize_text": "Total 8,000 €: 1st 4,000, 2nd 2,000, 3rd 1,000; Buildner Student Award 1,000 € (can be combined with a top-3 prize); 6 honourable mentions.",
+   "prize_text_uz": "Jami 8 000 €: 1-örin 4 000, 2-örin 2 000, 3-örin 1 000; Buildner talabalar sovrini 1 000 € (top-3 sovrin bilan birga berilişi mumkin); 6 ta faxriy yorliq.",
    "team": "Open to all; separate Student Award.",
    "team_uz": "Hamma uçun oçiq; talabalar uçun alohida sovrin bor.",
    "deliverables": "Visual-only entry (no text allowed); any real or imaginary site.",
@@ -275,14 +275,14 @@
    ],
    "summary_en": "Buildner's long-running ideas competition about architecture that creates emotional states, with a dedicated student award.",
    "summary_uz": "Buildner'ning hissiy holat uyğotuvçi arxitektura haqidagi ğoyalar tanlovi; talabalar uçun alohida sovrin bor.",
-   "verified": "partially verified: official page blocked for our checker; dates and prizes from Dezeen and Bustler listings",
-   "verified_uz": "qisman tekşirilgan: rasmiy sahifa oçilmadi, sanalar va sovrinlar Dezeen va Bustler dan",
-   "fee_usd": null
+   "verified": "verified",
+   "verified_uz": "tekşirilgan (rasmiy sayt)",
+   "fee_usd": 124
   },
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "check_date": "2026-10-27",
    "status": "open",
    "results_date": "2027-07-06",
    "flags": [
@@ -339,15 +339,15 @@
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "updated": "2026-10-27",
+   "check_date": "2026-10-27",
    "status": "open",
    "results_date": "2026-11-30",
    "flags": [
-    "Closes 30 October"
+    "Closes 30 October, 15:00 CET"
    ],
    "flags_uz": [
-    "30-oktyabrda yopiladi"
+    "30-oktyabr, 15:00 CET da yopiladi"
    ],
    "id": "stu-tactical-urbanism-now",
    "name": "Tactical Urbanism NOW!",
@@ -360,16 +360,16 @@
    "official_url": "https://www.terravivacompetitions.com/tactical-urbanism-competition-2026/",
    "registration_deadline": "2026-10-30",
    "submission_deadline": "2026-10-30",
-   "registration_deadline_at": "2026-10-30T22:59:00Z",
-   "submission_deadline_at": "2026-10-30T22:59:00Z",
+   "registration_deadline_at": "2026-10-30T14:00:00Z",
+   "submission_deadline_at": "2026-10-30T14:00:00Z",
    "deadline_tz": "Europe/Rome",
-   "deadline_time_exact": false,
+   "deadline_time_exact": true,
    "fee_current": "129 €",
    "fee_current_uz": "129 €",
    "fee_text": "Early 59 €, standard 89 €, late 129 € (25.09–30.10).",
    "fee_text_uz": "Erta 59 €, odatiy 89 €, keçki 129 € (25.09–30.10).",
-   "prize_text": "1st 5,000 $, 2nd 2,000 $, 3rd 1,000 $; 5 golden and 10 honourable mentions.",
-   "prize_text_uz": "1-örin 5 000 $, 2-örin 2 000 $, 3-örin 1 000 $; 5 ta oltin va 10 ta faxriy yorliq.",
+   "prize_text": "Prize pool 10,000 $: 1st 5,000 $, 2nd 2,000 $, 3rd 1,000 $ (paid in € at 1 € = 1.25 $); 5 golden mentions (free membership), 10 honourable mentions (free competition); no separate student prize — students compete on equal terms.",
+   "prize_text_uz": "Sovrin fondi 10 000 $: 1-örin 5 000 $, 2-örin 2 000 $, 3-örin 1 000 $ (1 € = 1,25 $ kursida yevroda töländi); 5 ta oltin yorliq (bepul a'zolik), 10 ta faxriy yorliq (bepul tanlov); alohida talaba sovrini yöq — talabalar teng şartda qatnaşadi.",
    "team": "Students, architects, urban planners, designers, artists and engineers; individuals or teams.",
    "team_uz": "Talabalar, arxitektorlar, şaharsozlar, dizaynerlar, rassom va muhandislar; yakka yoki jamoa.",
    "deliverables": "Two A1 horizontal panels + 250–500 word text.",
@@ -380,23 +380,23 @@
    "key_points_en": [
     "Quick, low-cost interventions that change city streets",
     "Open to students; urbanism topic",
-    "Last days: registration and submission both close 30 October"
+    "Registration and submission both close 30 October at 15:00 CET"
    ],
    "key_points_uz": [
     "Şahar köçalarini özgartiradigan tez va arzon aralaşuvlar",
     "Talabalar qatnaşa oladi; şaharsozlik mavzusi",
-    "Oxirgi kunlar: röyxat ham, topşiriş ham 30-oktyabrda yopiladi"
+    "Röyxat ham, topşiriş ham 30-oktyabr soat 15:00 CET da yopiladi"
    ],
    "summary_en": "Urban ideas competition on tactical urbanism — temporary, low-cost changes to public space.",
    "summary_uz": "Taktik urbanizm — jamoat joylarini vaqtinça va arzon özgartiriş — böyiça şaharsozlik ğoyalari tanlovi.",
-   "verified": "partially verified: official site blocked for our checker; details from Competitions.archi",
-   "verified_uz": "qisman tekşirilgan: rasmiy sayt oçilmadi, ma'lumot Competitions.archi dan",
+   "verified": "verified",
+   "verified_uz": "tekşirilgan (rasmiy sayt)",
    "fee_usd": 139
   },
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "check_date": "2026-10-27",
    "status": "open",
    "results_date": "2027-02-05",
    "flags": [],
@@ -448,7 +448,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "check_date": "2026-10-27",
    "status": "open",
    "results_date": "2026-12-23",
    "flags": [],
@@ -500,7 +500,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-26",
+   "check_date": "2026-10-27",
    "status": "open",
    "results_date": null,
    "flags": [
@@ -554,6 +554,126 @@
    "verified": "partially verified: official site not reachable from our checker; details from ArchUp",
    "verified_uz": "qisman tekşirilgan: rasmiy sayt oçilmadi, ma'lumot ArchUp dan",
    "fee_usd": 0
+  },
+  {
+   "added": "2026-10-27",
+   "updated": "2026-10-27",
+   "check_date": "2026-10-27",
+   "status": "open",
+   "submission_type": "new_design",
+   "language": "English",
+   "language_uz": "Ingliz tili",
+   "is_free": false,
+   "deadline_tz": "Europe/London",
+   "id": "stu-new-york-high-falls-market",
+   "name": "New York High Falls Riverfront Market",
+   "organizer": "Buildner (with AIA Rochester and Community Design Rochester)",
+   "group": "paid",
+   "kind": "ideas",
+   "level": "student_prize",
+   "popularity": 4,
+   "official_url": "https://architecturecompetitions.com/newyorkmarket/",
+   "registration_deadline": "2026-12-10",
+   "submission_deadline": "2027-01-18",
+   "registration_deadline_at": "2026-12-10T23:59:00Z",
+   "submission_deadline_at": "2027-01-18T23:59:00Z",
+   "deadline_time_exact": false,
+   "results_date": "2027-03-09",
+   "fee_current": "120 € student / 140 € professional + 4.5% VAT",
+   "fee_current_uz": "120 € talaba / 140 € mutaxassis + 4,5% QQS",
+   "fee_usd": 135,
+   "fee_text": "Current tier: 120 € student / 140 € architect, enthusiast or company, + 4.5% VAT; single payment or 3 monthly instalments; student rate needs confirmation from recognised university staff; group discount for 3+ registrations from one school.",
+   "fee_text_uz": "Hozirgi bosqiç: 120 € talaba / 140 € arxitektor, havaskor yoki kompaniya, + 4,5% QQS; bir yöla yoki 3 oylik bölib töläş; talaba narxi universitet xodimi tasdiği bilan; bir maktabdan 3+ röyxatga guruh çegirmasi.",
+   "prize_text": "Total 10,000: 1st 5,000, 2nd 2,500, 3rd 1,000; Buildner Student Award 1,000; Sustainability Award 500; 6 honourable mentions (Dezeen lists the fund in €).",
+   "prize_text_uz": "Jami 10 000: 1-örin 5 000, 2-örin 2 500, 3-örin 1 000; Buildner talabalar sovrini 1 000; barqarorlik sovrini 500; 6 ta faxriy yorliq (Dezeen fondni € da körsatadi).",
+   "team": "Open to all, including students; no professional qualification required; individuals or teams of up to 4.",
+   "team_uz": "Hamma uçun oçiq, talabalar ham qatnaşa oladi; malaka talab qilinmaydi; yakka yoki 4 kişigaça jamoa.",
+   "deliverables": "Per the brief (submitted on the Buildner platform); entries in English.",
+   "deliverables_uz": "Topşiriqqa köra (Buildner platformasida topşiriladi); ingliz tilida.",
+   "flags": [
+    "Registration closes 10 December",
+    "Entries must be in English"
+   ],
+   "flags_uz": [
+    "Röyxat 10-dekabrda yopiladi",
+    "Faqat ingliz tili"
+   ],
+   "key_points_en": [
+    "Riverfront market and public space at the High Falls State Park gateway, Rochester (USA)",
+    "Dedicated Buildner Student Award",
+    "Partnered with AIA Rochester",
+    "Registration 10 December, submission 18 January"
+   ],
+   "key_points_uz": [
+    "Roçester (AQŞ) dagi High Falls State Park kirişida daryo böyi bozori va jamoat makoni",
+    "Buildner talabalar uçun alohida sovrin",
+    "AIA Rochester bilan hamkorlikda",
+    "Röyxat 10-dekabr, topşiriş 18-yanvar"
+   ],
+   "summary_en": "Buildner ideas competition for a market hall and public space on the Rochester riverfront; open to all with a separate student award.",
+   "summary_uz": "Roçester daryo böyidagi bozor va jamoat makoni uçun Buildner ğoyalar tanlovi; hamma uçun oçiq, talabalar uçun alohida sovrin bor.",
+   "verified": "verified",
+   "verified_uz": "tekşirilgan (rasmiy sayt)"
+  },
+  {
+   "added": "2026-10-27",
+   "updated": "2026-10-27",
+   "check_date": "2026-10-27",
+   "status": "open",
+   "submission_type": "new_design",
+   "language": "English",
+   "language_uz": "Ingliz tili",
+   "is_free": false,
+   "deadline_tz": "Europe/Rome",
+   "id": "stu-rural-housing-ii",
+   "name": "Rural Housing II",
+   "organizer": "Terraviva Competitions",
+   "group": "paid",
+   "kind": "ideas",
+   "level": "open_all",
+   "popularity": 3,
+   "official_url": "https://www.terravivacompetitions.com/rural-housing-II-competition-2026/",
+   "registration_deadline": "2026-12-11",
+   "submission_deadline": "2026-12-11",
+   "registration_deadline_at": "2026-12-11T14:00:00Z",
+   "submission_deadline_at": "2026-12-11T14:00:00Z",
+   "deadline_time_exact": true,
+   "results_date": "2027-01-25",
+   "fee_current": "99 € (standard, until 13.11)",
+   "fee_current_uz": "99 € (odatiy, 13.11 gaça)",
+   "fee_usd": 107,
+   "fee_text": "Early 79 € (15.07–25.09.2026), standard 99 € (25.09–13.11), late 139 € (13.11–11.12); all at 15:00 CET. Monthly membership also gives access.",
+   "fee_text_uz": "Erta 79 € (15.07–25.09.2026), odatiy 99 € (25.09–13.11), keçki 139 € (13.11–11.12); hammasi 15:00 CET. Oylik a'zolik orqali ham qatnaşiş mumkin.",
+   "prize_text": "Prize pool up to 10,000 €: 1st 5,000, 2nd 2,000, 3rd 1,000; 5 golden mentions (free membership), 10 honourable mentions (free competition), 30 finalists published; no separate student prize — students compete on equal terms.",
+   "prize_text_uz": "Sovrin fondi 10 000 € gaça: 1-örin 5 000, 2-örin 2 000, 3-örin 1 000; 5 ta oltin yorliq (bepul a'zolik), 10 ta faxriy yorliq (bepul tanlov), 30 finalist nashr etiladi; alohida talaba sovrini yöq — talabalar teng şartda qatnaşadi.",
+   "team": "Open to students, architects, designers, urbanists, engineers and artists; individuals or teams of any nationality.",
+   "team_uz": "Talabalar, arxitektorlar, dizaynerlar, şaharsozlar, muhandislar va rassomlar uçun oçiq; yakka yoki istalgan millatdagi jamoa.",
+   "deliverables": "Two A1 horizontal panels (594 × 841 mm) + short descriptive text.",
+   "deliverables_uz": "Ikkita gorizontal A1 panel (594 × 841 mm) + qisqa izoh matni.",
+   "flags": [
+    "Fee rises to 139 € on 13 November",
+    "Closes 11 December, 15:00 CET"
+   ],
+   "flags_uz": [
+    "13-noyabrdan narx 139 € ga oşadi",
+    "11-dekabr, 15:00 CET da yopiladi"
+   ],
+   "key_points_en": [
+    "Contemporary housing for rural communities",
+    "Students compete on equal terms",
+    "Standard fee 99 € until 13 November",
+    "Registration and submission close 11 December"
+   ],
+   "key_points_uz": [
+    "Qişloq jamoalari uçun zamonaviy uy-joy",
+    "Talabalar teng şartda qatnaşadi",
+    "13-noyabrgaça odatiy narx 99 €",
+    "Röyxat va topşiriş 11-dekabrda yopiladi"
+   ],
+   "summary_en": "Terraviva's second rural housing ideas competition, asking for new dwellings that fit rural life and landscape; open to students.",
+   "summary_uz": "Terravivaning qişloq uy-joyi böyiça ikkinçi ğoyalar tanlovi: qişloq hayoti va landşaftiga mos yangi turar joylar; talabalar qatnaşa oladi.",
+   "verified": "verified",
+   "verified_uz": "tekşirilgan (rasmiy sayt)"
   }
  ],
  "log": [
@@ -567,6 +687,17 @@
    ],
    "closed": [],
    "notes": "Existing items were added/verified earlier today; spot-checked Vancouver Tall (unchanged). Added two Buildner calls with student awards. Rejected: UIA-HYP Cup 2026, Tamayouz GPA 2026, Velux Light of Tomorrow 2026, Unbuilt 2026 (closed); Saint-Gobain ASC (national stages, none in Uzbekistan); small listings without verifiable organiser."
+  },
+  {
+   "date": "2026-10-27",
+   "checked": 10,
+   "fixed": 4,
+   "added": [
+    "New York High Falls Riverfront Market",
+    "Rural Housing II"
+   ],
+   "closed": [],
+   "notes": "Re-checked official Buildner pages: Kinderspace #4 and Valli fees corrected to 120/140 € (+4.5% VAT), Museum of Emotions #9 student fee 110 € filled in; Tactical Urbanism deadline corrected to 15:00 CET. Added Buildner New York High Falls Market (student award) and Terraviva Rural Housing II. Rejected: W Prize 2027 (European schools only), Lyceum (North America), Figures of Architecture (Ontario), IADC2027 (no organiser), Cappadocia Oasis and Uphold (no student prize, weak organisers)."
   }
  ]
 }
