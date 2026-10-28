@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "note_uz": "Özbekistonda öqiyotgan talabalar qatnaşa oladigan xalqaro tanlovlar: davlat çeklovi yöq, talabalar uçun alohida toifa yoki sovrin bor yoki talabalar hamma bilan teng qatnaşadi.",
  "note_en": "International competitions that students studying in Uzbekistan can enter: no country restriction, and either a student category/prize or students compete on equal terms.",
  "items": [
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-28",
    "status": "open",
    "results_date": "2027-05-18",
    "flags": [],
@@ -60,7 +60,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-27",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-28",
    "status": "open",
    "results_date": "2027-01-26",
    "flags": [
@@ -116,7 +116,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-27",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-28",
    "status": "open",
    "submission_type": "new_design",
    "language": "English",
@@ -340,7 +340,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-27",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-28",
    "status": "open",
    "results_date": "2026-11-30",
    "flags": [
@@ -396,7 +396,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-28",
    "status": "open",
    "results_date": "2027-02-05",
    "flags": [],
@@ -448,7 +448,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-28",
    "status": "open",
    "results_date": "2026-12-23",
    "flags": [],
@@ -500,7 +500,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-28",
    "status": "open",
    "results_date": null,
    "flags": [
@@ -674,6 +674,62 @@
    "summary_uz": "Terravivaning qişloq uy-joyi böyiça ikkinçi ğoyalar tanlovi: qişloq hayoti va landşaftiga mos yangi turar joylar; talabalar qatnaşa oladi.",
    "verified": "verified",
    "verified_uz": "tekşirilgan (rasmiy sayt)"
+  },
+  {
+   "added": "2026-10-28",
+   "updated": "2026-10-28",
+   "check_date": "2026-10-28",
+   "status": "open",
+   "results_date": "2027-02-05",
+   "flags": [
+    "Registration closes 6 November"
+   ],
+   "flags_uz": [
+    "Röyxat 6-noyabrda yopiladi"
+   ],
+   "id": "stu-micro-living-2026",
+   "name": "Micro Living 2026",
+   "organizer": "Volume Zero Competitions",
+   "group": "paid",
+   "is_free": false,
+   "kind": "ideas",
+   "level": "open_all",
+   "popularity": 3,
+   "official_url": "https://volumezerocompetitions.com/micro-living-2026",
+   "registration_deadline": "2026-11-06",
+   "submission_deadline": "2026-12-03",
+   "registration_deadline_at": "2026-11-06T18:29:00Z",
+   "submission_deadline_at": "2026-12-03T18:29:00Z",
+   "deadline_tz": "Asia/Kolkata",
+   "deadline_time_exact": false,
+   "fee_current": "95 $ + 18% GST",
+   "fee_current_uz": "95 $ + 18% GST",
+   "fee_text": "Per team, outside India: headstart 70 $ (until 12.06), early bird 80 $ (13.06–04.09), standard 95 $ (05.09–06.11), plus 18% GST.",
+   "fee_text_uz": "Jamoa uçun, Hindistondan taşqarida: headstart 70 $ (12.06 gaça), erta 80 $ (13.06–04.09), odatiy 95 $ (05.09–06.11), ustiga 18% GST.",
+   "prize_text": "Total 10,000 $: 1st 5,000 $, 2nd 2,500 $, 3rd 1,500 $, gold mentions 1,000 $; 10 honourable mentions with certificates. No separate student prize — students compete on equal terms.",
+   "prize_text_uz": "Jami 10 000 $: 1-örin 5 000 $, 2-örin 2 500 $, 3-örin 1 500 $, oltin yorliqlar 1 000 $; 10 ta faxriy yorliq (sertifikat). Alohida talaba mukofoti yöq — talabalar teng şartlarda qatnaşadi.",
+   "team": "Open worldwide to everyone incl. students; no professional qualification needed; fee is per team.",
+   "team_uz": "Dunyo böyiça hamma uçun, talabalar ham; kasbiy malaka şart emas; tölov jamoa uçun.",
+   "deliverables": "One PDF, max 20 pages: plans, sections, elevations, diagrams, visualisations.",
+   "deliverables_uz": "Bitta PDF, 20 betgaça: rejalar, kesimlar, fasadlar, diagrammalar, vizualizatsiyalar.",
+   "language": "English",
+   "language_uz": "Ingliz tili",
+   "submission_type": "new_design",
+   "key_points_en": [
+    "A 250 sq ft living module for two residents",
+    "Cluster of 25 units for a 50-person community on a site of your choice",
+    "Registration until 6 November, submission 3 December"
+   ],
+   "key_points_uz": [
+    "Ikki kişi uçun 250 kv. fut (≈23 m²) yaşaş moduli",
+    "Öz tanlagan şahar uçastkasida 50 kişilik 25 modulli jamoa",
+    "Röyxat 6-noyabrgaça, topşiriş 3-dekabr"
+   ],
+   "summary_en": "Ideas competition for a compact two-person home module and a small micro-living community; students worldwide can enter.",
+   "summary_uz": "Ikki kişilik ixçam uy moduli va kiçik mikro-yaşaş jamoasi uçun ğoyalar tanlovi; dunyo böyiça talabalar qatnaşa oladi.",
+   "verified": "partially verified: official page not reachable from our checker; details from ArchUp and StudentCompetitions",
+   "verified_uz": "qisman tekşirilgan: rasmiy sayt tekşiruvçimizga oçilmadi; ma'lumotlar ArchUp va StudentCompetitions'dan",
+   "fee_usd": 112
   }
  ],
  "log": [
@@ -698,6 +754,16 @@
    ],
    "closed": [],
    "notes": "Re-checked official Buildner pages: Kinderspace #4 and Valli fees corrected to 120/140 € (+4.5% VAT), Museum of Emotions #9 student fee 110 € filled in; Tactical Urbanism deadline corrected to 15:00 CET. Added Buildner New York High Falls Market (student award) and Terraviva Rural Housing II. Rejected: W Prize 2027 (European schools only), Lyceum (North America), Figures of Architecture (Ontario), IADC2027 (no organiser), Cappadocia Oasis and Uphold (no student prize, weak organisers)."
+  },
+  {
+   "date": "2026-10-28",
+   "checked": 7,
+   "fixed": 0,
+   "added": [
+    "Micro Living 2026"
+   ],
+   "closed": [],
+   "notes": "Re-checked Kinderspace #4, Tactical Urbanism NOW!, Vancouver Tall, Unbox, Graines d'Avenir, eVolo, CartesianForms via ArchUp/Bustler/competitions.archi/official Terraviva page; no changes needed. Added Volume Zero Micro Living 2026 (open to students, partially verified). Rejected: im2026 (Turkey/TRNC students only), Future Cemetery (Archiol, no student prize, cash not fixed), Porada Award (furniture), Jacques Rougerie 2026 (closed 24.09), Inspireli Arsenal (closed)."
   }
  ]
 }
