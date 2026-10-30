@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-30",
  "note_uz": "Özbekistonda öqiyotgan talabalar qatnaşa oladigan xalqaro tanlovlar: davlat çeklovi yöq, talabalar uçun alohida toifa yoki sovrin bor yoki talabalar hamma bilan teng qatnaşadi.",
  "note_en": "International competitions that students studying in Uzbekistan can enter: no country restriction, and either a student category/prize or students compete on equal terms.",
  "items": [
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-28",
+   "check_date": "2026-10-30",
    "status": "open",
    "results_date": "2027-05-18",
    "flags": [],
@@ -59,15 +59,15 @@
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-27",
-   "check_date": "2026-10-28",
+   "updated": "2026-10-30",
+   "check_date": "2026-10-30",
    "status": "open",
    "results_date": "2027-01-26",
    "flags": [
-    "Registration closes 29 October"
+    "Registration closed 29 October — only already registered entrants can submit"
    ],
    "flags_uz": [
-    "Röyxat 29-oktyabrda yopiladi"
+    "Röyxat 29-oktyabrda yopildi — faqat röyxatdan ötganlar topşira oladi"
    ],
    "id": "stu-vancouver-tall-challenge",
    "name": "Vancouver Tall Challenge",
@@ -115,7 +115,7 @@
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-27",
+   "updated": "2026-10-30",
    "check_date": "2026-10-28",
    "status": "open",
    "submission_type": "new_design",
@@ -148,10 +148,10 @@
    "deliverables": "Per the brief (submitted on the Buildner platform).",
    "deliverables_uz": "Topşiriqqa köra (Buildner platformasida topşiriladi).",
    "flags": [
-    "Registration closes 28 October"
+    "Registration closed 28 October — only already registered entrants can submit"
    ],
    "flags_uz": [
-    "Röyxat 28-oktyabrda yopiladi"
+    "Röyxat 28-oktyabrda yopildi — faqat röyxatdan ötganlar topşira oladi"
    ],
    "key_points_en": [
     "Design a kindergarten that supports children's development",
@@ -174,7 +174,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-27",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-30",
    "status": "open",
    "submission_type": "new_design",
    "language": "English",
@@ -228,7 +228,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-27",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-30",
    "status": "open",
    "results_date": "2027-04-13",
    "flags": [],
@@ -340,7 +340,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-27",
-   "check_date": "2026-10-28",
+   "check_date": "2026-10-30",
    "status": "open",
    "results_date": "2026-11-30",
    "flags": [
@@ -448,7 +448,7 @@
   {
    "added": "2026-10-26",
    "updated": "2026-10-26",
-   "check_date": "2026-10-28",
+   "check_date": "2026-10-30",
    "status": "open",
    "results_date": "2026-12-23",
    "flags": [],
@@ -618,7 +618,7 @@
   {
    "added": "2026-10-27",
    "updated": "2026-10-27",
-   "check_date": "2026-10-27",
+   "check_date": "2026-10-30",
    "status": "open",
    "submission_type": "new_design",
    "language": "English",
@@ -678,7 +678,7 @@
   {
    "added": "2026-10-28",
    "updated": "2026-10-28",
-   "check_date": "2026-10-28",
+   "check_date": "2026-10-30",
    "status": "open",
    "results_date": "2027-02-05",
    "flags": [
@@ -730,6 +730,66 @@
    "verified": "partially verified: official page not reachable from our checker; details from ArchUp and StudentCompetitions",
    "verified_uz": "qisman tekşirilgan: rasmiy sayt tekşiruvçimizga oçilmadi; ma'lumotlar ArchUp va StudentCompetitions'dan",
    "fee_usd": 112
+  },
+  {
+   "added": "2026-10-30",
+   "updated": "2026-10-30",
+   "check_date": "2026-10-30",
+   "status": "open",
+   "submission_type": "new_design",
+   "language": "English",
+   "language_uz": "Ingliz tili",
+   "is_free": false,
+   "deadline_tz": "Europe/Rome",
+   "id": "stu-funes-house",
+   "name": "Funes House",
+   "organizer": "Terraviva Competitions",
+   "group": "paid",
+   "kind": "ideas",
+   "level": "open_all",
+   "popularity": 3,
+   "official_url": "https://www.terravivacompetitions.com/funes-house-competition-2026/",
+   "registration_deadline": "2027-04-30",
+   "submission_deadline": "2027-04-30",
+   "registration_deadline_at": "2027-04-30T13:00:00Z",
+   "submission_deadline_at": "2027-04-30T13:00:00Z",
+   "deadline_time_exact": false,
+   "results_date": "2027-05-31",
+   "fee_current": "89 € (early, until 29.01.2027)",
+   "fee_current_uz": "89 € (erta, 29.01.2027 gaça)",
+   "fee_usd": 96,
+   "fee_text": "Early 89 € (28.10.2026–29.01.2027), standard 109 € (29.01–26.03.2027), late 139 € (26.03–30.04.2027).",
+   "fee_text_uz": "Erta 89 € (28.10.2026–29.01.2027), odatiy 109 € (29.01–26.03.2027), keçki 139 € (26.03–30.04.2027).",
+   "prize_text": "Up to 8,000 $: 1st 3,000 $, 2nd 2,000 $, 3rd 1,000 $; 5 golden mentions, 10 honourable mentions, 30 finalists published; no separate student prize — students compete on equal terms.",
+   "prize_text_uz": "8 000 $ gaça: 1-örin 3 000 $, 2-örin 2 000 $, 3-örin 1 000 $; 5 ta oltin yorliq, 10 ta faxriy yorliq, 30 finalist nashr etiladi; alohida talaba sovrini yöq — talabalar teng şartda qatnaşadi.",
+   "team": "Open to students, architects, designers, artists, engineers and urban planners; individuals or teams.",
+   "team_uz": "Talabalar, arxitektorlar, dizaynerlar, rassomlar, muhandislar va şaharsozlar uçun oçiq; yakka yoki jamoa.",
+   "deliverables": "Two A1 horizontal panels (594 × 841 mm) + 250–500 word text.",
+   "deliverables_uz": "Ikkita gorizontal A1 panel (594 × 841 mm) + 250–500 sözlik matn.",
+   "flags": [
+    "Fee rises to 109 € on 29 January",
+    "Closing time not confirmed — Terraviva usually closes at 15:00 Rome time"
+   ],
+   "flags_uz": [
+    "29-yanvardan narx 109 € ga oşadi",
+    "Yopiliş vaqti aniq emas — Terraviva odatda Rim vaqti bilan 15:00 da yopadi"
+   ],
+   "key_points_en": [
+    "A two-phase family house in Funes, near Rosario, Argentina",
+    "Students compete on equal terms",
+    "Early fee 89 € until 29 January 2027",
+    "Registration and submission close 30 April 2027"
+   ],
+   "key_points_uz": [
+    "Argentina, Rosario yaqinidagi Funesda ikki bosqiçli oilaviy uy",
+    "Talabalar teng şartda qatnaşadi",
+    "29-yanvar 2027 gaça erta narx 89 €",
+    "Röyxat va topşiriş 30-aprel 2027 da yopiladi"
+   ],
+   "summary_en": "Terraviva ideas competition for a house that starts as a ground floor for a young couple and grows with a second level later; open to students.",
+   "summary_uz": "Terravivaning uy-joy ğoyalari tanlovi: avval yoş juftlik uçun bir qavatli, keyin ikkinçi qavat bilan kengayadigan uy; talabalar qatnaşa oladi.",
+   "verified": "partially verified: official page not reachable for our checker today; dates, fees and prizes from Competitions.archi",
+   "verified_uz": "qisman tekşirilgan: rasmiy sayt bugun tekşiruvçimizga oçilmadi; sanalar, narx va sovrinlar Competitions.archi dan"
   }
  ],
  "log": [
@@ -764,6 +824,16 @@
    ],
    "closed": [],
    "notes": "Re-checked Kinderspace #4, Tactical Urbanism NOW!, Vancouver Tall, Unbox, Graines d'Avenir, eVolo, CartesianForms via ArchUp/Bustler/competitions.archi/official Terraviva page; no changes needed. Added Volume Zero Micro Living 2026 (open to students, partially verified). Rejected: im2026 (Turkey/TRNC students only), Future Cemetery (Archiol, no student prize, cash not fixed), Porada Award (furniture), Jacques Rougerie 2026 (closed 24.09), Inspireli Arsenal (closed)."
+  },
+  {
+   "date": "2026-10-30",
+   "checked": 8,
+   "fixed": 2,
+   "added": [
+    "Funes House"
+   ],
+   "closed": [],
+   "notes": "Official organiser sites were not reachable today (fetch permission not granted in unattended run); re-checked eVolo, Vancouver Tall, Valli, Museum of Emotions #9, Tactical Urbanism, Rural Housing II, Micro Living, CartesianForms via Competitions.archi — all dates, fee tiers and prizes match. Vancouver Tall and Kinderspace #4 flags updated: registration has closed. Added Terraviva Funes House (open to students, early fee 89 €). Not added: Architecture of Play (Mindrain, small), Cappadocia Oasis, IADC2027, Figures of Architecture (rejected earlier)."
   }
  ]
 }
