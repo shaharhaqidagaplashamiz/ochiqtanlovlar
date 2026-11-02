@@ -1433,7 +1433,7 @@ function renderWin(){const uz=st.lang==="uz",L2=uz?"uz":"en";
     $("win-lead").textContent=uz?"Tanlovni tanlang: içida barça ğoliblar va ularning işlari bor.":"Pick a competition to see every winner and their work.";
     $("wgrid").className="cgrid";
     $("wgrid").innerHTML=CONTESTS.map(c=>`<a class="ccard ccomp" href="#goliblar/${esc(c.id)}">
-       ${circ(c.pair,`<b class="mono-l">${esc(c.mono)}</b>`,c.logo?`<img class="logo" src="${esc(c.logo)}" alt="" loading="lazy" onerror="this.remove()">`:"")}
+       ${circ(c.pair,`<b class="mono-l">${esc(c.mono)}</b>`,c.logo?`<img class="logo" src="${esc(SRC(c.logo))}" alt="" loading="lazy" onerror="this.remove()">`:"")}
        <span class="cbody">${ctryChip(c,uz)}<span class="cn">${esc(c.name)}</span>${starsHTML(c.stars)}<span class="eyebrow">${esc(uz?c.sub_uz:c.sub_en)} · ${c.winners.length} ${c.countWord?(uz?c.countWord.uz:c.countWord.en):(uz?"ğolib":"winners")}</span></span>
        <span class="cgo" aria-hidden="true">→</span></a>`).join("")
       +`<div class="ccard csoon"><span class="cc soon"><b class="mono-l">+</b></span><span class="cbody"><span class="cn">${uz?"Tez orada":"Coming soon"}</span><span class="eyebrow">${uz?"Şaharsoz, Aga Khan, Europan va boşqalar":"Shaharsoz, Aga Khan, Europan and more"}</span></span></div>`;
