@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "note_uz": "Özbekistonda öqiyotgan talabalar qatnaşa oladigan xalqaro tanlovlar: davlat çeklovi yöq, talabalar uçun alohida toifa yoki sovrin bor yoki talabalar hamma bilan teng qatnaşadi.",
   "note_en": "International competitions that students studying in Uzbekistan can enter: no country restriction, and either a student category/prize or students compete on equal terms.",
   "items": [
@@ -876,6 +876,14 @@
       "added": [],
       "closed": [],
       "notes": "Unattended run: WebFetch permission requests timed out again (8 official pages tried), so open items were not re-verified and no new calls added; web search returned titles only. No deadlines passed since last run; Tactical Urbanism NOW! stays listed as closed (within 30 days). Upcoming: Micro Living registration closes 06.11, Museum of Emotions #9 fee tier changes 12.11, Rural Housing II 13.11, UNBOX registration 13.11. Candidates for a run with page access: Buildner Unbuilt Award 2027, UIA-HYP Cup 2026."
+    },
+    {
+      "date": "2026-11-05",
+      "checked": 0,
+      "fixed": 0,
+      "added": [],
+      "closed": [],
+      "notes": "Unattended run: WebFetch permission requests timed out again (7 official and listing URLs), so open items were not re-verified and no new calls added; web search returned titles only (confirmed Buildner Unbuilt Award 2027 and UIA-HYP Cup 2026 calls exist, details unverifiable). No deadlines passed since last run; Tactical Urbanism NOW! stays listed as closed (within 30 days). Upcoming: Micro Living registration closes 06.11, Museum of Emotions #9 fee tier changes 12.11, Rural Housing II and UNBOX registration 13.11."
     }
   ]
 }
