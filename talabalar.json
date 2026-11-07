@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "note_uz": "Özbekistonda öqiyotgan talabalar qatnaşa oladigan xalqaro tanlovlar: davlat çeklovi yöq, talabalar uçun alohida toifa yoki sovrin bor yoki talabalar hamma bilan teng qatnaşadi.",
   "note_en": "International competitions that students studying in Uzbekistan can enter: no country restriction, and either a student category/prize or students compete on equal terms.",
   "items": [
@@ -677,15 +677,15 @@
     },
     {
       "added": "2026-10-28",
-      "updated": "2026-10-28",
+      "updated": "2026-11-07",
       "check_date": "2026-10-30",
       "status": "open",
       "results_date": "2027-02-05",
       "flags": [
-        "Registration closes 6 November"
+        "Registration closed 6 November — only already registered entrants can submit"
       ],
       "flags_uz": [
-        "Röyxat 6-noyabrda yopiladi"
+        "Röyxat 6-noyabrda yopildi — faqat röyxatdan ötganlar topşira oladi"
       ],
       "id": "stu-micro-living-2026",
       "name": "Micro Living 2026",
@@ -892,6 +892,14 @@
       "added": [],
       "closed": [],
       "notes": "Unattended run: WebFetch permission requests timed out again (6 official pages + Competitions.archi student list), so open items were not re-verified and no new calls added; web search returned titles only (UIA-HYP Cup 2026 listings seen on Bustler/StudentCompetitions/ArchDaily, details unverifiable). No final deadlines passed; Tactical Urbanism NOW! stays listed as closed (within 30 days). Today: Micro Living registration closes 18:29 UTC. Upcoming: Museum of Emotions #9 fee tier 12.11, Rural Housing II tier and UNBOX registration 13.11."
+    },
+    {
+      "date": "2026-11-07",
+      "checked": 0,
+      "fixed": 1,
+      "added": [],
+      "closed": [],
+      "notes": "Unattended run: WebFetch permission requests timed out again (4 official pages + Competitions.archi student list), so open items were not re-verified and no new calls added; web search returned titles only. Micro Living flag updated: registration closed 06.11, only registered entrants can submit. No final deadlines passed; Tactical Urbanism NOW! stays listed as closed (within 30 days). Upcoming: Museum of Emotions #9 fee tier 12.11, Rural Housing II tier and UNBOX registration 13.11."
     }
   ]
 }
