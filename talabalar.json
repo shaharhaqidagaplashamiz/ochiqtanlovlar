@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10",
+ "updated": "2026-11-13",
  "note_uz": "Özbekistonda öqiyotgan talabalar qatnaşa oladigan xalqaro tanlovlar: davlat çeklovi yöq, talabalar uçun alohida toifa yoki sovrin bor yoki talabalar hamma bilan teng qatnaşadi.",
  "note_en": "International competitions that students studying in Uzbekistan can enter: no country restriction, and either a student category/prize or students compete on equal terms.",
  "items": [
@@ -227,7 +227,7 @@
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-27",
+   "updated": "2026-11-13",
    "check_date": "2026-10-30",
    "status": "open",
    "results_date": "2027-04-13",
@@ -248,8 +248,8 @@
    "submission_deadline_at": "2027-02-22T23:59:00Z",
    "deadline_tz": "Europe/London",
    "deadline_time_exact": false,
-   "fee_current": "110 € student / 120 € professional + 4.5% VAT (advance tier until 12.11)",
-   "fee_current_uz": "110 € talaba / 120 € mutaxassis + 4,5% QQS (12.11 gaça ilgari bosqiç)",
+   "fee_current": "120 € student / 140 € professional + 4.5% VAT (last-minute tier)",
+   "fee_current_uz": "120 € talaba / 140 € mutaxassis + 4,5% QQS (oxirgi bosqiç)",
    "fee_text": "Advance (11.09–12.11.2026): 110 € student / 120 € architect, enthusiast or company; Last minute (13.11.2026–21.01.2027): 120 € / 140 €. All + 4.5% VAT; student rate needs a university e-mail; group discount for 3+ from one school.",
    "fee_text_uz": "Ilgari (11.09–12.11.2026): 110 € talaba / 120 € arxitektor, havaskor yoki kompaniya; oxirgi (13.11.2026–21.01.2027): 120 € / 140 €. Hammasiga + 4,5% QQS; talaba narxi uçun universitet e-poçtasi kerak; bir maktabdan 3+ röyxatga guruh çegirmasi.",
    "prize_text": "Total 8,000 €: 1st 4,000, 2nd 2,000, 3rd 1,000; Buildner Student Award 1,000 € (can be combined with a top-3 prize); 6 honourable mentions.",
@@ -264,20 +264,20 @@
    "key_points_en": [
     "\"Silent\" competition: the idea must be told only through images",
     "1,000 € Student Award",
-    "Advance (cheaper) registration ends 12 November",
+    "Last-minute fee tier (120 € student) since 13 November",
     "Submission 22 February 2027"
    ],
    "key_points_uz": [
     "«Jim» tanlov: ğoya faqat tasvirlar orqali ifodalanadi",
     "Talabalar uçun 1 000 € sovrin",
-    "Arzonroq röyxat 12-noyabrda tugaydi",
+    "13-noyabrdan oxirgi narx bosqiçi (talaba 120 €)",
     "Topşiriş 22-fevral 2027"
    ],
    "summary_en": "Buildner's long-running ideas competition about architecture that creates emotional states, with a dedicated student award.",
    "summary_uz": "Buildner'ning hissiy holat uyğotuvçi arxitektura haqidagi ğoyalar tanlovi; talabalar uçun alohida sovrin bor.",
    "verified": "verified",
    "verified_uz": "tekşirilgan (rasmiy sayt)",
-   "fee_usd": 124
+   "fee_usd": 135
   },
   {
    "added": "2026-10-26",
@@ -395,12 +395,16 @@
   },
   {
    "added": "2026-10-26",
-   "updated": "2026-10-26",
+   "updated": "2026-11-13",
    "check_date": "2026-10-28",
    "status": "open",
    "results_date": "2027-02-05",
-   "flags": [],
-   "flags_uz": [],
+   "flags": [
+    "Registration closes today, 13 November (23:59 IST)"
+   ],
+   "flags_uz": [
+    "Röyxat bugun, 13-noyabr (23:59 IST) yopiladi"
+   ],
    "id": "stu-unbox-2026",
    "name": "Unbox 2026",
    "organizer": "Volume Zero Competitions",
@@ -924,6 +928,14 @@
    "added": [],
    "closed": [],
    "notes": "Unattended run: WebFetch permission requests timed out again (4 official pages + Competitions.archi student list), so open items were not re-verified and no new calls added; web search returned titles only. No final deadlines passed; Tactical Urbanism NOW! stays listed as closed (within 30 days, drop after 29.11). Upcoming: Museum of Emotions #9 fee tier 12.11, Rural Housing II tier and UNBOX registration 13.11."
+  },
+  {
+   "date": "2026-11-13",
+   "checked": 0,
+   "fixed": 2,
+   "added": [],
+   "closed": [],
+   "notes": "Unattended run: WebFetch permission requests timed out again (13 official pages + 6 listing pages), so open items were not re-verified and no new calls added; web search returned titles only. Applied the already-recorded fee schedule: Museum of Emotions #9 moved to last-minute tier (120 EUR student); Unbox flagged as registration closing today. No final deadlines passed; Tactical Urbanism NOW! stays closed (drop after 29.11). Rural Housing II fee rises to 139 EUR at 15:00 CET today."
   }
  ]
 }
