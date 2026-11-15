@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "note_uz": "Özbekistonda öqiyotgan talabalar qatnaşa oladigan xalqaro tanlovlar: davlat çeklovi yöq, talabalar uçun alohida toifa yoki sovrin bor yoki talabalar hamma bilan teng qatnaşadi.",
   "note_en": "International competitions that students studying in Uzbekistan can enter: no country restriction, and either a student category/prize or students compete on equal terms.",
   "items": [
@@ -451,12 +451,16 @@
     },
     {
       "added": "2026-10-26",
-      "updated": "2026-10-26",
+      "updated": "2026-11-15",
       "check_date": "2026-10-30",
       "status": "open",
       "results_date": "2026-12-23",
-      "flags": [],
-      "flags_uz": [],
+      "flags": [
+        "Late period starts 16 November"
+      ],
+      "flags_uz": [
+        "16-noyabrdan keçki narx davri boşlanadi"
+      ],
       "id": "stu-cartesianforms",
       "name": "CartesianForms: Architecture Reimagined",
       "organizer": "FORMAS.AI · PAACADEMY · Parametric Architecture",
@@ -944,6 +948,14 @@
       "added": [],
       "closed": [],
       "notes": "Unattended run: WebFetch permission requests timed out again (official page + Competitions.archi student list), web search returned titles only, so no re-verification and no new calls added (UIA-HYP Cup 2026 still seen in listings, unverifiable). Applied recorded schedule: Rural Housing II moved to late fee 139 EUR; Unbox registration closed 13.11 (submission open to 03.12). No final deadlines passed; Tactical Urbanism NOW! stays closed (drop after 29.11)."
+    },
+    {
+      "date": "2026-11-15",
+      "checked": 0,
+      "fixed": 1,
+      "added": [],
+      "closed": [],
+      "notes": "Unattended run: WebFetch permission requests timed out again (eVolo, Buildner pages, Competitions.archi student list); web search returned titles only, so no re-verification and no new calls added (UIA-HYP Cup 2026 still seen in listings, unverifiable). CartesianForms flagged: late fee period starts 16.11. No final deadlines passed; Tactical Urbanism NOW! stays closed (drop after 29.11)."
     }
   ]
 }
