@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "note_uz": "Özbekistonda öqiyotgan talabalar qatnaşa oladigan xalqaro tanlovlar: davlat çeklovi yöq, talabalar uçun alohida toifa yoki sovrin bor yoki talabalar hamma bilan teng qatnaşadi.",
   "note_en": "International competitions that students studying in Uzbekistan can enter: no country restriction, and either a student category/prize or students compete on equal terms.",
   "items": [
@@ -451,15 +451,15 @@
     },
     {
       "added": "2026-10-26",
-      "updated": "2026-11-15",
+      "updated": "2026-11-16",
       "check_date": "2026-10-30",
       "status": "open",
       "results_date": "2026-12-23",
       "flags": [
-        "Late period starts 16 November"
+        "Late fee period now (16 November – 6 December)"
       ],
       "flags_uz": [
-        "16-noyabrdan keçki narx davri boşlanadi"
+        "Hozir keçki narx davri (16-noyabr – 6-dekabr)"
       ],
       "id": "stu-cartesianforms",
       "name": "CartesianForms: Architecture Reimagined",
@@ -956,6 +956,14 @@
       "added": [],
       "closed": [],
       "notes": "Unattended run: WebFetch permission requests timed out again (eVolo, Buildner pages, Competitions.archi student list); web search returned titles only, so no re-verification and no new calls added (UIA-HYP Cup 2026 still seen in listings, unverifiable). CartesianForms flagged: late fee period starts 16.11. No final deadlines passed; Tactical Urbanism NOW! stays closed (drop after 29.11)."
+    },
+    {
+      "date": "2026-11-16",
+      "checked": 0,
+      "fixed": 1,
+      "added": [],
+      "closed": [],
+      "notes": "Unattended run: WebFetch permission requests timed out again (Buildner, Volume Zero, PA Academy, eVolo, Competitions.archi); web search returned titles only, so no re-verification and no new calls added. CartesianForms flag updated: late fee period now running (to 06.12). No final deadlines passed; Tactical Urbanism NOW! stays closed (drop after 29.11)."
     }
   ]
 }
